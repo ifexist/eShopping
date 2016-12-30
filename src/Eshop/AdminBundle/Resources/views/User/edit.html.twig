@@ -1,0 +1,65 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block title %}{{ 'Edit'|trans }} {{ 'user'|trans }} "{{ user.username }}" "{{ user.email }}"{% endblock%}
+{% block page_content -%}
+    <h2>{{ 'Edit'|trans }} {{ 'user'|trans }} "{{ user.username }}" "{{ user.email }}"</h2>
+    <div class="btn-group-xs">
+        <a href="{{ path('admin_user_list') }}" class="btn btn-default">{{ 'Back to list'|trans }}</a>
+    </div>
+    <form action="{{ path('admin_user_edit', { 'id': user.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+        {{ form_errors(edit_form) }}
+        <table class="records_list table table-striped">
+            <tr>
+                <th class="col-md-3">{{ form_label(edit_form.enabled) }}</th>
+                <td class="col-md-9">{{ form_widget(edit_form.enabled) }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Firstname'|trans }}</th>
+                <td>{{ user.firstname }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Lastname'|trans }}</th>
+                <td>{{ user.lastname }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Username'|trans }}</th>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Email'|trans }}</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Phone number'|trans }}</th>
+                <td>{{ user.phone }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Address'|trans }}</th>
+                <td>{{ user.address }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Join date'|trans }}</th>
+                <td>{{ user.joinDate|date('Y-m-d h:i') }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'Orders'|trans }}</th>
+                <td>
+                    {% if user.orders|length %}
+                        <a href="{{ path('admin_user_orders', {'id': user.id}) }}">
+                            {{ 'Orders'|trans }} ({{ user.orders|length }})
+                        </a>
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="{{ 'Save'|trans }}" class="btn btn-primary"></td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+{% endblock page_content %}
+

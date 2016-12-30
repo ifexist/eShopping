@@ -1,0 +1,95 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'contact' %}
+
+{% block title %}{{ 'contact_title'|trans }}{% endblock %}
+{% block page_content -%}
+    <div class="container">
+        <h1>{{ 'contact_title'|trans }}</h1>
+    {{ form_start(form) }}
+    <table class="table">
+        <tr>
+            <th class="col-md-3">
+                {{ 'subject'|trans }}
+            </th>
+            <td class="col-md-9">
+                {{ form_widget(form.subject) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'title'|trans }}
+            </th>
+            <td>
+                {{ form_widget(form.title) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'firstname'|trans }}
+            </th>
+            <td>
+                {{ form_widget(form.firstname, {'attr':{'class':'col-md-12'} }) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'lastname'|trans }}
+            </th>
+            <td>
+                {{ form_widget(form.lastname, {'attr':{'class':'col-md-12'} }) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'email'|trans }}
+            </th>
+            <td>
+                {{ form_widget(form.email, {'attr':{'class':'col-md-12'} }) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'phone'|trans }}
+            </th>
+            <td>
+                {{ form_widget(form.phone, {'attr':{'class':'col-md-12'} }) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'message'|trans }}
+            </th>
+            <td>
+                {{ form_widget(form.message, {'attr':{'class':'col-md-12'} }) }}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'captcha'|trans }}
+            </th>
+            <td>
+                <div class="col-md-4">
+                    {{ form_widget(form.captcha) }}
+                </div>
+                <div class="col-md-8">
+                    <a href="" class="btn btn-xs btn-warning">
+                        <i class="fa fa-refresh"> {{ 'refresh'|trans }}</i>
+                    </a>
+                </div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                <input type="submit" value="{{ 'submit'|trans }}" class="btn btn-primary">
+            </td>
+        </tr>
+    </table>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+

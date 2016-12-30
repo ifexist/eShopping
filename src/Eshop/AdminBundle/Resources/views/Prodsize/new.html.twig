@@ -1,0 +1,100 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock stylesheets %}
+{% block page_content -%}
+    <h3>{{ 'Prdouct size create'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_prodsize') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+    </div>
+    {{ form_start(form) }}
+    
+
+    <table class="table table-responsive">
+        <tr>
+            <td>
+                <div class="col-md-2">
+                    {{ form_widget(form.enable, {'attr':{'checked':'checked'} }) }}
+                </div>
+                <div class="col-md-10">
+                    <i class="text-primary btn btn-succes">{{ 'Check'|trans }}/{{ 'Unchck'|trans }} {{ 'to'|trans }} {{ 'Enable'|trans }}/{{ 'Disable'|trans }}</i>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{'Title of size'|trans }} <span class="small">({{ 'Maximum'|trans }} 30 {{ 'Chars'|trans }})</span><br>
+                {{ form_widget(form.name, {'attr': {'class': 'col-md-12', 'maxlength':30} }) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ 'Name of size'|trans }} <span class="small">({{ 'Maximum'|trans }} 25 {{ 'Chars'|trans }})</span><br>
+                {{ form_widget(form.name, {'attr': {'class': 'col-md-12', 'maxlength':25} }) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ 'RGB code size'|trans }} <span class="small">({{ 'Maximum'|trans }} 15 {{ 'Chars'|trans }})</span><br>
+                {{ form_widget(form.code1, {'attr': {'class': 'col-md-12', 'maxlength':15} }) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ 'HEX code size'|trans }} <span class="small">({{ 'Maximum'|trans }} 15 {{ 'Chars'|trans }})</span><br>
+                {{ form_widget(form.code2, {'attr': {'class': 'col-md-12', 'maxlength':15} }) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ 'Array size'|trans }} <span class="small">({{ 'Maximum'|trans }} 300 {{ 'Chars'|trans }})</span><br>
+                {{ form_widget(form.codes, {'attr': {'class': 'col-md-12', 'maxlength':300} }) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="{{ 'save'|trans }}" class="btn btn-warning"/>
+            </td>
+        </tr>
+    </table>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    <br><br>
+    <div class="col-md-10 col-md-offset-2">
+        <ul class="list-group">
+            <li class="list-group-item">
+                    {{ form_start(delete_form, { 'attr': {'class': 'delete-form'} }) }}
+                    {{ form_widget(delete_form) }}
+                    <input type="submit" value="{{ 'Delete'|trans }}" class="btn btn-danger"/>
+                    {{ form_end(delete_form) }}
+            </li>
+        </ul>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/js/speakingurl.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        {% include '@Admin/Partials/initSummernote.js.twig' with {'height': 300} %}
+
+
+    </script>
+{% endblock javascripts %}

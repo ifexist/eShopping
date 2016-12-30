@@ -1,0 +1,147 @@
+    <input id="pac-input" class="controls" type="text"placeholder="Enter a location">
+    <div id="map"></div>
+    <div class="thumbnail alert alert-info col-xs-4" id="floating-panel">
+<h3>How it works</h3>
+<ol>
+<li>Enter a complete address + Enter</li>
+<li>See and check the text displayed</li>
+<li>Click on Save to Google Maps</li>
+<li>Press the "Continue for add this activity on ifexist.com" button</li>
+</ol>
+</div>
+    <script>
+// This sample uses the Place Autocomplete widget to allow the user to search
+// for and select a place. The sample then displays an info window containing
+// the place ID and other information about the place that the user has
+// selected.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.8688, lng: 151.2195},
+    zoom: 13
+  });
+
+  var input = document.getElementById('pac-input');
+
+  var autocomplete = new google.maps.places.Autocomplete(input);
+  autocomplete.bindTo('bounds', map);
+
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  var infowindow = new google.maps.InfoWindow();
+  var marker = new google.maps.Marker({
+    map: map
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  autocomplete.addListener('place_changed', function() {
+    infowindow.close();
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      return;
+    }
+
+    if (place.geometry.viewport) {
+      map.fitBounds(place.geometry.viewport);
+    } else {
+      map.setCenter(place.geometry.location);
+	var latitude = place.geometry.location.lat();
+	var longitude = place.geometry.location.lng();
+	var formattedAddress = place.formatted_address;
+
+      if (place.address_components) {
+	var localityShortName = place.address_components[0].short_name;
+	var localityLongName = place.address_components[1].long_name;
+	if(localityShortName){
+		lsn = localityShortName + ' ';
+	}
+	if(localityLongName){
+		lln = localityLongName;
+	}
+	var avn = lsn + '' + lln;
+	var city = place.address_components[2].long_name;
+	var departement = place.address_components[3].long_name;
+	var region = place.address_components[4].long_name;
+	var country = place.address_components[5].long_name;
+	var codepostal = place.address_components[6].long_name;
+
+}
+      map.setZoom(17);
+    }
+
+    // Set the position of the marker using the place ID and location.
+    marker.setPlace({
+      placeId: place.place_id,
+      location: place.geometry.location
+    });
+    marker.setVisible(true);
+
+    infowindow.setContent(
+        //'<b>Type</b>: ' + place.website + '<br>' +
+        //'<b>Address</b>: ' + avn + '<br>' +
+        //'<b>Postal code</b>: ' + codepostal + '<br>' +
+        //'<b>City</b>: ' + city + '<br>' +
+        //'<b>Department</b>: ' + departement + '<br>' +
+        //'<b>Region</b>: ' + region + '<br>' +
+        //'<b>Country</b>: ' + country + '<br>' +
+        //'Phone: ' + phone + '<br>' +
+        //'Icon: ' + icon + '<br>' +
+'<form action="" method="post"><input type="hidden" name="longitude" value="' + longitude + '"><input type="hidden" name="latitude" value="' + latitude + '"><input type="hidden" name="placeid" value="' + place.place_id + '"><br><input type="submit" value="Continue for add this activity on ifexist.com" class="btn btn-primary"></form>'
+
+
+);
+    infowindow.open(map, marker);
+  });
+
+
+
+}
+function addResult() {
+  var website = document.getElementById('website');
+  var address = document.getElementById('address');
+  var zipcode = document.getElementById('zipcode');
+  var city = document.getElementById('city');
+  var region = document.getElementById('region');
+  var country = document.getElementById('country');
+ '<div class="thumbnail" id="form-panel">' +
+	'<h4><center>Add elements</center></h4>' +
+		'<form action="" method="post">' +
+                '<table class="table"><tr>' +
+                        '<th width="50%">Name of store</th>' +
+                        '<th width="50%">Principal activity</th></tr><tr><td>' +       
+                            '<input class="col-xs-12" type="text" name="title">' +
+                        '</td><td>' +
+                            '<input class="col-xs-12" type="text" name="gtmstoresid">' +
+                        '</td></tr><tr><th>Website</th><th>Address *</th></tr><tr><td>' +
+                            '<input class="col-xs-12" type="text" name="link" value="' + website + '">' +
+                        '</td><td>' +
+                           '<input class="col-xs-12" type="text" name="address" value="' + address + '">' + 
+                        '</td></tr><tr><th>Contact indormations</th><th>Locality <span class="small">( For display enter a location)</span></th>' +
+                    '</tr><tr><td>' +
+                            '<table width="100%" cellspacing="4" cellpadding="4"><tr><th>Phone</th><th>Mobile</th>' +
+                                '</tr><tr><td>' +
+                                        '<input class="col-xs-12" style="font-size:12px;" type="text" name="tel">' +
+                                    '</td><td>' +
+                                        '<input class="col-xs-12" style="font-size:12px;" type="text" name="mobile">' +
+                                    '</td></tr><tr><th>Full Name</th><th>Email</th></tr><tr><td>' +
+                                        '<input class="col-xs-12" style="font-size:12px;" type="text" name="fullname"></td><td>' +
+                                        '<input class="col-xs-12" style="font-size:12px;" type="text" name="email">' +
+                                    '</td></tr></table></td><td><table width="100%" cellspacing="4" cellpadding="4"><tr><th>Postal code</th><th>City</th></tr><tr><td>' +
+                                        '<input id="zipcode" class="col-xs-12" type="text" name="zipcode" value="' + codepostal + '">' +
+                                    '</td><td>' +
+                                        '<input id="city" class="col-xs-12" type="text" name="city" value="' + city + '">' +
+                                    '</td><tr><th>Region</th><th>Country</th></tr><td>' +
+                                        '<input id="region" class="col-xs-12" type="text" name="region" value="' + region + '">' +
+                                    '</td><td>' +
+                                        '<input id="country" class="col-xs-12" type="text" name="country" value="' + country + '">' +
+                                    '</td></tr></table></td></tr><tr><td></td><td>' +
+                            '<input type="submit" value="Submit" class="col-xs-12 btn btn-primary"></td></tr></table>' +
+			'</form>' +  
+    '</div>'      
+        };
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs30Cla8wWBmpFCrIdoYJkSSqT3mQXV9I&libraries=places&signed_in=true&callback=initMap"
+        async defer></script>

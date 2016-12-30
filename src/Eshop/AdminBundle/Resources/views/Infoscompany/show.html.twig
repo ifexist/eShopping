@@ -1,0 +1,91 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% trans_default_domain 'shop' %}
+
+{% block page_content -%}
+    <h3>{{ 'Information of Company'|trans }}</h3>
+    <div class="btn-group">
+        {{ include('@Admin/Infoscompany/Includes/Menus/top.html.twig') }}
+        <a href="{{ path('admin_infoscompany_edit', { 'id': entity.id }) }}" class="btn btn-primary"><i class="fa fa-edit"> {{ 'Edit'|trans }}</i></a>
+    </div>
+    <br><br>
+    <table class="record_properties table table-bordered table-striped">
+        <tbody>
+        <tr>
+            <th width="25%">{{ 'Company'|trans }}</th>
+            <td width="75%">{{ entity.namets }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Product or service type'|trans }}</th>
+            <td>{{ entity.prodtype.cat1 }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Address'|trans }}</th>
+            <td>
+                {% if entity.streetnum != "" %}
+                    {{ entity.streetnum }} 
+                {% endif %}
+                {% if entity.address != "" %}
+                    {{ entity.address }}
+                {% endif %}
+                {% if entity.zipcode != "" %}
+                    , {{ entity.zipcode }}
+                {% endif %}
+                {% if entity.city != "" %}
+                    , {{ entity.city }}
+                {% endif %}
+                {% if entity.department != "" %}
+                    , {{ entity.department }}
+                {% endif %}
+                {% if entity.region != "" %}
+                    , {{ entity.region }}
+                {% endif %}
+                {% if entity.country != "" %}
+                    , {{ entity.country }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Contact information'|trans }}</th>
+            <td>
+                {% if entity.email != "" or entity.phone != "" %}
+                    {% if entity.email != "" %}
+                        <b>{{ 'Email'|trans }}</b> : {{ entity.email }}
+                    {% endif %}
+                    {% if entity.phone != "" %}
+                        , <b>{{ 'Phone'|trans }}</b> : {{ entity.phone }}
+                    {% endif %}
+                {% else %}
+                    <span class="label label-danger">{{ 'None'|trans }}</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Other information'|trans }}</th>
+            <td>
+                {% if entity.langcode != "" or entity.currencycode != ""  or entity.vat != "" %}
+                    {% if entity.langcode.code != "" %}
+                        <b>{{ 'Language'|trans }}</b> : {{ entity.langcode.code }}
+                    {% endif %}
+                    {% if entity.currencycode.code != "" %}
+                        , <b>{{ 'Currency'|trans }}</b> : {{ entity.currencycode.code }}
+                    {% endif %}
+                    {% if entity.vat != "" %}
+                        , <b>{{ 'VAT'|trans }}</b> : {{ entity.vat }}%
+                    {% endif %}
+                {% else %}
+                    <span class="label label-danger">{{ 'None'|trans }}</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'Additional information of company'|trans }} 
+            </th>
+            <td>
+                {{ entity.content|raw }}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock page_content %}

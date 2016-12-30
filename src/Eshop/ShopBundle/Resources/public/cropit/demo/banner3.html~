@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cropit</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+        <script src="../dist/jquery.cropit.js"></script>
+
+        <style>
+            .cropit-image-preview {
+                background-color: #f8f8f8;
+                background-size: cover;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                margin-top: 7px;
+                width: 950px;
+                height: 250px;
+                cursor: move;
+            }
+
+            .cropit-image-background {
+                opacity: .2;
+                cursor: auto;
+            }
+
+            .image-size-label {
+                margin-top: 10px;
+            }
+
+            input {
+                display: block;
+            }
+
+            .export {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+<form action="#" class="form-horizontal form-bordered" id="formUpload">
+  <div class="image-editor">
+    <div class="form-group">
+        <div class="col-xs-12">
+            <button id="fakeUpload" class="btn btn-default col-xs-12"><i class="fa fa-upload"></i> Choisissez des photos à télécharger</button>
+            <input type="file" class="cropit-image-input" name="bannerUpload" id="bannerUpload" style="display:none;">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12 text-center">
+            <div class="cropit-image-preview"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="zoomUpload" class="col-md-2">Zoom</label>
+        <div class="col-md-10 text-center">
+            <input type="range" class="cropit-image-zoom-input" id="zoomUpload">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12 text-center">
+            <input type="hidden" name="image-data" class="hidden-image-data" />
+            <button type="submit" class="btn btn-primary col-xs-12"><i class="fa fa-cloud-upload"></i> Carica</button>
+        </div>
+    </div>
+  </div>
+</form>
+
+        <script>
+$('#formUpload').submit(function() {
+    // Move cropped image data to hidden input
+    var imageData = $('.image-editor').cropit('export');
+    $('.hidden-image-data').val(imageData);
+
+    // Print HTTP request params
+    var formValue = $(this).serialize();
+    //$('#result-data').text(formValue);
+
+    $.ajax({
+      type: "POST",
+      url : "uploadBanner.php",
+      data: formValue,
+      success: function(msg){
+          //$("#AjaxResult").html(msg);
+          alert(msg);
+      }
+    })
+    // Prevent the form from actually submitting
+  return false;
+});
+        </script>
+    </body>
+</html>
+

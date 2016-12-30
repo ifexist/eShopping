@@ -1,0 +1,7 @@
+/vendor/
+/app/logs
+/app/cache
+/app/config/parameters.yml
+/nbproject/private
+/web/uploads
+*.md

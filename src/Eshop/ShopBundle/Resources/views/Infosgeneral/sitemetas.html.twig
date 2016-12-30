@@ -1,0 +1,23 @@
+<meta charset="UTF-8" />
+<meta name="Description" content="{{ sitemetas.metaDescription }}">
+<meta name="Keywords" content="{{ sitemetas.metaKeyword }}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Content-Language" content="{% if sitemetas.metaContentlanguage != ""%}{{ sitemetas.metaContentlanguage }}{% else %}en{% endif %}">
+<meta name="Copyright" content="{{ sitemetas.metaCopyright }}">
+<meta name="Author" content="{{ sitemetas.metaAuthor }}">
+<meta name="Publisher" content="{{ sitemetas.metaPublisher }}">
+<meta name="Identifier-Url" content="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}">
+<meta name="Reply-To" content="{{ sitemetas.metaReplyto }}">
+<meta name="Revisit-After" content="{% if sitemetas.metaRevisitafter != ""%}{{ sitemetas.metaRevisitafter }}{% else %}15 days{% endif %}">
+<meta name="Robots" content="{% if sitemetas.metaRobots != ""%}{{ sitemetas.metaRobots }}{% else %}all{% endif %}">
+<meta name="Rating" content="{% if sitemetas.metaRating != ""%}{{ sitemetas.metaRating }}{% else %}general{% endif %}">
+<meta name="Distribution" content="{% if sitemetas.metaDistribution != ""%}{{ sitemetas.metaDistribution }}{% else %}global{% endif %}">
+<meta name="Geography" content="{{ sitemetas.metaGeography }}">
+<meta name="Category" content="{% if sitemetas.metaCategory != ""%}{{ sitemetas.metaCategory }}{% else %}internet{% endif %}">
+
+<meta property="og:description" content="{{ sitemetas.metaDescription }}">
+<meta property="og:url" content="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}">
+<meta property="og:image" content="http://eshop.ifexist.com/site/images/demo.png">
+<meta property="og:type" content="{% if sitemetas.metaCategory != ""%}{{ sitemetas.metaCategory }}{% else %}internet{% endif %}">
+<meta property="og:site_name" content="{{ sitemetas.metaTitle }}">

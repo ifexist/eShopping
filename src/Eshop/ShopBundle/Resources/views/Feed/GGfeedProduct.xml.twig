@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+    <channel>
+        <title>{{ site.namesite }}</title>
+        <link>{{ app.request.schemeAndHttpHost }}</link>
+        <description>{{ site.slogan }}, {{ site.prodcats }}</description>
+		
+        {% for item in products %}
+        <item>
+            <!-- The following attributes are always required -->
+            <g:id>{{ item.ref }}</g:id>
+            <g:title>{{ item.name }}</g:title>
+            <g:description>{{ item.description|raw }}.</g:description>
+            <g:link>{{ path('show_product', {'slug' : item.slug}) }}</g:link>
+        {% if item.images|length %}
+            <g:image_link url="{{ asset( ('uploads/images/product/' ~ item.images.first().path) | imagine_filter('category_mainpage_thumb')) }}"></g:image_link>
+        {% else %}
+            <g:image_link url="{{ asset( ('uploads/images/product/no_image_available.png') | imagine_filter('category_mainpage_thumb')) }}"></g:image_link>
+        {% endif %}
+            <g:condition>new</g:condition>
+            <g:availability>{% if item.quantity > 1 %}in stock{% else %}out of stock{% endif %}</g:availability>
+            <g:price>{{ item.price }} {{ item.currency.code|upper }}</g:price>
+            <g:shipping>
+                <g:country>US</g:country>
+                <g:service>Standard</g:service>
+                <g:price>14.95 USD</g:price>
+            </g:shipping>
+			
+            <!-- 2 of the following 3 attributes are required fot this item according to the Unique Product Identifier Rules -->
+            <g:gtin>{{ item.ref }}</g:gtin>
+            <g:brand>{{ item.manufacturer.name }}</g:brand>
+            <g:mpn>22LB4510/US</g:mpn>
+			
+            <!-- The following attributes are not required for this item, but supplying them is recommended -->
+            <g:google_product_category>{{ item.category.name }}</g:google_product_category>
+            <g:product_type>Consumer Electronics &gt; TVs &gt; Flat Panel TVs</g:product_type>
+        </item>
+       {% endfor %}
+    </channel>
+</rss>

@@ -1,0 +1,31 @@
+<div class="row">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            {% for slide in slides %}
+                <table class="table table-responsive item {% if slide.slideOrder == 1 %}active{% endif %}" style="background: #000;">
+                    <tr>
+                        <td class="col-md-10">
+                            <img src="{{ asset('uploads/images/slide/' ~ slide.slidekey ~ '.jpg') }}" alt="{{ slide.name }}" width="100%">
+                        </td>
+                        <td class="align-top col-md-2" style="color:#fff">
+                            <p style="color:#fff"><b>{{ slide.name|truncate(80) }}</b></p>
+                            <p>{{ slide.description|raw|truncate(250) }}</p>
+                        </td>
+                    </tr>
+                </table>
+            {% endfor %}
+        </div>
+    </div>
+    <table class="table table-condensed table-bordered">
+        <tr>
+            <td>
+                <ul class="nav nav-pills nav-justified">
+                    {% for slide in slides %}
+                        <li data-target="#myCarousel" data-slide-to="{{ slide.slideOrder - 1 }}" {% if slide.slideOrder == 1 %} class="active"{% endif %}><a href="#"><small>{{ slide.name|truncate(20) }}</small></a></li>
+                        {% endfor %}    
+                </ul> 
+            </td>
+        </tr>
+    </table>
+</div>             

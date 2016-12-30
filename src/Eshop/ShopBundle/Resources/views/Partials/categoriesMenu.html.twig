@@ -1,0 +1,9 @@
+{% trans_default_domain 'shop' %}
+<div class="list-group">
+    <h4 class="list-group-item menu-link">{{ 'categories.menu.header'|trans }}</h4>
+    {% for category in categories %}
+        <a href="{{ path('category', {'slug' : category.slug}) }}" class="list-group-item menu-link">
+            {{ category.name }}
+        </a>
+    {% endfor %}
+</div>

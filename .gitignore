@@ -1,0 +1,8 @@
+/vendor/
+/app/logs
+/app/cache
+/app/config/parameters.yml
+/nbproject/private
+/web/uploads
+/src/Eshop/ShopBundle/Resources/public/AdminMetis/dist/assets/lib/components-font-awesome/fonts/fontawesome-webfont.ttf
+*.md

@@ -1,0 +1,99 @@
+{% trans_default_domain 'admin' %}
+<div class="col-sm-3 col-md-2 sidebar">
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- search form -->
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="pull-left info">
+                    <p>{{ app.user.firstname|capitalize ~ ' ' ~  app.user.lastname|upper}}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="header"><a href="{{ path('admin_index') }}"><i class="fa fa-home"></i> {{ 'Administration panel'|trans }}</a></li>
+                <li>
+                    <a href="{{ path('admin_user_list') }}"><i class="fa fa-users"></i> {{ 'User list'|trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_infoscompany') }}"><i class="fa fa-briefcase"></i> {{ "Company settings"|trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_translator_trans') }}"><i class="fa fa-language"></i> {{ 'Translator'|trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_staticpage') }}"><i class="fa fa-leaf"></i> {{ 'Static pages'|trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_news') }}"><i class="fa fa-"></i> {{ 'News'|trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('admin_category') }}"><i class="fa fa-list"></i> {{ 'Categories'|trans }}</a>
+                </li>
+                
+                <li><a href="{{ path('admin_slide') }}"><i class="fa fa-image"></i> {{ 'Slides'|trans }}</a></li>
+                <li>
+                    <a href="{{ path('admin_email_template') }}"><i class="fa fa-envelope-o"></i> {{ 'Email templates'|trans }}</a>
+                </li>
+                
+                <li>
+                    <a href="{{ path('admin_email_data') }}"><i class="fa fa-envelope-o"></i> {{ 'Email list'|trans }} <i class="fa fa-list"></i></a>
+                </li>
+                
+                <li>
+                    <a href="{{ path('admin_category_products_classification_google') }}"><i class="fa fa-shopping-cart"></i> {{ "Product classification"|trans }}</a></li>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-info"></i>
+                        <span>{{ "Product classification"|trans }}</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('admin_category_products_classification_google') }}">{{ "Product classification"|trans }}</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="{{ path('admin_product') }}"><i class="text-info fa fa-circle-o"></i> {{ 'Products'|trans }}</a></li>
+                
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o"></i> 
+                        <span>{{ 'Products types'|trans }}</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('admin_prodexistin') }}">{{ 'Product attribution'|trans }}</a></li>
+                        <li><a href="{{ path('admin_prodcolor') }}">{{ 'Product color'|trans }}</a></li>
+                        <li><a href="{{ path('admin_prodsize') }}">{{ 'Product size'|trans }}</a></li>
+                        <li><a href="{{ path('admin_measure') }}">{{ 'Product measurement'|trans }}</a></li>
+                        
+                    </ul>
+                </li>
+                
+                <li><a href="{{ path('admin_featured') }}"><i class="text-danger fa fa-circle-o"></i> {{ 'Featured products'|trans }}</a></li>
+                <li><a href="{{ path('admin_manufacturer') }}"><i class="text-info fa fa-circle-o"></i> {{ 'Manufacturers'|trans }}</a></li>
+                <li><a href="{{ path('admin_orders') }}"><i class="text-success fa fa-circle-o"></i> {{ 'Orders'|trans }}</a></li>
+                <li><a href="{{ path('admin_settings') }}"><i class="text-primary fa fa-circle-o"></i> {{ 'Other settings'|trans }}</a></li>
+
+            </ul>
+        </section>
+    </aside>
+</div>

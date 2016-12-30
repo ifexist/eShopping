@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-06-29T16:38:49Z" source-language="en" target-language="it" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="da39a3ee5e6b4b0d3255bfef95601890afd80709" resname="">
+        <source></source>
+        <target state="new"></target>
+        <jms:reference-file line="68">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProductType.php</jms:reference-file>
+        <jms:reference-file line="101">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProductType.php</jms:reference-file>
+        <jms:reference-file line="48">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/CategoryType.php</jms:reference-file>
+        <jms:reference-file line="58">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17fec7d253efb88aaec351b11edc208086429514" resname="%days days ago">
+        <source>%days days ago</source>
+        <target state="new">%days days ago</target>
+        <jms:reference-file line="133">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9212e15f01ca59bf721bac8e30e153ce2b6ffce3" resname="%minutes minutes ago">
+        <source>%minutes minutes ago</source>
+        <target state="new">%minutes minutes ago</target>
+        <jms:reference-file line="119">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2d8a6f7c34468578640b333b8650131de06ac770" resname="1 day">
+        <source>1 day</source>
+        <target state="new">1 day</target>
+        <jms:reference-file line="122">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="27bb80cd0b24b9f1ce4892b99f3bba9dadc76fa1" resname="1 day ago">
+        <source>1 day ago</source>
+        <target state="new">1 day ago</target>
+        <jms:reference-file line="128">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="21d7014531329a0fabd514f2029dbcdcc5a92c45" resname="1 minute ago">
+        <source>1 minute ago</source>
+        <target state="new">1 minute ago</target>
+        <jms:reference-file line="113">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="116">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="488d8aa53bf2350163124dbadf674b224735e62a" resname="10 days">
+        <source>10 days</source>
+        <target state="new">10 days</target>
+        <jms:reference-file line="131">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4dd0718e255c34c503457b58c987803a4f42a182" resname="11 days">
+        <source>11 days</source>
+        <target state="new">11 days</target>
+        <jms:reference-file line="132">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ad0ac7e91b4643cf527dec588a607e203abf4c94" resname="12 days">
+        <source>12 days</source>
+        <target state="new">12 days</target>
+        <jms:reference-file line="133">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b8f424743a5bf6953568ad8b22c51d7109d252cd" resname="13 days">
+        <source>13 days</source>
+        <target state="new">13 days</target>
+        <jms:reference-file line="134">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="176e595a08b4f909ff37298ae6a37f98f6476606" resname="14 days">
+        <source>14 days</source>
+        <target state="new">14 days</target>
+        <jms:reference-file line="135">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="651c6e4fc5b246cd9558eaf944a1c7f95c33bd1a" resname="14 years">
+        <source>14 years</source>
+        <target state="new">14 years</target>
+        <jms:reference-file line="74">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="db2c5a6fd32a6747b0d3ff4489f03ac03e6bfd3c" resname="15 days">
+        <source>15 days</source>
+        <target state="new">15 days</target>
+        <jms:reference-file line="121">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a4a28fe2fe22f6840e16fdfb382911d5666853fd" resname="16 days">
+        <source>16 days</source>
+        <target state="new">16 days</target>
+        <jms:reference-file line="136">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="372bdc269ba7f4e04b0004091716f91e8570849c" resname="17 days">
+        <source>17 days</source>
+        <target state="new">17 days</target>
+        <jms:reference-file line="137">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5e75eb39828452c195855b4bc4f37a2ecc715e6d" resname="18 days">
+        <source>18 days</source>
+        <target state="new">18 days</target>
+        <jms:reference-file line="138">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d9e1d745a43da9f617142e0bddc4461f5ea49d2d" resname="19 days">
+        <source>19 days</source>
+        <target state="new">19 days</target>
+        <jms:reference-file line="139">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4d2463e1b91a0e2efe9bcdb94f1095025e563617" resname="2 days">
+        <source>2 days</source>
+        <target state="new">2 days</target>
+        <jms:reference-file line="123">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="95993bf59354a47dd3fe5b48eddf8497d7ab7ca0" resname="20 days">
+        <source>20 days</source>
+        <target state="new">20 days</target>
+        <jms:reference-file line="140">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f0505b5ac32e0909d2706a14396f7e4306ab8c82" resname="21 days">
+        <source>21 days</source>
+        <target state="new">21 days</target>
+        <jms:reference-file line="141">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="311a779e724e880e7e623d79d820d1157ccb6f9a" resname="22 days">
+        <source>22 days</source>
+        <target state="new">22 days</target>
+        <jms:reference-file line="142">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5b29901a4e015197067badb27c38a1a7c635dc79" resname="23 days">
+        <source>23 days</source>
+        <target state="new">23 days</target>
+        <jms:reference-file line="143">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="628c120406feae152a49546ebec157eb553c82c3" resname="24 days">
+        <source>24 days</source>
+        <target state="new">24 days</target>
+        <jms:reference-file line="144">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e9e4d34fefc072e6631774efdf23d8f202d38a45" resname="25 days">
+        <source>25 days</source>
+        <target state="new">25 days</target>
+        <jms:reference-file line="145">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f13397513ebb913a12754dcfc9dcad9256b8ca87" resname="26 days">
+        <source>26 days</source>
+        <target state="new">26 days</target>
+        <jms:reference-file line="146">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="35e0970e6760b0f09dfaf6a558db20498d4db526" resname="27 days">
+        <source>27 days</source>
+        <target state="new">27 days</target>
+        <jms:reference-file line="147">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="675dcf356fb8bec1ad1c99a6434769dc2bcd2661" resname="28 days">
+        <source>28 days</source>
+        <target state="new">28 days</target>
+        <jms:reference-file line="148">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="699f71cc861e0e3be4e77ccc50b206ad757acfd9" resname="29 days">
+        <source>29 days</source>
+        <target state="new">29 days</target>
+        <jms:reference-file line="149">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="09ad9df4a1fd1dd4c9a23473c13eee9dd918e432" resname="3 days">
+        <source>3 days</source>
+        <target state="new">3 days</target>
+        <jms:reference-file line="124">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7d4278a875900ffd7f62164dd3ede0b42e509644" resname="30 days">
+        <source>30 days</source>
+        <target state="new">30 days</target>
+        <jms:reference-file line="150">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bbd389364dd5a771434a441eb691ea086d6b0f56" resname="31 days">
+        <source>31 days</source>
+        <target state="new">31 days</target>
+        <jms:reference-file line="151">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8948b448fdcc17e3e6d8393d88a159b6fe5c3bce" resname="4 days">
+        <source>4 days</source>
+        <target state="new">4 days</target>
+        <jms:reference-file line="125">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d7df892f80e3636a011a5fdeac571511d911a1ce" resname="5 days">
+        <source>5 days</source>
+        <target state="new">5 days</target>
+        <jms:reference-file line="126">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6447375004f9743053c637558d773256eb29a316" resname="6 days">
+        <source>6 days</source>
+        <target state="new">6 days</target>
+        <jms:reference-file line="127">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a8dd6adce7a0dcd996c5a1443464cb702001e8b" resname="7 days">
+        <source>7 days</source>
+        <target state="new">7 days</target>
+        <jms:reference-file line="128">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f59fb2aae89238b994c7461f7da0a2ae7e8c477c" resname="8 days">
+        <source>8 days</source>
+        <target state="new">8 days</target>
+        <jms:reference-file line="129">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f69677afe7e65efcfde5a23dfdc4913a36176191" resname="9 days">
+        <source>9 days</source>
+        <target state="new">9 days</target>
+        <jms:reference-file line="130">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9451f4946595d2b49023f465739975a73a1cd288" resname="Add a description to this slide (Maximum chars 300)">
+        <source>Add a description to this slide (Maximum chars 300)</source>
+        <target state="new">Add a description to this slide (Maximum chars 300)</target>
+        <jms:reference-file line="34">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/SlideType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ca91e008f6cb5f8abba94f9657524440ac4d53c6" resname="Add a name to this slide (Maximum 150 chars)">
+        <source>Add a name to this slide (Maximum 150 chars)</source>
+        <target state="new">Add a name to this slide (Maximum 150 chars)</target>
+        <jms:reference-file line="29">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/SlideType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f2aaac94f4a3acf6f39c58f2090ab106f3d4930f" resname="BIG5">
+        <source>BIG5</source>
+        <target state="new">BIG5</target>
+        <jms:reference-file line="34">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c5be79e324f6dc6bfc3c27f72ec6b392480af62" resname="BIG5-HKSCS">
+        <source>BIG5-HKSCS</source>
+        <target state="new">BIG5-HKSCS</target>
+        <jms:reference-file line="36">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1a0371e373ff2700ab0c7bb696ff5d8fb3aad23d" resname="Background color">
+        <source>Background color</source>
+        <target state="new">Background color</target>
+        <jms:reference-file line="45">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a3c686e711e4720f99b4562bb3dbaae7ab658cf2" resname="Category">
+        <source>Category</source>
+        <target state="new">Category</target>
+        <jms:reference-file line="93">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="94e0edeb3fc3c5951d234007193bed2eb836b5c0" resname="Category parnet name">
+        <source>Category parnet name</source>
+        <target state="new">Category parnet name</target>
+        <jms:reference-file line="27">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/CatparentType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="72bda839b7dafab2942b41dfd554b8826f13a6c0" resname="Check for yes">
+        <source>Check for yes</source>
+        <target state="new">Check for yes</target>
+        <jms:reference-file line="48">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProductType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8dc8db59dccec47cfafc309e4cbbab28a9719fac" resname="Code icon">
+        <source>Code icon</source>
+        <target state="new">Code icon</target>
+        <jms:reference-file line="31">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5fb9f4e346aff0761adbc9c9722a540561391eaf" resname="Code image">
+        <source>Code image</source>
+        <target state="new">Code image</target>
+        <jms:reference-file line="24">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9dc23a7997864c55005710ea24536d0e2b74f329" resname="Contact-us">
+        <source>Contact-us</source>
+        <target state="new">Contact-us</target>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Infosgeneral/infositeContact.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="de15f753728a08035f3b255ee52f6eb542d0d443" resname="Content type">
+        <source>Content type</source>
+        <target state="new">Content type</target>
+        <jms:reference-file line="28">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d3c457cbe3e35739086346e0a4048653efa42e7" resname="Distribution">
+        <source>Distribution</source>
+        <target state="new">Distribution</target>
+        <jms:reference-file line="81">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a36b1c4a07a8075ea37d807ee8c0478f36bb47a8" resname="EUCJP">
+        <source>EUCJP</source>
+        <target state="new">EUCJP</target>
+        <jms:reference-file line="38">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d1fc03d291d91cd84a0c802a815c478d224e9042" resname="Enable/Disable">
+        <source>Enable/Disable</source>
+        <target state="new">Enable/Disable</target>
+        <jms:reference-file line="20">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e9957bf66e01930fa10f0557d5796108f1130cd7" resname="Enabled (Check for yes)">
+        <source>Enabled (Check for yes)</source>
+        <target state="new">Enabled (Check for yes)</target>
+        <jms:reference-file line="21">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/MeasureType.php</jms:reference-file>
+        <jms:reference-file line="37">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/SlideType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2a01ccdcf7f8842874a563f805737c9e9eccfb1" resname="Field type">
+        <source>Field type</source>
+        <target state="new">Field type</target>
+        <jms:reference-file line="31">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ExistinType.php</jms:reference-file>
+        <jms:reference-file line="42">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ExistinType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b20b8626ac71ec5966b767f3a27db1efb9164a2" resname="GB2312">
+        <source>GB2312</source>
+        <target state="new">GB2312</target>
+        <jms:reference-file line="35">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="58fcb6276d024d9cf24165432f2b8994f3324b09" resname="HEX code color">
+        <source>HEX code color</source>
+        <target state="new">HEX code color</target>
+        <jms:reference-file line="47">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdcolorType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e4d773805cf8a24c47b008dd036ad6936efd068b" resname="ISO-8859-1">
+        <source>ISO-8859-1</source>
+        <target state="new">ISO-8859-1</target>
+        <jms:reference-file line="31">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="040b237321e1a57c881c5378364f043907979fb0" resname="ISO-8859-15">
+        <source>ISO-8859-15</source>
+        <target state="new">ISO-8859-15</target>
+        <jms:reference-file line="32">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4c2c78376b083ddf5e44e3608ad3cbc8de588a6f" resname="Multiple">
+        <source>Multiple</source>
+        <target state="new">Multiple</target>
+        <jms:reference-file line="34">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ExistinType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="709a23220f2c3d64d1e1d6d18c4d5280f8d82fca" resname="Name">
+        <source>Name</source>
+        <target state="new">Name</target>
+        <jms:reference-file line="24">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ExistinType.php</jms:reference-file>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdsizeType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4dc3900b0aa3513eb7f5655dae3a082ee6bba68c" resname="Name of color">
+        <source>Name of color</source>
+        <target state="new">Name of color</target>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdcolorType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d7b5e6914ece75367b7663d450054b83f24257b1" resname="Product size type">
+        <source>Product size type</source>
+        <target state="new">Product size type</target>
+        <jms:reference-file line="47">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdsizeType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c345f2388a65c1b5a9948567d1ada380b2882b99" resname="Product type">
+        <source>Product type</source>
+        <target state="new">Product type</target>
+        <jms:reference-file line="40">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdsizeType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6aff30073395de71fba4b4738ce5732fbdb5c980" resname="RGB code color">
+        <source>RGB code color</source>
+        <target state="new">RGB code color</target>
+        <jms:reference-file line="40">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdcolorType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6437b7bf655854909262d5f53fbe3bc7a6665b48" resname="Rating">
+        <source>Rating</source>
+        <target state="new">Rating</target>
+        <jms:reference-file line="69">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="65b886da37f0d34d18ccce8278e4976b4e1400a0" resname="Register number">
+        <source>Register number</source>
+        <target state="new">Register number</target>
+        <jms:reference-file line="40">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfoscompanyType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="92906166ef3b10f2811b16cc05581f70b0f617db" resname="Revisit after">
+        <source>Revisit after</source>
+        <target state="new">Revisit after</target>
+        <jms:reference-file line="119">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="be46f2ffbe68f7cc3624d69a534dd32dd0294a6d" resname="Robots">
+        <source>Robots</source>
+        <target state="new">Robots</target>
+        <jms:reference-file line="55">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="34ca9f2e9bedec059779353756117cfa0cd23d9b" resname="Shift_JIS">
+        <source>Shift_JIS</source>
+        <target state="new">Shift_JIS</target>
+        <jms:reference-file line="37">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dd1186892a2f5c2bd17cd7d41f90482e39bd02c5" resname="Single">
+        <source>Single</source>
+        <target state="new">Single</target>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ExistinType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="96de489fe3c2b4dd68982096808dc9222145c984" resname="Sizes">
+        <source>Sizes</source>
+        <target state="new">Sizes</target>
+        <jms:reference-file line="54">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdsizeType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="01370036a262fa4141b58bc582171d9e28feae0b" resname="Taxonomy Cotegoy">
+        <source>Taxonomy Cotegoy</source>
+        <target state="new">Taxonomy Cotegoy</target>
+        <jms:reference-file line="52">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="06551b0394bdeac832f387eb0b7465581225c124" resname="Term of Taxonomy">
+        <source>Term of Taxonomy</source>
+        <target state="new">Term of Taxonomy</target>
+        <jms:reference-file line="38">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/TagTermsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="768e0c1c69573fb588f61f1308a015c11468e05f" resname="Title">
+        <source>Title</source>
+        <target state="new">Title</target>
+        <jms:reference-file line="26">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdsizeType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f1ad85e91997c7b2700dc1a440cafa930e579fae" resname="Title of color">
+        <source>Title of color</source>
+        <target state="new">Title of color</target>
+        <jms:reference-file line="26">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/ProdcolorType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="663b90c899fa25a111067be0c22ffc64dcf581c2" resname="UTF-8">
+        <source>UTF-8</source>
+        <target state="new">UTF-8</target>
+        <jms:reference-file line="30">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f47e9ae6b5dbe632d353e4ecdaeb5785b59030db" resname="about %hours hours ago">
+        <source>about %hours hours ago</source>
+        <target state="new">about %hours hours ago</target>
+        <jms:reference-file line="125">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a0b22cce5cd1d0fdb33d54ab1369933b9b35b24a" resname="about 1 hour ago">
+        <source>about 1 hour ago</source>
+        <target state="new">about 1 hour ago</target>
+        <jms:reference-file line="122">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d87c448044defb778f33158d8ccf94a20531d600" resname="all">
+        <source>all</source>
+        <target state="new">all</target>
+        <jms:reference-file line="57">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="19647db2fbfa143081c02de245d66ab40c2d18e3" resname="animals">
+        <source>animals</source>
+        <target state="new">animals</target>
+        <jms:reference-file line="96">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4635deebe25414c6003dc8218a863a6429f8a99b" resname="astronomy">
+        <source>astronomy</source>
+        <target state="new">astronomy</target>
+        <jms:reference-file line="97">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="332b26598dccaabff87938dfe73c9e38ce116359" resname="cp1252">
+        <source>cp1252</source>
+        <target state="new">cp1252</target>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17a7fac7bffb6537ae6969635c604eeab0c52acd" resname="economics">
+        <source>economics</source>
+        <target state="new">economics</target>
+        <jms:reference-file line="98">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="72917ef6c1d976fb7d5e3e52394a829d441ed3cd" resname="engineering">
+        <source>engineering</source>
+        <target state="new">engineering</target>
+        <jms:reference-file line="99">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c6e454d960df4845f9d69eb11377c8b23882715b" resname="environment">
+        <source>environment</source>
+        <target state="new">environment</target>
+        <jms:reference-file line="100">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c33f059b0ca7725fbfd6c9ea4f2f012cc7ac5a74" resname="family">
+        <source>family</source>
+        <target state="new">family</target>
+        <jms:reference-file line="101">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a1cf62af599e2c2403cd6542a3bbe8f828511be8" resname="finance">
+        <source>finance</source>
+        <target state="new">finance</target>
+        <jms:reference-file line="102">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f7ac253b1bed9171deb0a7bf46da68b63af1e6cc" resname="follow">
+        <source>follow</source>
+        <target state="new">follow</target>
+        <jms:reference-file line="61">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dd27204535de317c6202952eeb2043fad52e3fec" resname="games">
+        <source>games</source>
+        <target state="new">games</target>
+        <jms:reference-file line="103">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dfe2db74975e0aa9f6fdd4d61dedcb7328502456" resname="general">
+        <source>general</source>
+        <target state="new">general</target>
+        <jms:reference-file line="71">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9027cc5a2c1321de60a2d71ccde6229d1152d6d3" resname="global">
+        <source>global</source>
+        <target state="new">global</target>
+        <jms:reference-file line="83">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d9bf6fd6b6d5c433ae4318a5be528f360e9c2e99" resname="half a minute ago">
+        <source>half a minute ago</source>
+        <target state="new">half a minute ago</target>
+        <jms:reference-file line="107">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="834b34f16f451e00f268dd5c8c81d16e3c020275" resname="health">
+        <source>health</source>
+        <target state="new">health</target>
+        <jms:reference-file line="107">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f818dd0b366d5fa7dcd5541b98e25a39d8f9f510" resname="in %days days">
+        <source>in %days days</source>
+        <target state="new">in %days days</target>
+        <jms:reference-file line="181">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ccaca5d5b26cb410e1015106ac46c446d9ef2148" resname="in %minutes minutes">
+        <source>in %minutes minutes</source>
+        <target state="new">in %minutes minutes</target>
+        <jms:reference-file line="169">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc2039a238ce798ad77c85f8155d0bfbeb2ec4a7" resname="in 1 day">
+        <source>in 1 day</source>
+        <target state="new">in 1 day</target>
+        <jms:reference-file line="178">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2298b71681ba15946e2df94a706e5df7ea1be2d5" resname="in 1 minute">
+        <source>in 1 minute</source>
+        <target state="new">in 1 minute</target>
+        <jms:reference-file line="163">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="166">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c8b5e4be255c379a10e10e349026e16ec7df2229" resname="in about %hours hours">
+        <source>in about %hours hours</source>
+        <target state="new">in about %hours hours</target>
+        <jms:reference-file line="175">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9e8c014fc4e74a7ad5d1dc73328934d6b444ae46" resname="in about 1 hour">
+        <source>in about 1 hour</source>
+        <target state="new">in about 1 hour</target>
+        <jms:reference-file line="172">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8c18f0621baad18f87b85d887099529634bbc93e" resname="in half a minute">
+        <source>in half a minute</source>
+        <target state="new">in half a minute</target>
+        <jms:reference-file line="157">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1712980cd5d3e5e2a4c0a1167a852686225bfa60" resname="in less than %seconds seconds">
+        <source>in less than %seconds seconds</source>
+        <target state="new">in less than %seconds seconds</target>
+        <jms:reference-file line="148">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="151">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="154">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="40f25e544997d515de211e851a903036191a1685" resname="in less than a minute">
+        <source>in less than a minute</source>
+        <target state="new">in less than a minute</target>
+        <jms:reference-file line="160">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="166">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e540cdd1328b2b21e29a95405c301b9313b7c346" resname="index">
+        <source>index</source>
+        <target state="new">index</target>
+        <jms:reference-file line="59">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4d0fb475b242228032cbdf6d53924d2538df037b" resname="internet">
+        <source>internet</source>
+        <target state="new">internet</target>
+        <jms:reference-file line="95">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6566243318e061e342a45debda4dd0d8cd48df9a" resname="iu">
+        <source>iu</source>
+        <target state="new">iu</target>
+        <jms:reference-file line="85">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bad665788a37c488970d82be777fcad65c7e3cc9" resname="less than %seconds seconds ago">
+        <source>less than %seconds seconds ago</source>
+        <target state="new">less than %seconds seconds ago</target>
+        <jms:reference-file line="98">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="101">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="104">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="abff00c5e14af3204b29ada18692ccf79736e0a3" resname="less than a minute ago">
+        <source>less than a minute ago</source>
+        <target state="new">less than a minute ago</target>
+        <jms:reference-file line="110">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+        <jms:reference-file line="116">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="efa0c129598db9bb7c6a58d51059f95dc4a574f8" resname="literature">
+        <source>literature</source>
+        <target state="new">literature</target>
+        <jms:reference-file line="104">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="939bb46a04c3640c8c427e92b1b557e882e2d2a0" resname="local">
+        <source>local</source>
+        <target state="new">local</target>
+        <jms:reference-file line="84">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f0499e7c62b78915df63bad0d2b9e3d1c8e1a4e2" resname="mature">
+        <source>mature</source>
+        <target state="new">mature</target>
+        <jms:reference-file line="72">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="db5f81138cb8708b7202533fa46db654a10d1e74" resname="noFollow">
+        <source>noFollow</source>
+        <target state="new">noFollow</target>
+        <jms:reference-file line="62">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1c2dc231cf197b1a6c5ed9dc64580a0549bcb146" resname="noindex">
+        <source>noindex</source>
+        <target state="new">noindex</target>
+        <jms:reference-file line="60">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="71f8e7976e4cbc4561c9d62fb283e7f788202acb" resname="none">
+        <source>none</source>
+        <target state="new">none</target>
+        <jms:reference-file line="58">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9aa15b5bf5c702f55fd8263ecb4f690854aadabd" resname="photography">
+        <source>photography</source>
+        <target state="new">photography</target>
+        <jms:reference-file line="106">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cf4d2385b84329a52ca542285b93d9c4618420df" resname="restricted">
+        <source>restricted</source>
+        <target state="new">restricted</target>
+        <jms:reference-file line="73">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c651445273f6c41e717155ebd14771e9756dcbbd" resname="shopping">
+        <source>shopping</source>
+        <target state="new">shopping</target>
+        <jms:reference-file line="108">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c981d125d1a564c9f5738faff51d59d98711f145" resname="software">
+        <source>software</source>
+        <target state="new">software</target>
+        <jms:reference-file line="105">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="150a8af76a92892f269dead204d533cbfad5cd7f" resname="sports">
+        <source>sports</source>
+        <target state="new">sports</target>
+        <jms:reference-file line="109">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f7956b2763e6ff1741381e063233bb4d3c512568" resname="travel">
+        <source>travel</source>
+        <target state="new">travel</target>
+        <jms:reference-file line="110">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Form/Type/InfositemetasType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fd3b10d36c29f5baf8ff223ee18450f6b70bde25" resname="{1} 1 month ago |]1,Inf[ %months months ago">
+        <source>{1} 1 month ago |]1,Inf[ %months months ago</source>
+        <target state="new">{1} 1 month ago |]1,Inf[ %months months ago</target>
+        <jms:reference-file line="136">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="69eb68cb2ac8fcaf9b42ea4d69892f87a982d470" resname="{1} 1 year ago |]1,Inf[ %years years ago">
+        <source>{1} 1 year ago |]1,Inf[ %years years ago</source>
+        <target state="new">{1} 1 year ago |]1,Inf[ %years years ago</target>
+        <jms:reference-file line="139">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Twig/Extension/TimeAgoExtension.php</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

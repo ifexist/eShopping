@@ -1,0 +1,34 @@
+{% trans_default_domain 'shop' %}
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+       aria-expanded="true">
+        <span class="btn btn-xs btn-info fa fa-share-alt" title="{{ 'Share this page'|trans }}"> <span class="caret"></span></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&t=Eshop%20Ifexist&picture=http://eshop.ifexist.com/demo.png" target="_blank" title="Share on Facebook">
+                <span class=" btn btn-xs btn-default fa fa-facebook"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://plus.google.com/share?url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}" target="_blank" title="Share on Google+">
+                <span class=" btn btn-xs btn-default fa fa-google-plus"></span>
+            </li>
+        <li>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&title=Eshop%20Ifexist&summary=Create%20your%20Eshop%20site%20fastly%20by%20this%20Eshop%20Ifexist%20request%20un%20free%20quote%20%3A%20here&source={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}" target="_blank" title="Share on LinkedIn">
+                <span class=" btn btn-xs btn-default fa fa-linkedin"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/intent/tweet?source={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&text=Eshop%20Ifexist:%20{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&via=Create your Eshop site fastly by this Eshop Ifexist request un free quote : here" target="_blank" title="Tweet">
+                <span class=" btn btn-xs btn-default fa fa-twitter"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.addthis.com/tellfriend_v2.php?v=300&winname=addthis&pub=ra-56a3bedc092bdd44&source=tbx32-300&lng=fr&s=email&url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&title=Pour%20l%E2%80%99amiral%20Debray%2C%20si%20des%20accords%20strat%C3%A9giques%20sont%20possibles%2C%20l%E2%80%99OTAN%20est%20une%20force%20d%E2%80%99occupation&ate=AT-ra-564c970b7a029bf1/-/-/577a563199cbbf98/2&description=Le%20Brexit%2C%20s%E2%80%99il%20est%20respect%C3%A9%2C%20pourrait%20aussi%20bouleverser%20l%E2%80%99UE%20en%20termes%20militaires%2C%20explique%20l%E2%80%99amiral%20Debray%20%C3%A0%20RT%20France%2C%20confiant%20sa%20vision%20de%20la%20s%C3%A9curit%C3%A9%20en%20Europe%2C%20l%E2%80%99h%C3%A9g%C3%A9monie%20am%C3%A9ricaine%20et%20l%E2%80%99imp%C3%A9ratif%2C%20pour%20un%20pays%2C%20d%E2%80%99%C3%AAtre%20ma%C3%AEtre%20de%20sa%20d%C3%A9fense.&uud=1&ct=1&ui_email_to=&ui_email_from=&ui_email_note=&pre=https%3A%2F%2Fwww.facebook.com&tt=0&captcha_provider=recaptcha2&pro=1&ats=imp_url%3D1%26url%3Dhttps%253A%252F%252Ffrancais.rt.com%252Fentretiens%252F22811-entretien-amiral-debray%26title%3DPour%2520l%25E2%2580%2599amiral%2520Debray%252C%2520si%2520des%2520accords%2520strat%25C3%25A9giques%2520sont%2520possibles%252C%2520l%25E2%2580%2599OTAN%2520est%2520une%2520force%2520d%25E2%2580%2599occupation%26description%3DLe%2520Brexit%252C%2520s%25E2%2580%2599il%2520est%2520respect%25C3%25A9%252C%2520pourrait%2520aussi%2520bouleverser%2520l%25E2%2580%2599UE%2520en%2520termes%2520militaires%252C%2520explique%2520l%25E2%2580%2599amiral%2520Debray%2520%25C3%25A0%2520RT%2520France%252C%2520confiant%2520sa%2520vision%2520de%2520la%2520s%25C3%25A9curit%25C3%25A9%2520en%2520Europe%252C%2520l%25E2%2580%2599h%25C3%25A9g%25C3%25A9monie%2520am%25C3%25A9ricaine%2520et%2520l%25E2%2580%2599imp%25C3%25A9ratif%252C%2520pour%2520un%2520pays%252C%2520d%25E2%2580%2599%25C3%25AAtre%2520ma%25C3%25AEtre%2520de%2520sa%2520d%25C3%25A9fense.%26smd%3Drsi%253D%2526gen%253D0%2526rsc%253D%2526dr%253Dhttps%25253A%25252F%25252Fwww.facebook.com%2526sta%253DAT-ra-564c970b7a029bf1%25252F-%25252F-%25252F577a563199cbbf98%25252F1%26hideEmailSharingConfirmation%3Dundefined%26service%3Demail%26media%3Dundefined%26passthrough%3Dundefined%26email_template%3Dundefined%26email_vars%3Dundefined&atc=username%3Dra-564c970b7a029bf1%26services_exclude%3Dskype%26services_exclude_natural%3Dskype%26services_compact%3Dfacebook%252Ctwitter%252Cprint%252Cemail%252Cgoogle_plusone_share%252Cpinterest_share%252Clinkedin%252Cgmail%252Cviadeo%252Cmailto%252Cmore%26product%3Dtbx32-300%26pubid%3Dra-564c970b7a029bf1%26ui_pane%3Demail&rb=false">
+            
+                <span class=" btn btn-xs btn-default fa fa-envelope-o"></span>
+            </a>
+        </li>
+    </ul>
+</li>

@@ -1,0 +1,177 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block page_content -%}
+    <h3>{{ 'Information of website'|trans }}</h3>
+    {% include "@Admin/Infosite/Includes/imagesite.html.twig" %}
+    <br><br>
+    <table class="record_properties table table-bordered table-striped">
+        <tbody>
+        <tr>
+            <td><a href="{{ path('admin_infosite_edit', { 'id': entity.id }) }}" class="btn btn-xs btn-primary" title="{{ 'Edit'|trans }}"><i class="fa fa-edit"></i> {{ 'Edit'|trans }}</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th width="25%">{{ 'Website'|trans }}</th>
+            <td width="75%">{{ entity.namesite }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Slogan'|trans }}</th>
+            <td>{{ entity.slogan }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Activity of site'|trans }}</th>
+            <td>{{ entity.prodcats }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Infos service'|trans }} 1</th>
+            <td>
+                {% if entity.contactservice1 != "" or entity.titleservice1 != "" or entity.emailservice1 != "" or entity.phoneservice1 != "" %}
+                    <div class="btn-group-xs">
+                        {% if entity.titleservice1 != "" %}
+                            <span class="btn btn-default fa fa-asterisk">
+                                &nbsp;{{ entity.titleservice1 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.contactservice1 != "" %}
+                            <span class="btn btn-default fa fa-user">
+                                &nbsp;{{ entity.contactservice1 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.emailservice1 != "" %}
+                            <span class="btn btn-default fa fa-envelope">
+                                &nbsp;{{ entity.emailservice1 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.phoneservice1 != "" %}
+                            <span class="btn btn-default fa fa-phone">
+                                &nbsp;{{ entity.phoneservice1 }}
+                            </span>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <span class="label label-danger">{{ 'None'|trans }}</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Infos service'|trans }} 2</th>
+            <td>
+                {% if entity.contactservice2 != "" or entity.titleservice2 != "" or entity.emailservice2 != "" or entity.phoneservice2 != "" %}
+                    <div class="btn-group-xs">
+                        {% if entity.titleservice2 != "" %}
+                            <span class="btn btn-default fa fa-asterisk">
+                                &nbsp;{{ entity.titleservice2 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.contactservice2 != "" %}
+                            <span class="btn btn-default fa fa-user">
+                                &nbsp;{{ entity.contactservice2 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.emailservice2 != "" %}
+                            <span class="btn btn-default fa fa-envelope">
+                                &nbsp;{{ entity.emailservice2 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.phoneservice2 != "" %}
+                            <span class="btn btn-default fa fa-phone">
+                                &nbsp;{{ entity.phoneservice2 }}
+                            </span>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <span class="label label-danger">{{ 'None'|trans }}</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Infos service'|trans }} 3</th>
+            <td>
+                {% if entity.contactservice3 != "" or entity.titleservice3 != "" or entity.emailservice3 != "" or entity.phoneservice3 != "" %}
+                    <div class="btn-group-xs">
+                        {% if entity.titleservice3 != "" %}
+                            <span class="btn btn-default fa fa-asterisk">
+                                &nbsp;{{ entity.titleservice3 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.contactservice3 != "" %}
+                            <span class="btn btn-default fa fa-user">
+                                &nbsp;{{ entity.contactservice3 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.emailservice3 != "" %}
+                            <span class="btn btn-default fa fa-envelope">
+                                &nbsp;{{ entity.emailservice3 }}
+                            </span>
+                        {% endif %}
+                        {% if entity.phoneservice3 != "" %}
+                            <span class="btn btn-default fa fa-phone">
+                                &nbsp;{{ entity.phoneservice3 }}
+                            </span>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <span class="label label-danger">{{ 'None'|trans }}</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'Media link'|trans }}
+            </th>
+            <td>
+                {% include "@Admin/Infosite/Includes/infositelinks.html.twig" %}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'Themes'|trans }}
+            </th>
+            <td>
+                <div class="col-md-6">
+                    {{ 'Site theme'|trans }}
+                    <img src="{{ asset('bootswatch/skins/' ~ entity.sitestyle ~ '/thumbnail.png') }}" width="100%">
+                </div>
+                <div class="col-md-6">
+                    {{ 'Admin theme'|trans }}
+                    <img src="{{ asset('bootswatch/skins/' ~ entity.adminstyle ~ '/thumbnail.png') }}" width="100%">
+                </div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td><a href="{{ path('admin_infosite_edit', { 'id': entity.id }) }}" class="btn btn-xs btn-primary" title="{{ 'Edit'|trans }}"><i class="fa fa-edit"></i> {{ 'Edit'|trans }}</a></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/fancybox/jquery.mousewheel-3.0.6.pack.js') }}"
+            type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/fancybox/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock javascripts %}

@@ -1,0 +1,4 @@
+services:
+#    contact.example:
+#        class: Eshop\ContactBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

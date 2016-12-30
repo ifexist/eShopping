@@ -1,0 +1,87 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock stylesheets %}
+{% block page_content -%}
+    <h3>{{ 'Prdouct color edit'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_prodcolor') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+        <a href="{{ path('admin_prodcolor_show', { 'id': entity.id }) }}" class="btn btn-default">{{ 'view'|trans }}</a>
+        <a href="{{ path('admin_prodcolor_new') }}" class="btn btn-default">{{ 'add'|trans }}</a>
+    </div>
+
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success" role="alert">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {{ form_start(edit_form) }}
+    
+
+    <table class="table table-responsive">
+        <tr>
+            <td>
+                <div class="col-md-2">
+                    {{ form_widget(edit_form.enable) }}
+                </div>
+                <div class="col-md-10">
+                    <i class="text-primary btn btn-succes">{{ 'Check'|trans }}/{{ 'Unchck'|trans }} {{ 'to'|trans }} {{ 'Enable'|trans }}/{{ 'Disable'|trans }}</i>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-md-3">
+                    {{ 'Title of color'|trans }} <span class="small">({{ 'Maximum'|trans }} 30 {{ 'Chars'|trans }})</span><br>
+                    {{ form_widget(edit_form.title, {'attr': {'class': 'col-md-12', 'maxlength':30} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ 'Name of color'|trans }} <span class="small">({{ 'Maximum'|trans }} 25 {{ 'Chars'|trans }})</span><br>
+                    {{ form_widget(edit_form.name, {'attr': {'class': 'col-md-12', 'maxlength':25} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ 'RGB code color'|trans }} <span class="small">({{ 'Maximum'|trans }} 15 {{ 'Chars'|trans }})</span><br>
+                    {{ form_widget(edit_form.code1, {'attr': {'class': 'col-md-12', 'maxlength':15} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ 'HEX code color'|trans }} <span class="small">({{ 'Maximum'|trans }} 15 {{ 'Chars'|trans }})</span><br>
+                    {{ form_widget(edit_form.code2, {'attr': {'class': 'col-md-12', 'maxlength':15} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="{{ 'save'|trans }}" class="btn btn-warning"/>
+            </td>
+        </tr>
+    </table>
+    {{ form_rest(edit_form) }}
+    {{ form_end(edit_form) }}
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/js/speakingurl.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        {% include '@Admin/Partials/initSummernote.js.twig' with {'height': 300} %}
+
+
+    </script>
+{% endblock javascripts %}

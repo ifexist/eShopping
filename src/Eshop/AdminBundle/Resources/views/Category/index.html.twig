@@ -1,0 +1,89 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block title %}
+    {{ 'Category list'|trans }} - {{ 'Administration panel'|trans }}
+{% endblock title %}
+
+{% block page_content -%}
+    <h3>{{ 'Category list'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_catparent') }}" class="btn btn-warning">{{ 'Parents Categories'|trans }}</a>
+        <a href="{{ path('admin_category_new') }}" class="btn btn-success">
+            <span class="glyphicon glyphicon-plus"></span>
+            {{ 'Create a new category'|trans }}
+        </a>
+    </div>
+    <p>
+    </p>
+    <table class="table">
+        <tr>
+            <th>{{ 'Image'|trans }}</th>
+            <th class="dropdown">
+                <a href="#" data-toggle="dropdown" class="btn btn-xs btn-default dropdown-toggle">
+                    <i class="fa fa-list"></i> {{ 'Sort by'|trans }} <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>{{ knp_pagination_sortable(entities, 'Main Category'|trans, 'parent.') }}</li>
+                    <li>{{ knp_pagination_sortable(entities, 'Category'|trans, 'c.name') }}</li>
+                    <li>{{ knp_pagination_sortable(entities, 'Description'|trans, 'c.description') }}</li>
+                </ul>
+            </th>
+            <th>{{ 'Actions'|trans }}</th>
+        </tr>
+    {% for entity in entities %} 
+        <tr>
+            <td width="10%">
+                {% if entity.path %}
+                    <a href="{{ path('admin_category_show', { 'id': entity.id }) }}">
+                        <img src="{{ asset( ('uploads/images/category/' ~ entity.path) | imagine_filter('some_thumb')) }}" width="100%"/>
+                    </a>
+                {% else %}
+                    <img src="{{ asset('no-logo.jpg') }}">
+                {% endif %}
+            </td>
+            <td width="80%">
+                <h4>
+                    <a href="{{ path('admin_category_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
+                    {% for parent in catparents if parent.id == entity.parent.id %}
+                        <span class="small">(<b>{{ 'Main Category'|trans  }}</b> {{ parent.name|trans }})</small>
+                        {% endfor %} 
+                </h4>
+                {{ entity.description|truncate(300)|raw }}
+            </td>
+            <td width="10%">
+                <div class="btn-group-xs">
+                    <a href="{{ path('admin_category_show', { 'id': entity.id }) }}" class="btn btn-default" title="{{ 'show'|trans }}"><i class="fa fa-eye"></i></a>
+                    <a href="{{ path('admin_category_edit', { 'id': entity.id }) }}" class="btn btn-primary" title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <div class="row">
+        <div class="col-md-12">
+            {{ knp_pagination_render(entities) }}
+        </div>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/fancybox/jquery.mousewheel-3.0.6.pack.js') }}"
+    type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/fancybox/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+        });
+    </script>
+{% endblock javascripts %}
+
+
+

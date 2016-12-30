@@ -1,0 +1,269 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% trans_default_domain 'shop' %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/shop/geoaddresspicker/demos/themes/base/jquery.ui.all.css') }}">
+{% endblock stylesheets %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDSnhhW98gdQkwQ1hSJ9ztQppJTj_1x7kU"></script>
+    <script src="{{ asset('geocomplete/js/jquery.js') }}"></script>
+    <script src="{{ asset('geocomplete/js/geocomplete-modified.js') }}"></script>
+    <script>
+            $(document).ready(function () {
+                $("#geocomplete").geocomplete({
+                    details: '#geo_details',
+                    detailsAttribute: "data-geo",
+                    types: ['geocode', 'establishment']
+                }).bind("geocode:result", function (event, result) {
+                    console.log(event, result);
+                    if (result.opening_hours.weekday_text[0].length) {
+                        //start opening_hours
+                        $('[data-geo=opening_hours]').val(
+                                result.opening_hours.weekday_text[0] + '\n' +
+                                result.opening_hours.weekday_text[1] + '\n' +
+                                result.opening_hours.weekday_text[2] + '\n' +
+                                result.opening_hours.weekday_text[3] + '\n' +
+                                result.opening_hours.weekday_text[4] + '\n' +
+                                result.opening_hours.weekday_text[5] + '\n' +
+                                result.opening_hours.weekday_text[6]
+                                );
+                    } else {
+                        $('[data-geo=opening_hours]').val("");
+                    }
+
+                if (result.photos.length) {
+                    var photosN = result.photos;
+                    var text = "";
+                    var i;
+                    for (i = 0; i < photosN.length; i++) {
+                        text += photosN[i].getUrl({maxHeight: 400, maxWidth: 800}) + "|";
+                    }
+                    document.getElementById("photos").innerHTML = text;
+                }
+
+                    if (result.reviews[0].language) {
+                        $('[data-geo=language]').val(
+                                result.reviews[0].language
+                                );
+                    } else {
+                        $('[data-geo=language]').val("");
+                    }
+
+                    //end language
+
+                });
+            });
+
+</script>
+{% endblock javascripts %}
+{% block page_content -%}
+    <h3>{{ "Edit your company's information"|trans }} <a href="{{ path('admin_infoscompany_show', { 'id': entity.id }) }}" class="btn btn-default"><i class="fa fa-eye"> {{ 'Show'|trans }}</i></a></h3>
+    {{ include('@Admin/Infoscompany/Includes/Menus/top.html.twig') }}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success" role="alert">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    <div id="geo_details">
+    {{ form_start(edit_form) }}
+    <div style="display: none">
+    {{ form_widget(edit_form.latitude, {'attr':{'data-geo':'lat'} }) }}
+    {{ form_widget(edit_form.longitude, {'attr':{'data-geo':'lng'} }) }}
+    </div>
+    <table class="record_properties table table-bordered">
+        <tr>
+            <td class="col-sm-6">
+                <b>{{ 'Locality'|trans }}</b> 
+                <span style="font-size: 12px;color:#666;">
+                    ({{ 'auto completion'|trans|capitalize }} : <a href="https://developers.google.com/maps/"><b>Google</b></a>).<span> 
+                <span class="small">
+                {{ "Your informations on"|trans }} <a href="https://www.google.com/maps" class="btn btn-xs btn-info" target="_blank"><b class="fa fa-map-marker"> Google maps</b></a><a href="https://business.google.com" class="btn btn-xs btn-warning" target="_blank"><b>Google my bunsiss</b></a>
+                <span>
+            </td>
+            <th class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ 'Name of company'|trans }} *
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'Principal Activity'|trans }} *
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'Principal Product or service'|trans }} *
+                    </div>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="geocomplete" id="geocomplete" class="col-md-12" placeholder="{{ 'Enter your business name'|trans }}" value="" style="font-size:16px;">        
+            </td>
+            <td>     
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.namets, {'attr': {'data-geo':'name', 'class': 'col-lg-12', 'required':'required'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.activity, {'attr': {'class': 'col-lg-12', 'required':'required'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.prodtype, {'attr': {'class': 'col-lg-12', 'required':'required'} }) }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ 'City'|trans }} *
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'Departement'|trans }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'Provance'|trans }}
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="row">
+                    <div class="col-sm-3">
+                        {{ 'Street number'|trans }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ 'Address'|trans }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ 'Postal Code'|trans }}
+                    </div>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.city, {'attr': {'class': 'col-lg-12', 'data-geo':'locality'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.department, {'attr': {'class': 'col-lg-12', 'data-geo':'administrative_area_level_2'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.region, {'attr': {'class': 'col-lg-12', 'data-geo':'administrative_area_level_1'} }) }}
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="row">
+                    <div class="col-sm-2">
+                        {{ form_widget(edit_form.streetnum, {'attr': {'class': 'col-lg-12', 'data-geo':'street_number'} }) }}
+                    </div>
+                    <div class="col-sm-7">
+                        {{ form_widget(edit_form.address, {'attr': {'class': 'col-lg-12', 'data-geo':'route'} }) }}
+                    </div>
+                    <div class="col-sm-3">
+                        {{ form_widget(edit_form.zipcode, {'attr': {'class': 'col-lg-12', 'data-geo':'postal_code'} }) }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ 'Country'|trans }} *
+                    </div>
+                    <div class="col-sm-2">
+                        {{ 'Currency'|trans }} *
+                    </div>
+                    <div class="col-sm-2">
+                        {{ 'Language'|trans }} *
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'VAT'|trans }} (<em class="text-danger">{{ 'Without'|trans }} %</em>)
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ 'Register number'|trans }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'E-mail'|trans }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ 'Phone'|trans }}
+                    </div>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.country, {'attr': {'class': 'col-lg-12', 'data-geo':'country'} }) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_widget(edit_form.currencycode, {'attr': {'class': 'col-lg-12'} }) }}
+                    </div>
+                    <div class="col-sm-2">
+                        {{ form_widget(edit_form.langcode, {'attr': {'class': 'col-lg-12', 'data-geo':'language'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="input-group">
+                        {{ form_widget(edit_form.vat, {'attr': {'class': 'col-lg-12', 'style':'z-index:900;'} }) }}
+                        <span class="input-group-btn">
+                          <button class="btn btn-default" type="button">%</button>
+                        </span>
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-sm-4 -->
+                </div>
+            </td>
+            <td>
+                <div class="row">
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.register, {'attr': {'class': 'col-lg-12'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.email, {'attr': {'class': 'col-lg-12'} }) }}
+                    </div>
+                    <div class="col-sm-4">
+                        {{ form_widget(edit_form.phone, {'attr': {'class': 'col-lg-12'} }) }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Other additional information of your company'|trans }} *</th>
+            <th class="text-info text-center"><h4></b>{{ 'Important'|trans }}! * = {{ 'Required'|trans }}</b></h4></th>
+        </tr>
+        <tr>
+            <td>{{ form_widget(edit_form.content, {'attr': {'class': 'col-lg-12', 'rows':'7', 'required':'required'} }) }}</td>
+            <td class="alert alert-info">
+                <span class="text-center text-bold">
+                    <h4>{{ 'Entering of all fields, is not mandatory'|trans }}</h4>
+                    <p>
+                        {{ 'However, it is important to grasp the most possble box'|trans }}. 
+                        {{ 'These information are units to better ranking of your website and business'|trans }}.
+                    </p>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                <input type="submit" value="{{ 'Save'|trans }}" class="col-md-12 btn btn-success"/>
+            </td>
+        </tr>
+    </table>
+    {{ form_rest(edit_form) }}
+    {{ form_end(edit_form) }}
+    </div>
+{% endblock page_content %}

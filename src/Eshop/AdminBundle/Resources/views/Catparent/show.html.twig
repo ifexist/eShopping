@@ -1,0 +1,76 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block page_content -%}
+    <h3>{{ 'Main Category'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_category') }}" class="btn btn-warning">{{ 'Categories'|trans }}</a>
+        <a href="{{ path('admin_catparent') }}" class="btn btn-default">{{ 'Parents Categories'|trans }}</a>
+        <a href="{{ path('admin_catparent_edit', { 'id': entity.id }) }}" class="btn btn-primary">{{ 'Edit'|trans }}</a>
+        <a href="{{ path('admin_catparent_new') }}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> {{ 'Create a new main category'|trans }}</a>
+    </div>
+
+    <table class="table table-striped">
+        <tr>
+            <th width="30%">{{ 'Enable'|trans }}</th>
+            <td width="70%">{% if entity.enable == 1 %}{{ 'Yes'|trans }}{% else %}{{ 'No'|trans }}{% endif %}</td>
+        </tr>.
+        <tr>
+            <th>{{ 'Name'|trans }}</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Description'|trans }}</th>
+            <td>
+                {{ entity.description|rawdescr|nl2br }}
+            </td>
+        </tr>
+    </table>
+    <br>
+    <div class="col-md-10 col-md-offset-2">
+        <ul class="list-group">
+            <li class="list-group-item">
+                {% if cntCategories > 0 %}
+                    <h4 class="text-danger">{{ 'deleteRestrictionChild'|trans }}</h4>
+                {% else %}
+                {% include "@Admin/Partials/Includes/Modals/deleteConfirm.html.twig" %}
+                {{ form_start(delete_form) }}
+                {{ form_widget(delete_form) }}
+                <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete" data-title="{{ 'Delete'|trans }} {{ entity.name }}" data-message="{{ 'Are you sure to delete this data'|trans }} ?">
+                    <i class="fa fa-trash"></i> {{ 'Delete'|trans }}
+                </button>
+                    &nbsp;&nbsp;<span class="text-danger"><strong>{{ 'Warning'|trans }} !</strong> {{ 'Removing these data will be irreversible'|trans }}.</span>
+                {{ form_end(delete_form) }}
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/fancybox/jquery.mousewheel-3.0.6.pack.js') }}"
+            type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/fancybox/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock javascripts %}

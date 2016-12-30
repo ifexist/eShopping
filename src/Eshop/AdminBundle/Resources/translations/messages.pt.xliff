@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-12-30T11:35:33Z" source-language="en" target-language="pt" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="97c89a4d6630adeb18fa12ba9976a31413fe293e" resname="Action">
+        <source>Action</source>
+        <target state="new">Action</target>
+        <jms:reference-file line="9">/../src/Eshop/AdminBundle/Resources/views/Translator/formSelectFile.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="53fbc0cef86970b75b8e2e016df5d9227deff0c8" resname="Are you sure">
+        <source>Are you sure</source>
+        <target state="new">Are you sure</target>
+        <jms:reference-file line="74">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="23ed731baa70210b0018815c933e79895e2422a1" resname="Bundle">
+        <source>Bundle</source>
+        <target state="new">Bundle</target>
+        <jms:reference-file line="6">/../src/Eshop/AdminBundle/Resources/views/Translator/formSelectFile.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6ccb60071be8f00760a3824d9f7d0fad57de789f" resname="Categories">
+        <source>Categories</source>
+        <target state="new">Categories</target>
+        <jms:reference-file line="2">/../src/Eshop/AdminBundle/Resources/views/Category/Includes/Menus/top.html.twig</jms:reference-file>
+        <jms:reference-file line="24">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fa756d077568ca3fa7947f31c705c22d117ea195" resname="Chars">
+        <source>Chars</source>
+        <target state="new">Chars</target>
+        <jms:reference-file line="42">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+        <jms:reference-file line="48">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b5e84be0e45d1f4cc38276a4ec0e7fdea116bcf" resname="Check">
+        <source>Check</source>
+        <target state="new">Check</target>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2b393fc5e9257a04393abb3973d9f6bb71d6c584" resname="Choose the elements in the lists for the translation">
+        <source>Choose the elements in the lists for the translation</source>
+        <target state="new">Choose the elements in the lists for the translation</target>
+        <jms:reference-file line="1">/../src/Eshop/AdminBundle/Resources/views/Translator/formSelectFile.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="aeafdacf6b6f9bbc4ce5ed5e30db27c33440071c" resname="Click to image for change banner">
+        <source>Click to image for change banner</source>
+        <target state="new">Click to image for change banner</target>
+        <jms:reference-file line="6">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="8">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="6">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+        <jms:reference-file line="8">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="160988d7e0ee212a769357faa8c65cf5e5a8f6a6" resname="Click to image for change icon">
+        <source>Click to image for change icon</source>
+        <target state="new">Click to image for change icon</target>
+        <jms:reference-file line="48">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="50">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="48">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+        <jms:reference-file line="50">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7f3a34bd12e46c46300438e783118bac4ca52844" resname="Click to image for change logo">
+        <source>Click to image for change logo</source>
+        <target state="new">Click to image for change logo</target>
+        <jms:reference-file line="27">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="29">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="27">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+        <jms:reference-file line="29">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dda88c4385c6fedd2694f06ccc93a0126b1f4646" resname="Click to image for upload banner">
+        <source>Click to image for upload banner</source>
+        <target state="new">Click to image for upload banner</target>
+        <jms:reference-file line="15">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="17">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="15">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+        <jms:reference-file line="17">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b778b237e461986a81cfbb9e21cbbc81c61478eb" resname="Click to image for upload icon">
+        <source>Click to image for upload icon</source>
+        <target state="new">Click to image for upload icon</target>
+        <jms:reference-file line="57">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="59">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="57">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+        <jms:reference-file line="59">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d7eb8d1e5219b8df5e359e004f983a94249c6c77" resname="Click to image for upload logo">
+        <source>Click to image for upload logo</source>
+        <target state="new">Click to image for upload logo</target>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="38">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/imagesite.html.twig</jms:reference-file>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+        <jms:reference-file line="38">/../src/Eshop/AdminBundle/Resources/views/Infositemetas/Includes/imagelink.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="933d3a5c76e3af7e2b5d9be5953b35dd2bb19352" resname="Company settings">
+        <source>Company settings</source>
+        <target state="new">Company settings</target>
+        <jms:reference-file line="1">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/Includes/Menus/top.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2e02623966f9391facf6eaefc8b079ed5b630bee" resname="Continue">
+        <source>Continue</source>
+        <target state="new">Continue</target>
+        <jms:reference-file line="39">/../src/Eshop/AdminBundle/Resources/views/Translator/formSelectFile.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="55f8ebc805e65b5b71ddafdae390e3be2bcd69af" resname="Description">
+        <source>Description</source>
+        <target state="new">Description</target>
+        <jms:reference-file line="48">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9a7d4e0687b14e2b7cda406900b802782cd50a62" resname="Disable">
+        <source>Disable</source>
+        <target state="new">Disable</target>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5301648dcf6b53cefc9ed52999aaa92d4603cae0" resname="Edit">
+        <source>Edit</source>
+        <target state="new">Edit</target>
+        <jms:reference-file line="74">/../src/Eshop/AdminBundle/Resources/views/Infosite/Includes/infositelinks.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="20063ad9053289cecaa20ae630ed2dd758282a07" resname="Enable">
+        <source>Enable</source>
+        <target state="new">Enable</target>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c73a21415402fd994c68697eec7d1144b10c393c" resname="Enter one parent category name">
+        <source>Enter one parent category name</source>
+        <target state="new">Enter one parent category name</target>
+        <jms:reference-file line="42">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="923ead4b23b63e80b6863a451e15314bfd55e11b" resname="Example Man, Woman, Kid, ...">
+        <source>Example Man, Woman, Kid, ...</source>
+        <target state="new">Example Man, Woman, Kid, ...</target>
+        <jms:reference-file line="43">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="89b86ab0e66f527166d98df92ddbcf5416ed58f6" resname="Language">
+        <source>Language</source>
+        <target state="new">Language</target>
+        <jms:reference-file line="8">/../src/Eshop/AdminBundle/Resources/views/Translator/formSelectFile.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1dc1dc9703747f8db301579d009a36cd0d8ad553" resname="Main category creation">
+        <source>Main category creation</source>
+        <target state="new">Main category creation</target>
+        <jms:reference-file line="22">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a8df2fec28d8948a0326722029c7492b88ee4fbe" resname="Maximum">
+        <source>Maximum</source>
+        <target state="new">Maximum</target>
+        <jms:reference-file line="42">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+        <jms:reference-file line="48">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0fe1957f3eabb724c6e02ebc9a49c2e38b1588b6" resname="Parents Categories">
+        <source>Parents Categories</source>
+        <target state="new">Parents Categories</target>
+        <jms:reference-file line="1">/../src/Eshop/AdminBundle/Resources/views/Category/Includes/Menus/top.html.twig</jms:reference-file>
+        <jms:reference-file line="25">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="16fc9b6e98066aa25ef5962838b5ee10d3063e2d" resname="Translation file prefix">
+        <source>Translation file prefix</source>
+        <target state="new">Translation file prefix</target>
+        <jms:reference-file line="7">/../src/Eshop/AdminBundle/Resources/views/Translator/formSelectFile.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bdde5c04279169e84e89ecd06bfc8d10ac14b9f3" resname="Unchck">
+        <source>Unchck</source>
+        <target state="new">Unchck</target>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="89b96991575f9229a104eb8e2a47537a2b25b185" resname="Website Media links">
+        <source>Website Media links</source>
+        <target state="new">Website Media links</target>
+        <jms:reference-file line="4">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/Includes/Menus/top.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="afe43bd2878abb6c549bf31a81de2fc452cfcf2d" resname="Website Meta tags">
+        <source>Website Meta tags</source>
+        <target state="new">Website Meta tags</target>
+        <jms:reference-file line="3">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/Includes/Menus/top.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="016ff8af026a38c69a2e60c10ded00adfa7c28be" resname="Website settings">
+        <source>Website settings</source>
+        <target state="new">Website settings</target>
+        <jms:reference-file line="2">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/Includes/Menus/top.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="13a4a11319d31c1b323d5774f44240a9ffc984d0" resname="save">
+        <source>save</source>
+        <target state="new">save</target>
+        <jms:reference-file line="54">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4374aaee247fb237ce6c97d5c8d64bbe474d16de" resname="to">
+        <source>to</source>
+        <target state="new">to</target>
+        <jms:reference-file line="36">/../src/Eshop/AdminBundle/Resources/views/Catparent/new.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

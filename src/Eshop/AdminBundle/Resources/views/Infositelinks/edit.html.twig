@@ -1,0 +1,238 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block page_content -%}
+    <h3>{{ "Add your media links"|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_infositelinks_show', { 'id': entity.id }) }}" class="btn btn-default">{{ 'View'|trans }}</a>
+    </div>
+    
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>
+            {{ 'Entering of all fields, is not mandatory'|trans }}. 
+            {{ 'However, it is important to grasp the most possble box'|trans }}. 
+            {{ 'These information are units to better ranking of your website and business'|trans }}.
+        </p>
+    </div>
+    {{ form_start(edit_form) }}
+    <table class="record_properties table table-bordered table-striped">
+        <tr>
+            <th>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 1
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 1
+                </div>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 2
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 2
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-xs-2">
+                    <select name="mediatitle1" class="col-md-12">
+                        <option value="{{ entity.mediatitle1 }}" selected="selected">{{ entity.mediatitle1|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink1, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-xs-2">
+                    <select name="mediatitle2" class="text-info col-md-12">
+                        <option value="{{ entity.mediatitle2 }}" selected="selected">{{ entity.mediatitle2|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink2, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 3
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 3
+                </div>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 4
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 4
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-xs-2">
+                    <select name="mediatitle3" class="col-md-12">
+                        <option value="{{ entity.mediatitle3 }}" selected="selected">{{ entity.mediatitle3|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink3, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-xs-2">
+                    <select name="mediatitle4" class="col-md-12">
+                        <option value="{{ entity.mediatitle4 }}" selected="selected">{{ entity.mediatitle4|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink4, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 5
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 5
+                </div>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 6
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 6
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-xs-2">
+                    <select name="mediatitle5" class="col-md-12">
+                        <option value="{{ entity.mediatitle5 }}" selected="selected">{{ entity.mediatitle5|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink5, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-xs-2">
+                    <select name="mediatitle6" class="col-md-12">
+                        <option value="{{ entity.mediatitle6 }}" selected="selected">{{ entity.mediatitle6|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink6, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 7
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 7
+                </div>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 8
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 8
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-xs-2">
+                    <select name="mediatitle7" class="col-md-12">
+                        <option value="{{ entity.mediatitle7 }}" selected="selected">{{ entity.mediatitle7|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink7, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-xs-2">
+                    <select name="mediatitle8" class="col-md-12">
+                        <option value="{{ entity.mediatitle8 }}" selected="selected">{{ entity.mediatitle8|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink8, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 9
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 9
+                </div>
+                <div class="col-xs-2">
+                    {{ 'Media'|trans }} 10
+                </div>
+                <div class="col-xs-4">
+                    {{ 'Link'|trans }} 10
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-xs-2">
+                    <select name="mediatitle9" class="col-md-12">
+                        <option value="{{ entity.mediatitle9 }}" selected="selected">{{ entity.mediatitle9|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink9, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-xs-2">
+                    <select name="mediatitle10" class="col-md-12">
+                        <option value="{{ entity.mediatitle10 }}" selected="selected">{{ entity.mediatitle10|capitalize }}</option>
+                        {% for media in medias %}
+                        <option value="{{ media.code }}">{{ media.code|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    {{ form_widget(edit_form.medialink10, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="{{ 'Save'|trans }}" class="col-md-12 btn btn-success"/>
+            </td>
+        </tr>
+    </table>
+    {{ form_rest(edit_form) }}
+    {{ form_end(edit_form) }}
+{% endblock page_content %}

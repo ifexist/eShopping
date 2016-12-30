@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-06-29T16:40:19Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="9dc23a7997864c55005710ea24536d0e2b74f329" resname="Contact-us">
+        <source>Contact-us</source>
+        <target state="new">Contact-us</target>
+        <jms:reference-file line="4">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Infosgeneral/infositeContactFooter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="06357a260ed9bbb58e672673ec72a476484f5d7b" resname="Discounted">
+        <source>Discounted</source>
+        <target state="new">Discounted</target>
+        <jms:reference-file line="26">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html.twig</jms:reference-file>
+        <jms:reference-file line="51">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/showProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5301648dcf6b53cefc9ed52999aaa92d4603cae0" resname="Edit">
+        <source>Edit</source>
+        <target state="new">Edit</target>
+        <jms:reference-file line="44">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html_1.twig</jms:reference-file>
+        <jms:reference-file line="38">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d1c69a859a9638b242f2dabf8acf1c0b1450ce6b" resname="Last">
+        <source>Last</source>
+        <target state="new">Last</target>
+        <jms:reference-file line="51">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/showProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="63a46f8559fb0183adf6bdad3d987e061cd2d169" resname="Only for demonstration">
+        <source>Only for demonstration</source>
+        <target state="new">Only for demonstration</target>
+        <jms:reference-file line="9">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/themeSelector.html.twig</jms:reference-file>
+        <jms:reference-file line="112">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3e8248e32edfca0c629622b5b669c2d9ce4d0917" resname="Price">
+        <source>Price</source>
+        <target state="new">Price</target>
+        <jms:reference-file line="51">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/showProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2bcda53d588c05536e5a7b5aa375b8e12281f40c" resname="Request a free quote">
+        <source>Request a free quote</source>
+        <target>Request a free quote</target>
+        <jms:reference-file line="69">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="69bd4ef9fbd0894a22759c3766b859defbdedbc8" resname="View">
+        <source>View</source>
+        <target state="new">View</target>
+        <jms:reference-file line="42">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html_1.twig</jms:reference-file>
+        <jms:reference-file line="44">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html_1.twig</jms:reference-file>
+        <jms:reference-file line="36">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="80cb9b9960a960280d084b5d8f8ec6fab8a03e06" resname="cart.addtocart">
+        <source>cart.addtocart</source>
+        <target>Add to cart</target>
+        <jms:reference-file line="41">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html_1.twig</jms:reference-file>
+        <jms:reference-file line="35">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html.twig</jms:reference-file>
+        <jms:reference-file line="61">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/showProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="65e2f98bbe5c38212c51f765fe5cf0bb73f14b09" resname="cart.checkout">
+        <source>cart.checkout</source>
+        <target>CHECKOUT</target>
+        <jms:reference-file line="88">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b79b6c8ab61b9e2237554d6e050f127cbac66e97" resname="cart.clear">
+        <source>cart.clear</source>
+        <target>Clear</target>
+        <jms:reference-file line="92">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="02fcca9fa9d607d391c2a93cc640503a958431c0" resname="cart.continue">
+        <source>cart.continue</source>
+        <target>continue shopping</target>
+        <jms:reference-file line="101">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+        <jms:reference-file line="12">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/cartIsEmpty.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3a2397a9ac10d92055579a8bdc1d6459c01d22d5" resname="cart.continuewithout">
+        <source>cart.continuewithout</source>
+        <target>Continue without registration</target>
+        <jms:reference-file line="127">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="304d2b3a7932bc4601c72c7a00eea856998ade07" resname="cart.isempty">
+        <source>cart.isempty</source>
+        <target>Your cart is empty</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/cartIsEmpty.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5f864fcae1c662c6b5fe93a2e1ded53dbaaf3d58" resname="cart.isemptyyet">
+        <source>cart.isemptyyet</source>
+        <target>Your cart is empty yet</target>
+        <jms:reference-file line="100">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+        <jms:reference-file line="11">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/cartIsEmpty.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="782b76082a4aa04908e3a68c3d140da0cd9eb6b9" resname="cart.login">
+        <source>cart.login</source>
+        <target>Login</target>
+        <jms:reference-file line="121">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="424a30f99cd51f8c59bb1e748a59fc0604c8a0bc" resname="cart.navbar.goods">
+        <source>cart.navbar.goods</source>
+        <target>goods for</target>
+        <jms:reference-file line="2">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/navbarCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d1da1771708727016f192d6025971026e3a871d4" resname="cart.pleasereg">
+        <source>cart.pleasereg</source>
+        <target>Please Registrate!</target>
+        <jms:reference-file line="114">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3301f814907b999b0567b7c7b2b926f75298af10" resname="cart.regadvadtages">
+        <source>cart.regadvadtages</source>
+        <target>Please registrate to use all site advantage!</target>
+        <jms:reference-file line="117">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d99f200949fc38851d5104a10b508f4cb1acb890" resname="cart.register">
+        <source>cart.register</source>
+        <target>Register</target>
+        <jms:reference-file line="124">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a6ebf5efd4fadb920523b37254cb987a3ccca131" resname="cart.table.price">
+        <source>cart.table.price</source>
+        <target>Price</target>
+        <jms:reference-file line="24">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1c2030ba9e7f7e65b6e98146f205afd7b7ad1974" resname="cart.table.product">
+        <source>cart.table.product</source>
+        <target>Product</target>
+        <jms:reference-file line="21">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fbf537f450dfa4e0949fffe47ff2392923ea0038" resname="cart.table.quantity">
+        <source>cart.table.quantity</source>
+        <target>Quantity</target>
+        <jms:reference-file line="22">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7b495d24e9a28ce51ca0e6791e43a8a22eea4b9a" resname="cart.table.sum">
+        <source>cart.table.sum</source>
+        <target>Sum</target>
+        <jms:reference-file line="25">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="009e106ce910cf2472084ae1676bfb8647e5377d" resname="cart.table.totalsum">
+        <source>cart.table.totalsum</source>
+        <target>Total sum of the order</target>
+        <jms:reference-file line="77">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fdbfbf6b9b1bf6461d09de46ece4504f2fa98776" resname="cart.title.cart">
+        <source>cart.title.cart</source>
+        <target>Cart</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d4dea68cc1c7e850323f298b33d232d8ea240d6a" resname="cart.yourcart">
+        <source>cart.yourcart</source>
+        <target>Your cart</target>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9fa2dc78a971c4d6a3912f566e155c85a5411c8a" resname="categories.menu.header">
+        <source>categories.menu.header</source>
+        <target>Categories</target>
+        <jms:reference-file line="2">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/categoriesMenu.html.twig</jms:reference-file>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6586d4c0dc1271c3a2ec87280a31b582191ec650" resname="category.sort.by">
+        <source>category.sort.by</source>
+        <target>Sort by</target>
+        <jms:reference-file line="21">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/category.html.twig</jms:reference-file>
+        <jms:reference-file line="18">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1b907d400844f0f7a7956b8dd4521f5053da90d1" resname="category.sort.name">
+        <source>category.sort.name</source>
+        <target>Name</target>
+        <jms:reference-file line="28">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/category.html.twig</jms:reference-file>
+        <jms:reference-file line="25">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="af3ec95945d359380708facb9af50bde4b26f312" resname="category.sort.oldprice">
+        <source>category.sort.oldprice</source>
+        <target>Olde Price</target>
+        <jms:reference-file line="35">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/productPreview.html_1.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8b8e2945a887f0a0afd83c71cc0b41e9a52ab259" resname="category.sort.price">
+        <source>category.sort.price</source>
+        <target>Price</target>
+        <jms:reference-file line="29">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/category.html.twig</jms:reference-file>
+        <jms:reference-file line="26">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b9a329a92a2042c145faf87204a26d2abf23ba63" resname="category.view.grid">
+        <source>category.view.grid</source>
+        <target>Grid</target>
+        <jms:reference-file line="17">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/category.html.twig</jms:reference-file>
+        <jms:reference-file line="17">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/manufacturer.html.twig</jms:reference-file>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4e433effbd2dd9e091b0f79f767591dea1ca3d5e" resname="category.view.list">
+        <source>category.view.list</source>
+        <target>List</target>
+        <jms:reference-file line="16">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/category.html.twig</jms:reference-file>
+        <jms:reference-file line="13">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a5eba05921c11add89e9b68570149da22499c604" resname="change_password.submit">
+        <source>change_password.submit</source>
+        <target>Change your password</target>
+        <jms:reference-file line="13">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bebc3db8028343c72fc4ecc0c504310b42e448f9" resname="contact.form_page_title">
+        <source>contact.form_page_title</source>
+        <target>Kontaktieren Sie uns</target>
+        <jms:reference-file line="95">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="001517ee5d3d0c7f4481ec2cd77c6aefd2fa802e" resname="currency">
+        <source>currency</source>
+        <target>$</target>
+        <jms:reference-file line="53">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+        <jms:reference-file line="78">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/showCart.html.twig</jms:reference-file>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/navbarCart.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cff80a0e7b38e89855b9f7463c1f11b2dc60d8ca" resname="favourites.noproducts">
+        <source>favourites.noproducts</source>
+        <target>You have not favourite products yet!</target>
+        <jms:reference-file line="37">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cbe04cb57f3145be23d5ef08cbe7d460fc03d247" resname="favourites.sort.added">
+        <source>favourites.sort.added</source>
+        <target>Added</target>
+        <jms:reference-file line="27">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b304ef1f4ce3b3c0763c49f2693d18f96d520ba1" resname="favourites.sort.by">
+        <source>favourites.sort.by</source>
+        <target>Sort by</target>
+        <jms:reference-file line="18">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ab6607de694f02fb78ac896049d2fde545b6425" resname="favourites.sort.name">
+        <source>favourites.sort.name</source>
+        <target>Name</target>
+        <jms:reference-file line="25">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b1042e38ba97478b1ef67b3c4388ce3f48c0ba3d" resname="favourites.sort.price">
+        <source>favourites.sort.price</source>
+        <target>Price</target>
+        <jms:reference-file line="26">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b93f2c5c4aa38a9548933c9a1fa2d2389dfc35f" resname="favourites.view.grid">
+        <source>favourites.view.grid</source>
+        <target>Grid</target>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="45306a5b6714b1ff835988b85e80c151a1f8eb01" resname="favourites.view.list">
+        <source>favourites.view.list</source>
+        <target>List</target>
+        <jms:reference-file line="13">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc8fd34dc059c5fe74504ee45c46edb161d49c6e" resname="favourites.yourfavouriteproducts">
+        <source>favourites.yourfavouriteproducts</source>
+        <target>Your Favourite Products</target>
+        <jms:reference-file line="16">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4ad6532f319fb9e2dfba4209584a1bcb341de013" resname="layout.index.featuredproducts">
+        <source>layout.index.featuredproducts</source>
+        <target>Featured products</target>
+        <jms:reference-file line="30">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0414a9fc60dbeabb1d6781a43f42fa106fd7c48f" resname="layout.index.latestproducts">
+        <source>layout.index.latestproducts</source>
+        <target>Latest products</target>
+        <jms:reference-file line="25">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b4d1cb5efffe52aa4b248de58525250af8eb4893" resname="layout.lastseen.header">
+        <source>layout.lastseen.header</source>
+        <target>Your last seen products</target>
+        <jms:reference-file line="2">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/lastSeenProducts.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4a3362be778d9566b5905d40283f5be47d9a6a7a" resname="layout.messages.mustberegistered">
+        <source>layout.messages.mustberegistered</source>
+        <target>You must be registered for this</target>
+        <jms:reference-file line="213">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d76100b16d75235e2d6af1860aeff2b10a3555ff" resname="layout.messages.productnotfound">
+        <source>layout.messages.productnotfound</source>
+        <target>Product not found</target>
+        <jms:reference-file line="214">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5c07d9b6c456d2442a919aef88df35564b7ecf83" resname="layout.navbar.admin">
+        <source>layout.navbar.admin</source>
+        <target>Admin</target>
+        <jms:reference-file line="8">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="21661628e4bd2fa85b985baa034eb569a8b3b4c9" resname="layout.navbar.adminpanel">
+        <source>layout.navbar.adminpanel</source>
+        <target>Admin panel</target>
+        <jms:reference-file line="11">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1f59012a8b48c301b36b045340f238a9a0353a50" resname="layout.navbar.favourites">
+        <source>layout.navbar.favourites</source>
+        <target>Favourites</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+        <jms:reference-file line="65">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="80ca7d2457bf52cf8413b070ba6f4bf6ee16c516" resname="layout.navbar.home">
+        <source>layout.navbar.home</source>
+        <target>Home</target>
+        <jms:reference-file line="118">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+        <jms:reference-file line="21">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/showProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ac9d24498f9fb431fa80dafcc76fae057d45ecf8" resname="layout.navbar.importantpages">
+        <source>layout.navbar.importantpages</source>
+        <target>Important pages</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/staticPagesDropdownMenu.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fdf55155534603b22d1d24cf26443b5357ec8778" resname="layout.navbar.lang">
+        <source>layout.navbar.lang</source>
+        <target>Languages</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/localeMenu.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2df7e102119d30e7c5329be5df4469ba47092706" resname="layout.navbar.loggedas">
+        <source>layout.navbar.loggedas</source>
+        <target>Logged as</target>
+        <jms:reference-file line="21">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ef05698fd0f1fd38b98116d05d7f18316d5009de" resname="layout.navbar.login">
+        <source>layout.navbar.login</source>
+        <target>Login</target>
+        <jms:reference-file line="32">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="60e96fbc116c940fbaca104e756886bb473832bd" resname="layout.navbar.logout">
+        <source>layout.navbar.logout</source>
+        <target>Logout</target>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+        <jms:reference-file line="24">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9cc4ac35164dbcba178e8c48fbfe64bfb7409b82" resname="layout.navbar.news">
+        <source>layout.navbar.news</source>
+        <target>News</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Profile/favourites.html.twig</jms:reference-file>
+        <jms:reference-file line="63">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+        <jms:reference-file line="158">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/news.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6c17219f0ba8039b15a9f9cdcca838aa9afba479" resname="layout.navbar.pages">
+        <source>layout.navbar.pages</source>
+        <target>pages</target>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/staticPagesFooterMenu.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e21443e202f2019c6828db449c991c635c0ff770" resname="layout.navbar.signin">
+        <source>layout.navbar.signin</source>
+        <target>Sign in</target>
+        <jms:reference-file line="35">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dbc6037981a3c92a57410b605e7232084d1ecea9" resname="layout.navbar.signup">
+        <source>layout.navbar.signup</source>
+        <target>Sign up</target>
+        <jms:reference-file line="36">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6946821146aff91fbd1db016137280f7b288e3f9" resname="layout.navbar.sitename">
+        <source>layout.navbar.sitename</source>
+        <target>Ifexist Eshop Demo</target>
+        <jms:reference-file line="112">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+        <jms:reference-file line="181">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/index.html.twig</jms:reference-file>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/news.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6a21ac8855a778bd0060182c9c2482df88595cf9" resname="layout.navbar.theme">
+        <source>layout.navbar.theme</source>
+        <target>Theme</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/themeSelector.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0ac3404c83d4fb53f7c7940deab279a477786c20" resname="layout.navbar.themechoose">
+        <source>layout.navbar.themechoose</source>
+        <target>Choose a theme</target>
+        <jms:reference-file line="9">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/themeSelector.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5c3edd1997d122d81771d8a9c86949eda2fe0e9b" resname="manufacturer.noproducts">
+        <source>manufacturer.noproducts</source>
+        <target>Sorry, no products of this manufacturer yet!</target>
+        <jms:reference-file line="39">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/category.html.twig</jms:reference-file>
+        <jms:reference-file line="39">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/manufacturer.html.twig</jms:reference-file>
+        <jms:reference-file line="36">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d59e6a9caeef17bb06346d12b2dee12adede7597" resname="manufacturer.sort.by">
+        <source>manufacturer.sort.by</source>
+        <target>Sort by</target>
+        <jms:reference-file line="21">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/manufacturer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="10c7fa5cb1ceb3c2f57444dd3215eb562a10f9c0" resname="manufacturer.sort.name">
+        <source>manufacturer.sort.name</source>
+        <target>Name</target>
+        <jms:reference-file line="28">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/manufacturer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f9d4e625d40e2ab1235d605c38e36ac735fbda83" resname="manufacturer.sort.price">
+        <source>manufacturer.sort.price</source>
+        <target>Price</target>
+        <jms:reference-file line="29">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/manufacturer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d0b18b550fe35fdcddd052e37b459008627deaf3" resname="manufacturer.view.list">
+        <source>manufacturer.view.list</source>
+        <target>List</target>
+        <jms:reference-file line="16">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/manufacturer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6c1a7d75bc6228d4284e7742d8bd101028914bd3" resname="manufacturers.menu.footer">
+        <source>manufacturers.menu.footer</source>
+        <target>Brands</target>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/manufacturersFooterMenu.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7afabbd25631655ed397e26b80d80d530d6812d9" resname="manufacturers.menu.header">
+        <source>manufacturers.menu.header</source>
+        <target>Brands</target>
+        <jms:reference-file line="2">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/manufacturersMenu.html.twig</jms:reference-file>
+        <jms:reference-file line="4">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/manufacturersDropdownMenu.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="14e0d5df5061256ce1b6fe6651b1f522b6205f67" resname="news.nonews">
+        <source>news.nonews</source>
+        <target>No news yet</target>
+        <jms:reference-file line="27">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/news.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2f17b73b2e57671377d7c3b38761e0f294e2b40a" resname="notification.neworder">
+        <source>notification.neworder</source>
+        <target>You have received a new order</target>
+        <jms:reference-file line="2">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Mail/orderNotificationEmail.txt.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d616a9d7956fa936961fb778b2c78f67d442666" resname="orderform.address">
+        <source>orderform.address</source>
+        <target>Address</target>
+        <jms:reference-file line="34">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="48aebfc363fe437b83386afc077ae4a1ed26e340" resname="orderform.email">
+        <source>orderform.email</source>
+        <target>Email</target>
+        <jms:reference-file line="22">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77fed8ae9bbe582e4d1faf19ec7101616930c30d" resname="orderform.name">
+        <source>orderform.name</source>
+        <target>Name</target>
+        <jms:reference-file line="16">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1fafd448489d5367d6895254a6a8330e8dfc447e" resname="orderform.orderform">
+        <source>orderform.orderform</source>
+        <target>Order Form</target>
+        <jms:reference-file line="6">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+        <jms:reference-file line="9">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c5a7a4c6d8aa30a8025a5388b7046f2e6839ce2a" resname="orderform.phone">
+        <source>orderform.phone</source>
+        <target>Phone</target>
+        <jms:reference-file line="28">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a0d7e071b1ff6c1d06799f263504c0cbdca33a90" resname="orderform.submit">
+        <source>orderform.submit</source>
+        <target>Submit</target>
+        <jms:reference-file line="48">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9c0eb8da545a9759633cc380c1a46793ef993b69" resname="orderform.totalsumis">
+        <source>orderform.totalsumis</source>
+        <target>Total sum is</target>
+        <jms:reference-file line="53">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d0ded18051c996b819c52134022774f3a7c06653" resname="orderform.yourcomment">
+        <source>orderform.yourcomment</source>
+        <target>Your comment</target>
+        <jms:reference-file line="40">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/orderForm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="426a78c6e5ec0c4e001dc5b9b59f5c7581047525" resname="product.notavailable">
+        <source>product.notavailable</source>
+        <target>Sorry, this product is not available!</target>
+        <jms:reference-file line="81">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/showProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9741ffbcf8dbb31e1a2d32bd25cb0ccc5a6dea54" resname="profile.edit.submit">
+        <source>profile.edit.submit</source>
+        <target>Edit your  profile</target>
+        <jms:reference-file line="12">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Partials/navbarAuthBlock.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6ffbb9b14f98e94b8dda5418ef3910942b42c44e" resname="search.search">
+        <source>search.search</source>
+        <target>search</target>
+        <jms:reference-file line="76">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ed79f45179b7814a245b9649dc186fee0509ff9" resname="search.searchfor">
+        <source>search.searchfor</source>
+        <target>Search for</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+        <jms:reference-file line="16">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Catalog/searchProduct.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="da4e1bee6e2129cdcd1a5770d01fb0fa032866ce" resname="thankyou.continue">
+        <source>thankyou.continue</source>
+        <target>continue shopping</target>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/thankYou.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="95c722f2b36aa8c407eb35befa9fa178e4625b78" resname="thankyou.handleorder">
+        <source>thankyou.handleorder</source>
+        <target>Thank you! We handle your order as soon as possible!</target>
+        <jms:reference-file line="11">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/thankYou.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3b0092dd8a5868205ee759831c360cae6094722b" resname="thankyou.thankyou">
+        <source>thankyou.thankyou</source>
+        <target>Thank you!</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ShopBundle/Resources/views/Cart/thankYou.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

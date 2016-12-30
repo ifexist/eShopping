@@ -1,0 +1,56 @@
+{% trans_default_domain 'shop' %}
+      <div class="social-sharing" data-permalink="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}">
+ 
+    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+    <a target="_blank" href="http://www.facebook.com/sharer.php?u={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&title={{ 'Your fully configurable online store from'|trans }} 950 €&amp;picture=http://eshop.ifexist.com/site/images/demo.png" class="share-facebook">
+      <span class="icon icon-facebook" aria-hidden="true"></span>
+      <span class="share-title">{{ 'Share'|trans }}</span>
+    </a>
+    
+    <a target="_blank" href="http://twitter.com/share?url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&amp;text={{ 'Your fully configurable online store from'|trans }} 950 €&amp;ImageURL=http://eshop.ifexist.com/site/images/demo.png" class="share-twitter">
+      <span class="icon icon-twitter" aria-hidden="true"></span>
+      <span class="share-title">Tweet</span>
+    </a>
+      
+    <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&amp;media=http://photos-c.ak.instagram.com/hphotos-ak-xfp1/10369404_682591538475746_1724734234_n.jpg&amp;description={{ 'Your fully configurable online store from'|trans }} 950 €" class="share-pinterest">
+      <span class="icon icon-pinterest" aria-hidden="true"></span>
+      <span class="share-title">Save</span>
+    </a>
+      
+    <a target="_blank" href="http://plus.google.com/share?url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}" class="share-google">
+      <span class="icon icon-google" aria-hidden="true"></span>
+      <span class="share-title">+1</span>
+    </a>
+      
+    <a target="_blank" href="http://www.thefancy.com/fancyit?ItemURL={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&amp;Title={{ 'Your fully configurable online store from'|trans }} 950 €&amp;Category=Other&amp;ImageURL=http://eshop.ifexist.com/site/images/demo.png" class="share-fancy">
+      <span class="icon icon-fancy" aria-hidden="true"></span>
+      <span class="share-title">Fancy</span>
+    </a>
+      
+    <a target="_blank" href="http://www.reddit.com/submit?url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&title={{ 'Your fully configurable online store from'|trans }} 950 €" class="share-reddit">
+      <span class="icon icon-reddit" aria-hidden="true"></span>
+      <span class="share-title">Reddit</span>
+    </a>
+      
+    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&title={{ 'Your fully configurable online store from'|trans }} 950 €&amp;ImageURL=http://eshop.ifexist.com/site/images/demo.png" class="share-linkedin">
+      <span class="icon icon-linkedin" aria-hidden="true"></span>
+      <span class="share-title">{{ 'Share'|trans }}</span>
+    </a>
+    
+    <a target="_blank" href="https://web.skype.com/share?url={{ app.request.schemeAndHttpHost ~ app.request.requestUri }}&lang=en-us" class="share-skype">
+      <span class="icon icon-skype" aria-hidden="true"></span>
+      <span class="share-title">{{ 'Share'|trans }}</span>
+    </a>
+  </div>
+    
+{#<span class='st_facebook_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} Facebook" st_summary="{{ 'Your fully configurable online store from'|trans }} 950 €"><i class="btn btn-xs btn-default fa fa-facebook"></i></span>
+<span class="st_twitter_custom" st_via="jobfreed" title="{{ 'Share on'|trans }} Twitter"  st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-twitter"></i></span>
+<span class='st_googleplus_custom' st_via="ifexist" title="{{ 'Share on'|trans }} Google +" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-google-plus"></i></span>
+<span class='st_linkedin_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} LinkedIn" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-linkedin"></i></span>
+<span class='st_reddit_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} Reddit" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-reddit"></i></span>
+<span class='st_whatsapp_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} WhatsApp" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-whatsapp"></i></span>
+<span class='st_wordpress_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} WordPress" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-wordpress"></i></span>
+<span class='st_stumbleupon_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} StumbleUpon" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-stumbleupon"></i></span>
+<span class='st_delicious_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} Delicious" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-delicious"></i></span>
+<span class='st_pinterest_custom' st_via="jobfreed" title="{{ 'Share on'|trans }} Pinterest" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-pinterest"></i></span>
+<span class="st_sharethis_custom" st_via="jobfreed" title="{{ 'Share on'|trans }} ShareThis" st_summary="{{ 'Your shop with all the necessary tools to present your products'|trans }}, {{ 'A fluid and interactive navigation'|trans }}, {{ 'Your products on Google Shopping'|trans }}, {{ 'The automatic optimization of data and files with each addition'|trans }}, ...etc."><i class="btn btn-xs btn-default fa fa-share-alt"></i></span>#}

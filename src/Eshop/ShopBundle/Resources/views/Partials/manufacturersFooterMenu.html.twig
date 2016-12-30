@@ -1,0 +1,9 @@
+{% trans_default_domain 'shop' %}
+<div class="small foot-header">
+    {{ 'manufacturers.menu.footer'|trans }}
+</div>
+{% for manufacturerFooter in manufacturersFooter %}
+    <div class="foot-links">
+        <a href="{{ path('manufacturer', {'slug' : manufacturerFooter.slug}) }}">{{ manufacturerFooter.name }}</a>
+    </div>
+{% endfor %}

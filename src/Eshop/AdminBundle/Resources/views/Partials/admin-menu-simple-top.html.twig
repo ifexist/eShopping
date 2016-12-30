@@ -1,0 +1,81 @@
+{% trans_default_domain 'admin' %}
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('admin_index') }}"><i class="fa fa-home"></i> {{ 'Admin panel'|trans }}</a>
+            <ul class="nav navbar-nav">
+                <li><a href="{{ path('admin_user_list') }}"><i class="fa fa-users"></i> {{ 'User list'|trans }}</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gears"></i> {{ 'Site Setting'|trans }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('admin_catparent') }}"><i class="fa fa-list"></i> {{ 'Parents Categories'|trans }}</a></li>
+                        <li><a href="{{ path('admin_category') }}"><i class="fa fa-list"></i> {{ 'Categories'|trans }}</a></li>
+                        <li><a href="{{ path('admin_infoscompany') }}"><i class="fa fa-briefcase"></i> {{ "Company settings"|trans }}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ path('admin_infosite') }}"><i class="fa fa-info"></i> {{ "Website settings"|trans }}</a></li>
+                        <li><a href="{{ path('admin_infositemetas') }}"><i class="fa fa-tags"></i> {{ "Website Meta tags"|trans }}</a></li>
+                        <li><a href="{{ path('admin_infositelinks') }}"><i class="fa fa-external-link"></i> {{ "Website Media links"|trans }}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ path('admin_orders') }}"><i class="fa fa-circle-o"></i> {{ 'Orders'|trans }}</a></li>
+                        <li><a href="{{ path('admin_settings') }}"><i class="fa fa-circle-o"></i> {{ 'Other settings'|trans }}</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language"></i> {{ 'Site Translator'|trans }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('lexik_translation_grid') }}"><i class="fa fa-language"></i> {{ 'Translator'|trans }}</a></li>
+                        <li><a href="{{ path('admin_langs_activation') }}"><i class="fa fa-list-alt"></i> {{ 'Enable'|trans|capitalize }}, {{ 'Disable'|trans|capitalize }} {{ 'Languages'|trans }}</a></li>
+                    </ul>
+                </li>
+                        
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf"></i> {{ 'Pages'|trans }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('admin_staticpage') }}"><i class="fa fa-leaf"></i> {{ 'Static pages'|trans }}</a></li>
+                        <li><a href="{{ path('admin_news') }}"><i class="fa fa-newspaper-o"></i> {{ 'News'|trans }}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o"></i> {{ 'Emailing'|trans }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu"><li>
+                        <li><a href="{{ path('admin_email_template') }}"><i class="fa fa-envelope-o"></i> {{ 'Email templates'|trans }}</a></li>
+                        <li><a href="{{ path('admin_email_data') }}"><i class="fa fa-envelope-o"></i> {{ 'Email list'|trans }} <i class="fa fa-list"></i></a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('admin_slide') }}"><i class="fa fa-image"></i> {{ 'Slides'|trans }}</a></li>
+                {#<li><a href="{{ path('admin_category_products_classification_google') }}"><i class="fa fa-shopping-cart"></i> {{ "Product classification"|trans }}</a></li></li>#}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart"></i> {{ 'Products and Manufacturer'|trans }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('admin_featured') }}"><i class="fa fa-star"></i> {{ 'Featured products'|trans }}</a></li>
+                        <li><a href="{{ path('admin_manufacturer') }}"><i class="fa fa-building-o"></i> {{ 'Manufacturers'|trans }}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ path('admin_prodexistin') }}">{{ 'Product attribution'|trans }}</a></li>
+                        <li><a href="{{ path('admin_prodcolor') }}">{{ 'Product color'|trans }}</a></li>
+                        <li><a href="{{ path('admin_prodsize') }}">{{ 'Product size'|trans }}</a></li>
+                        <li><a href="{{ path('admin_measure') }}">{{ 'Product measurement'|trans }}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{ app.user.username|upper }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('user_profile_edit') }}" class="fa fa-power-off">&nbsp;{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}</a></li>
+                        <li><a href="{{ path('fos_user_security_logout') }}" class="fa fa-sign-out">&nbsp;{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
+                    </ul>
+                </li> 
+                <li><a href="{{ path('index_main') }}"><i class="fa fa-home"></i> {{ 'eShop'|trans }}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

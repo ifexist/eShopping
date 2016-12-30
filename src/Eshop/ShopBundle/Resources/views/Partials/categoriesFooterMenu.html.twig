@@ -1,0 +1,11 @@
+{% trans_default_domain 'shop' %}
+{% for mainCatFoot in mainCatsFoot %}
+    <div class="foot-header">
+        {{ mainCatFoot.name|trans }}
+    </div>
+    {% for subCatFoot in subCatsFoot if mainCatFoot.id == subCatFoot.parent.id %}
+        <div class="foot-links">
+            <a href="{{ path('category', {'slug' : subCatFoot.slug}) }}" class="small">{{ subCatFoot.name|trans }}</a></p>
+        </div>
+    {% endfor %}
+{% endfor %}

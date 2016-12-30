@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-12-30T11:35:21Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="9b52471738893ce89a815bb5d8c570a2f9dfd5a2" resname="Additional information of company">
+        <source>Additional information of company</source>
+        <target state="new">Additional information of company</target>
+        <jms:reference-file line="83">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d70f93df5e8f9b55be44fbeee9d203972e3383d4" resname="Address">
+        <source>Address</source>
+        <target state="new">Address</target>
+        <jms:reference-file line="138">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="23">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4271627f4f0bef6104a95cca7bb21cda4d74503e" resname="City">
+        <source>City</source>
+        <target state="new">City</target>
+        <jms:reference-file line="122">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a1994999d181deea68e4304b3346e78f838ecb7" resname="Company">
+        <source>Company</source>
+        <target state="new">Company</target>
+        <jms:reference-file line="15">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="852a4222122269b28e61fe1c3ef5f78501df156e" resname="Contact information">
+        <source>Contact information</source>
+        <target state="new">Contact information</target>
+        <jms:reference-file line="49">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d523ebbd10146cdfd39dee077f04c9d08468d0bc" resname="Country">
+        <source>Country</source>
+        <target state="new">Country</target>
+        <jms:reference-file line="178">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e070de224434a2acd352b35cec46f34f9e08e1b2" resname="Currency">
+        <source>Currency</source>
+        <target state="new">Currency</target>
+        <jms:reference-file line="181">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="71">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b0d937da2d0f660a58e664e00d042a7392b430ed" resname="Departement">
+        <source>Departement</source>
+        <target state="new">Departement</target>
+        <jms:reference-file line="125">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0d01e2e86669e98441ab4dce5520696c318b7098" resname="E-mail">
+        <source>E-mail</source>
+        <target state="new">E-mail</target>
+        <jms:reference-file line="197">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5301648dcf6b53cefc9ed52999aaa92d4603cae0" resname="Edit">
+        <source>Edit</source>
+        <target state="new">Edit</target>
+        <jms:reference-file line="9">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6106436e06c60f6f6a61d399d15a3f1429024d69" resname="Edit your company's information">
+        <source>Edit your company's information</source>
+        <target state="new">Edit your company's information</target>
+        <jms:reference-file line="63">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="84add5b2952787581cb9a8851eef63d1ec75d22b" resname="Email">
+        <source>Email</source>
+        <target state="new">Email</target>
+        <jms:reference-file line="53">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="79c40149597946934a603578d504c94a00165d5b" resname="Enter your business name">
+        <source>Enter your business name</source>
+        <target state="new">Enter your business name</target>
+        <jms:reference-file line="102">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="24f6756c872c8d02e0c68591078146526fd5384f" resname="Entering of all fields, is not mandatory">
+        <source>Entering of all fields, is not mandatory</source>
+        <target state="new">Entering of all fields, is not mandatory</target>
+        <jms:reference-file line="249">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="807bcfed2e21e7540d25e06f78af25cbb5bd3f30" resname="However, it is important to grasp the most possble box">
+        <source>However, it is important to grasp the most possble box</source>
+        <target state="new">However, it is important to grasp the most possble box</target>
+        <jms:reference-file line="251">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b6d6a30150a506f9b79caf45da5aecb76b0018e" resname="Important">
+        <source>Important</source>
+        <target state="new">Important</target>
+        <jms:reference-file line="243">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d65645458690569f494ccbf1087ed673012ccef" resname="Information of Company">
+        <source>Information of Company</source>
+        <target state="new">Information of Company</target>
+        <jms:reference-file line="6">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="89b86ab0e66f527166d98df92ddbcf5416ed58f6" resname="Language">
+        <source>Language</source>
+        <target state="new">Language</target>
+        <jms:reference-file line="184">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="68">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b058a9b22f579cab7ac16513a1de431a941a51e5" resname="Locality">
+        <source>Locality</source>
+        <target state="new">Locality</target>
+        <jms:reference-file line="79">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="67370c8e5feb3e1066f9337265ee0c220612fa85" resname="Name of company">
+        <source>Name of company</source>
+        <target state="new">Name of company</target>
+        <jms:reference-file line="89">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6eef6648406c333a4035cd5e60d0bf2ecf2606d7" resname="None">
+        <source>None</source>
+        <target state="new">None</target>
+        <jms:reference-file line="59">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+        <jms:reference-file line="77">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9c85c818679b8011078fa0645c965fcc8174e22f" resname="Other additional information of your company">
+        <source>Other additional information of your company</source>
+        <target state="new">Other additional information of your company</target>
+        <jms:reference-file line="242">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a8a99aa360ec38b3a0b0ffe94c0735213bc205c7" resname="Other information">
+        <source>Other information</source>
+        <target state="new">Other information</target>
+        <jms:reference-file line="64">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77064d5265236e0ac252f3fc4a5ba7b274b6a583" resname="Phone">
+        <source>Phone</source>
+        <target state="new">Phone</target>
+        <jms:reference-file line="200">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="56">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c7ac934cfaa9b50e25559321e48737eb6bc8d9d8" resname="Postal Code">
+        <source>Postal Code</source>
+        <target state="new">Postal Code</target>
+        <jms:reference-file line="141">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="89378146f034acdc50d449707ca3242e137228d3" resname="Principal Activity">
+        <source>Principal Activity</source>
+        <target state="new">Principal Activity</target>
+        <jms:reference-file line="92">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c5d99d98a4b451a15630e07cfcdcd5677b0a618" resname="Principal Product or service">
+        <source>Principal Product or service</source>
+        <target state="new">Principal Product or service</target>
+        <jms:reference-file line="95">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="76d7cafc0277a3ce2b4b80344da97d40eeeccb67" resname="Product or service type">
+        <source>Product or service type</source>
+        <target state="new">Product or service type</target>
+        <jms:reference-file line="19">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="11ac1d8980aea0d4b52632830e681568df4c6d2c" resname="Provance">
+        <source>Provance</source>
+        <target state="new">Provance</target>
+        <jms:reference-file line="128">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="65b886da37f0d34d18ccce8278e4976b4e1400a0" resname="Register number">
+        <source>Register number</source>
+        <target state="new">Register number</target>
+        <jms:reference-file line="194">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="eed6bfb41051ed5b74447340f3c2e29d11e99a7c" resname="Required">
+        <source>Required</source>
+        <target state="new">Required</target>
+        <jms:reference-file line="243">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="efc007a393f66cdb14d57d385822a3d9e36ef873" resname="Save">
+        <source>Save</source>
+        <target state="new">Save</target>
+        <jms:reference-file line="262">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d97d1ee339e4eeaba8cac91dca37c8b4ec8f5501" resname="Show">
+        <source>Show</source>
+        <target state="new">Show</target>
+        <jms:reference-file line="63">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c4422a4a2f60b1ee5bb30d0114797d119a0eb12" resname="Street number">
+        <source>Street number</source>
+        <target state="new">Street number</target>
+        <jms:reference-file line="135">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0de362a648f185095aecc85ecca81fc943698ad1" resname="This information helps you better rank your website and your business">
+        <source>This information helps you better rank your website and your business</source>
+        <target state="new">This information helps you better rank your website and your business</target>
+        <jms:reference-file line="252">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5f54ad7bf78bfc644706e5476b2bd927ca5322a9" resname="VAT">
+        <source>VAT</source>
+        <target state="new">VAT</target>
+        <jms:reference-file line="187">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+        <jms:reference-file line="74">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/show.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cb7353567e5fa105e1e904cb9f6dc9fbbd610436" resname="Without">
+        <source>Without</source>
+        <target state="new">Without</target>
+        <jms:reference-file line="187">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f9371bd35aa3e7346b13aee86d6be47a79cadc3b" resname="Your informations on">
+        <source>Your informations on</source>
+        <target state="new">Your informations on</target>
+        <jms:reference-file line="83">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1de49f7900d3c5420e6270869944886d3c98f4b2" resname="auto completion">
+        <source>auto completion</source>
+        <target state="new">auto completion</target>
+        <jms:reference-file line="81">/../src/Eshop/AdminBundle/Resources/views/Infoscompany/edit.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,123 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'contact' %}
+{% block title %}{{ 'Confirmation of free quote request'|trans }}{% endblock %}
+{% block page_content -%}
+    <body bgcolor="#FFFFFF">
+        <div class="container">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="col-md-12 text-center well">
+                    <h2>{{ 'Confirmation of free quote request'|trans }}</h2>
+                    <a href="http://{{ app.request.getSchemeAndHttpHost() }}">
+                        {% if file_exists(app.request.server.get('DOCUMENT_ROOT') ~  '/site/images/logo.png') %}
+                            <div class="col-md-6">
+                                <img src="{{ asset('site/images/logo.png') }}" width="40%" style="background: #fff;">
+                            </div>
+                            <div class="col-md-6">
+                                <h4>{{ app.request.getSchemeAndHttpHost() }}</h4>
+                            </div>
+                        {% else %}
+                            <h4>{{ app.request.getSchemeAndHttpHost() }}</h4>
+                        {% endif %}
+                    </a>
+                </div> 
+            </div>
+            <div class="col-md-1"></div>
+        </div>     
+        <!-- HEADER -->
+
+        <div class="container">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h4>{{ entity.title|capitalize }} {{ entity.firstname|capitalize }} {{ entity.lastname|upper }}</h4>
+                <h6>{{ 'Your free quote request is sent successfully'|trans }} {{ 'Check your mailbox'|trans }} : {{ entity.email|upper }}</h6>
+                <p>{{ 'Here is the information'|trans }}</p>
+                {% if entity.namets != "" %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ 'Company'|trans }}
+                        </div>
+                        <div class="col-md-8">
+                            {{ entity.namets|upper }}
+                        </div>
+                    </div>
+                {% endif %}   
+
+                {% if entity.phone != "" %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ 'Phone'|trans }}
+                        </div>
+                        <div class="col-md-8">
+                            {{ entity.phone }}
+                        </div>
+                    </div>
+                {% endif %}   
+                
+                {% if entity.zipcode != "" or  entity.city != "" or  entity.country != "" %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ 'Address'|trans }}
+                        </div>
+                        <div class="col-md-8">
+                            {% if entity.city != "" %}
+                                {{ entity.zipcode }},  
+                            {% endif %}    
+                            {% if entity.city != "" %}
+                                {{ entity.city }}, 
+                            {% endif %}    
+                            {% if entity.country != "" %}
+                                {{ entity.country }}
+                            {% endif %}   
+                        </div>
+                    </div>
+                {% endif %}   
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ 'Type and language of site'|trans }}
+                    </div>
+                    <div class="col-md-8">
+                        {{ entity.typesite|capitalize }} ({{ entity.lang|upper }})
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ 'Budget'|trans }}
+                    </div>
+                    <div class="col-md-8">
+                        {{ entity.budget }} {{ entity.currency|upper }}
+                    </div>
+                </div>
+                {% if entity.web != "" %}  
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ 'Website'|trans }}
+                        </div>
+                        <div class="col-md-8">
+                            <a href="{{ entity.web }}">{{ entity.web }}</a>
+                        </div>
+                    </div>
+                {% endif %} 
+                {% if entity.webmodel != "" %}    
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ 'On the model of'|trans }}
+                        </div>
+                        <div class="col-md-8">
+                            <a href="{{ entity.webmodel }}">{{ entity.webmodel }}</a>
+                        </div>
+                    </div>  
+                {% endif %} 
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>{{ 'More on this project'|trans }}</p>
+                        <p>{{ entity.project }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+    {% endblock page_content -%}

@@ -1,0 +1,108 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'ShopBundle' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}
+    {{ entity.username }}
+{% endblock title %}
+
+{% block page_content %}
+<div class="container">    
+        {% if msgEmail != "" %}
+        {% endif %}    
+        {{ form_start(form) }}
+        <div class="btn-group-xs">
+            <h2>{{ entity.username }}</h2>
+        </div>
+    <div class="btn-group-xs">
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('admin_index') }}" class="btn btn-default">{{ 'layout.navbar.adminpanel'|trans }}</a>
+        <a href="{{ path('fos_user_change_password') }}" class="btn btn-danger">{{ 'change_password.submit'|trans }}</a>
+        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-danger">{{ 'layout.logout'|trans }}</a>
+    {% else %}
+        <a href="{{ path('fos_user_change_password') }}" class="btn btn-danger">{{ 'change_password.submit'|trans }}</a>
+        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-danger">{{ 'layout.logout'|trans }}</a>
+    {% endif %}
+    </div>
+        <table class="table table-hover">
+            <tr>
+                <th width="25%">
+                    {{ form_label(form.username) }}
+                </th>
+                <td width="75%">
+                    {{ form_widget(form.username, {'attr': {'readonly': true, 'class':'col-md-12'} }) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    {{ form_label(form.email) }}
+                </th>
+                <td>     
+        {{ form_widget(form.email, {'attr': {'class':'col-md-12', 'reqired':true} }) }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ form_label(form.gender) }}
+                </th>                    
+                <td>     
+        {{ form_widget(form.gender, {'attr': {'class':'col-md-12', 'reqired':true} }) }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    
+                    {{ form_label(form.firstname) }}
+                </th>                    
+                <td>     
+        {{ form_widget(form.firstname, {'attr': {'class':'col-md-12', 'reqired':true} }) }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    
+                    {{ form_label(form.lastname) }}
+                </th>                    
+                <td>     
+        {{ form_widget(form.lastname, {'attr': {'class':'col-md-12', 'reqired':true} }) }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ form_label(form.phone) }}
+                </th>                    
+                <td>     
+        {{ form_widget(form.phone, {'attr': {'class':'col-md-12'} }) }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ form_label(form.address) }}
+                </th>                    
+                <td>     
+        {{ form_widget(form.address, {'attr': {'class':'col-md-12'} }) }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ form_label(form.current_password) }}
+                </th>    
+                <td>
+                    {{ form_widget(form.current_password, {'attr': {'class':'col-md-12'} }) }}
+                </td> 
+            </tr>
+            <tr>
+                <th>
+                    
+                </th>   
+                <td>
+                    <button type="submit" class="btn btn-primary">{{ 'profile.submit'|trans }}</button>
+                </td> 
+            </tr>
+        </table>
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <h4>&nbsp;</h4>
+
+    </div>
+{% endblock page_content %}

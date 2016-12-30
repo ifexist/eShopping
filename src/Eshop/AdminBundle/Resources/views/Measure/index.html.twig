@@ -1,0 +1,66 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block title %}
+    {{ 'Measure list'|trans }} - {{ 'Administration panel'|trans }}
+{% endblock title %}
+
+    {% block stylesheets %}
+    {{ parent() }}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.20/daterangepicker.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/u/bs/jszip-2.5.0,pdfmake-0.1.18,dt-1.10.12,b-1.2.1,b-colvis-1.2.1,b-flash-1.2.1,b-html5-1.2.1,b-print-1.2.1,r-2.1.0/datatables.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.4.1/featherlight.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/css/bootstrap-slider.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+    {% endblock %}
+    {% block head_javascripts %}
+    {{ parent() }}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.20/daterangepicker.min.js"></script>
+        <script src="https://cdn.datatables.net/u/bs/jszip-2.5.0,pdfmake-0.1.18,dt-1.10.12,b-1.2.1,b-colvis-1.2.1,b-flash-1.2.1,b-html5-1.2.1,b-print-1.2.1,r-2.1.0/datatables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.4.1/featherlight.min.js"></script>
+        <script src="https://raw.githubusercontent.com/bartaz/sandbox.js/master/jquery.highlight.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.1.0/bootstrap-slider.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js'></script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+    {% endblock %}
+{% block page_content -%}
+    <h3>{{ 'Measure list'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_measure_new') }}" class="btn btn-default">{{ 'Create a new measure'|trans }}</a>
+    </div>
+    <table class="records_list table table-striped">
+        <thead>
+        <tr>
+            <th class="col-md-3">{{ 'Parent'|trans }}</th>
+            <th class="col-md-3">{{ 'Name'|trans }}</th>
+            <th class="col-md-3">{{ 'Enable'|trans }}</th>
+            <th class="col-md-3">{{ 'Actions'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>
+                    <a href="{{ path('admin_prodexistin_show', { 'id': entity.parent.id }) }}">{{ entity.parent.name }}</a>
+                </td>
+                <td>
+                    <a href="{{ path('admin_measure_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
+                </td>
+                <td>
+                    {% if entity.enable == 1 %}{{ 'Yes'|trans }}{% else %}{{ 'No'|trans }}{% endif %}
+                </td>
+                <td>
+                    <div class="btn-group-xs">
+                        <a href="{{ path('admin_measure_show', { 'id': entity.id }) }}" class="btn btn-default" title="{{ 'show'|trans }}"><i class="fa fa-eye"></i></a>
+                        <a href="{{ path('admin_measure_edit', { 'id': entity.id }) }}" class="btn btn-primary" title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock page_content %}

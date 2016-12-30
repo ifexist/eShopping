@@ -1,0 +1,57 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block page_content -%}
+    <h3>{{ 'Measure'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_measure') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+        <a href="{{ path('admin_measure_new') }}" class="btn btn-default">{{ 'Create a new measure'|trans }}</a>
+        <a href="{{ path('admin_measure_edit', { 'id': entity.id }) }}" class="btn btn-primary">{{ 'Edit'|trans }}</a>
+    </div>
+
+    <table class="record_properties table table-bordered table-striped">
+        <tbody>
+        <tr>
+            <th>{{ 'Name'|trans }}</th>
+            <td>{{ entity.name }}</td>
+            <td>{% if entity.enable == 1 %}{{ 'Yes'|trans }}{% else %}{{ 'No'|trans }}{% endif %}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+                
+            </a>
+        </li>
+        <li class="list-group-item">
+        </li>
+        <li class="list-group-item">
+                {% include "@Admin/Partials/Includes/Modals/deleteConfirm.html.twig" %}
+                {{ form_start(delete_form) }}
+                {{ form_widget(delete_form) }}
+                <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete" data-title="{{ 'Delete'|trans }}" data-message="{{ 'Are you sure to delete this data'|trans }} ?">
+                    <i class="fa fa-trash"></i> {{ 'Delete'|trans }}
+                </button>
+                    &nbsp;&nbsp;<span class="text-danger"><strong>{{ 'Warning'|trans }} !</strong> {{ 'Removing these data will be irreversible'|trans }}.</span>
+                {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function () {
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock javascripts %}

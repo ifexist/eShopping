@@ -1,0 +1,10 @@
+{% extends "@Shop/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block page_content %}
+    <div class="container">
+        <p>
+            {{ 'resetting.check_email'|trans({'%email%': email}) }}
+        </p>
+    </div>
+{% endblock page_content %}

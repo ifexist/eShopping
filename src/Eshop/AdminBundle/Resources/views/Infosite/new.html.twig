@@ -1,0 +1,85 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/css/summernote.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/geoaddresspicker/demos/themes/base/jquery.ui.all.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block page_content -%}
+    <h3>{{ "Add your website information"|trans }}</h3>
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>
+            <b>{{ 'Important'|trans }}! * = {{ 'Required'|trans }}</b>.<br>{{ 'Entering of all fields, is not mandatory'|trans }}. 
+            {{ 'However, it is important to grasp the most possble box'|trans }}. 
+            {{ 'These information are units to better ranking of your website and business'|trans }}.
+        </p>
+    </div>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input type="submit" value="{{ 'Save'|trans }}" class="btn btn-warning"/>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock page_content %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="{{ asset('bundles/shop/bootstrap-tokenfield/dist/bootstrap-tokenfield.min.js') }}"></script>
+    <script>
+        $('#prodcats').tokenfield({
+            autocomplete: {
+                source: [        
+                    {% for prodcat in prodcats %}
+                        '{{ prodcat.parentid }}|{{ prodcat.cat1 }}',
+                    {% endfor %}   
+                        ],
+                delay: 100
+                    },
+                    showAutocompleteOnFocus: true
+                })
+    </script>
+
+    
+    
+    <script src="{{ asset('bundles/shop/js/speakingurl.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/js/summernote.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.generate-slug').on('click', function (e) {
+                e.preventDefault();
+                //get field value
+                var productName = $('.product-name').val();
+                var slugInut = $('.product-slug');
+                var nameToSlug = productName;
+
+                //generate slug
+                var slug = getSlug(nameToSlug, {
+                    custom: {
+                        '%': ' percent '
+                    },
+                    uric: true
+                });
+                //record to slug input
+                slugInut.val(slug);
+            });
+
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        });
+        {% include '@Admin/Partials/initSummernote.js.twig' with {'height': 300} %}
+    </script>
+{% endblock javascripts %}

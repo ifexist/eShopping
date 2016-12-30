@@ -1,0 +1,18 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'contact' %}
+{% block title %}{{ 'This quote request already exists'|trans }}{% endblock %}
+{% block page_content -%}
+    <body bgcolor="#FFFFFF">
+        <div class="alert alert-warning">
+            <h2><i class="fa fa-warning"></i> {{ 'This quote request already exists'|trans }}</h2>
+                    <h4><i class="fa fa-warning"></i> {{ 'Warning'|trans }}</h4>
+                    <p>{{ 'One free quotation id already requested by'|trans }}
+                        <strong>{{ entity.email|upper }}</strong> {{ 'for creation of a website type'|trans }} <strong>{{ entity.typesite|capitalize }} ({{ entity.lang|upper }}) {{ entity.createdAt|ago }}</strong>.
+                    </p>
+                    <br>
+                    <h4>
+                        {{ 'Note that all quotes received applications will be reviewed and answered promptly'|trans }}.
+                    </h4>
+            </div>
+
+{% endblock page_content -%}

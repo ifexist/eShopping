@@ -1,0 +1,142 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block page_content -%}
+    <h3>{{ 'Media links'|trans }}</h3>
+    <a href="{{ path('admin_infositelinks_edit', { 'id': entity.id }) }}" class="btn btn-xs btn-primary">{{ 'Edit'|trans }}</a>
+<table class="small table table-striped">
+    <tr>
+        <th>
+            {{ 'First social media'|trans }}
+        </th>
+        <th>
+            {{ 'Second social media'|trans }}
+        </th>
+        <th>
+            {{ 'Third social media'|trans }}
+        </th>
+        <th>
+            {{ 'Fourth social media'|trans }}
+        </th>
+        <th>
+            {{ 'Fifth social media'|trans }}
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {% if entity.mediatitle1 != "" %}
+                <a href="{{ entity.medialink1 }}" target="_blank" title="{{ entity.mediatitle1|capitalize }} : {{ entity.medialink1 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle1|lower ~'.png') }}" title="{{ entity.mediatitle1|capitalize }} : {{ entity.medialink1 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle2 != "" %}
+                <a href="{{ entity.medialink2 }}" target="_blank" title="{{ entity.mediatitle2|capitalize }} : {{ entity.medialink2 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle2|lower ~'.png') }}" title="{{ entity.mediatitle2|capitalize }} : {{ entity.medialink2 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle3 != "" %}
+                <a href="{{ entity.medialink3 }}" target="_blank" title="{{ entity.mediatitle3|capitalize }} : {{ entity.medialink3 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle3|lower ~'.png') }}" title="{{ entity.mediatitle3|capitalize }} : {{ entity.medialink3 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle4 != "" %}
+                <a href="{{ entity.medialink4 }}" target="_blank" title="{{ entity.mediatitle4|capitalize }} : {{ entity.medialink4 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle4|lower ~'.png') }}" title="{{ entity.mediatitle4|capitalize }} : {{ entity.medialink4 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle5 != "" %}
+                <a href="{{ entity.medialink5 }}" target="_blank" title="{{ entity.mediatitle5|capitalize }} : {{ entity.medialink5 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle5|lower ~'.png') }}" title="{{ entity.mediatitle5|capitalize }} : {{ entity.medialink5 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+
+    <tr>
+        <th>
+            {{ 'Sixth social media'|trans }}
+        </th>
+        <th>
+            {{ 'Seventh social media'|trans }}
+        </th>
+        <th>
+            {{ 'Eighth social media'|trans }}
+        </th>
+        <th>
+            {{ 'Ninth social media'|trans }}
+        </th>
+        <th>
+            {{ 'Tenth social media'|trans }}
+        </th>
+    </tr>
+    <tr>
+        <td>
+            {% if entity.mediatitle6 != "" %}
+                <a href="{{ entity.medialink6 }}" target="_blank" title="{{ entity.mediatitle6|capitalize }} : {{ entity.medialink6 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle6|lower ~'.png') }}" title="{{ entity.mediatitle6|capitalize }} : {{ entity.medialink6 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle7 != "" %}
+                <a href="{{ entity.medialink7 }}" target="_blank" title="{{ entity.mediatitle7|capitalize }} : {{ entity.medialink7 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle7|lower ~'.png') }}" title="{{ entity.mediatitle7|capitalize }} : {{ entity.medialink7 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle8 != "" %}
+                <a href="{{ entity.medialink8 }}" target="_blank" title="{{ entity.mediatitle8|capitalize }} : {{ entity.medialink8 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle8|lower ~'.png') }}" title="{{ entity.mediatitle8|capitalize }} : {{ entity.medialink8 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle9 != "" %}
+                <a href="{{ entity.medialink9 }}" target="_blank" title="{{ entity.mediatitle9|capitalize }} : {{ entity.medialink9 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle9|lower ~'.png') }}" title="{{ entity.mediatitle9|capitalize }} : {{ entity.medialink9 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+        <td>
+            {% if entity.mediatitle10 != "" %}
+                <a href="{{ entity.medialink10 }}" target="_blank" title="{{ entity.mediatitle10|capitalize }} : {{ entity.medialink10 }}">
+                <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ entity.mediatitle10|lower ~'.png') }}" title="{{ entity.mediatitle10|capitalize }} : {{ entity.medialink10 }}" width="28px">
+                </a>
+            {% else %}
+                <span style="color:red;">{{ 'None'|trans }}<span>
+            {% endif %}
+        </td>
+    </tr>
+</table>
+{% endblock page_content %}

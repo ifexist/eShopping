@@ -1,0 +1,11 @@
+{% trans_default_domain 'shop' %}
+<div class="foot-header">
+    {{ 'layout.navbar.pages'|trans|capitalize }}
+</div>
+{% for SPF in SPFs %}
+    <div class="foot-links">
+        <a href="{{ path('show_static_page', {'slug' : SPF.slug}) }}">
+            {{ SPF.title|trans }}
+        </a>
+    </div>
+{% endfor %}

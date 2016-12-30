@@ -1,0 +1,65 @@
+contact:
+    resource: "@ContactBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user:
+    resource: "@UserBundle/Resources/config/routing/all.xml"
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+shop:
+    resource: "@ShopBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+oneup_uploader:
+    resource: .
+    type: uploader
+    
+    
+PrestaSitemapBundle:
+    resource: "@PrestaSitemapBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+    
+genemu_base64:
+    resource: "@GenemuFormBundle/Resources/config/routing/base64.xml"
+    
+    
+
+usn_newsletter:
+    resource: "@UsnNewsletterBundle/Resources/config/routing.yml"
+    
+    
+sg_datatables_bundle:
+    resource: "@SgDatatablesBundle/Controller/"
+    type:     annotation
+    
+
+lexik_translation_edition:
+    resource: "@LexikTranslationBundle/Resources/config/routing.yml"
+    prefix:   /admin/translation
+    
+    
+#feedio:
+#    resource: @DebrilRssAtomBundle/Resources/config/routing.xml
+    
+#web_consul_ebay_api_homepage:
+#    resource: "@WebConsulEbayApiBundle/Controller/"
+#    type: annotation

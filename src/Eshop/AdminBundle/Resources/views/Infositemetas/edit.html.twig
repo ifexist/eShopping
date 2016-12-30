@@ -1,0 +1,196 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block page_content -%}
+    <h3>{{ "Edit your website meta tags information"|trans }}</h3>
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>
+            <b>{{ 'Important'|trans }}! * = {{ 'Required'|trans }}</b>.<br>{{ 'Entering of all fields, is not mandatory'|trans }}. 
+            {{ 'However, it is important to grasp the most possble box'|trans }}. 
+            {{ 'These information are units to better ranking of your website and business'|trans }}. 
+            <b>{{ 'Click on each image for updating or changing'|trans }}</b>.
+        </p>
+    </div> 
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success" role="alert">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    {{ form_start(edit_form) }}
+    <table class="record_properties table table-bordered">
+        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Meta Title'|trans }} *
+                </div>
+                <div class="small col-xs-3">
+                     {{ 'Meta Content Type '|trans }} *
+                </div>
+                <div class="small col-xs-3">
+                     {{ 'Meta Rating'|trans }} *
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Meta Language'|trans }} *
+                </div>
+        
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaTitle, {'attr':{'class':'col-md-12', 'required':'required'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaContentype, {'attr':{'class':'col-md-12', 'required':'required'} }) }}
+                </div> 
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaRating, {'attr':{'class':'col-md-12', 'required':'required'} }) }}
+                </div> 
+                <div class="small col-xs-3">
+                    <select name="langcode" class="col-md-12" required>
+                        <option value="{{ app.request.locale|lower }}" selected="selected">{{ app.request.locale|lower }}</option>
+                        {% for lang in langs %}
+                            <option value="{{ lang.code|lower }}">{{ lang.code|lower }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Copyright'|trans }} <span class="small">({{ 'Owner Full name'|trans }})</a></span>
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Author'|trans }} <span class="small">({{ 'Autor Full name'|trans }})</a></span>
+                </div>
+                <div class="small col-xs-3">
+                     {{ 'Publisher '|trans }} <span class="small">({{ 'Publisher Full name'|trans }})</a></span>
+                </div>
+                <div class="small col-xs-3">
+                     {{ 'Distribution'|trans }}
+                </div>
+        
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaCopyright, {'attr':{'class':'col-md-12'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaAuthor, {'attr':{'class':'col-md-12'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaPublisher, {'attr':{'class':'col-md-12'} }) }}
+                </div> 
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaDistribution, {'attr':{'class':'col-md-12'} }) }}
+                </div> 
+            </td>
+        </tr>
+        
+
+        
+        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Geography'|trans }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Category'|trans }}
+                </div>
+                <div class="small col-xs-3">
+                     {{ 'Robot '|trans }}
+                </div>
+                <div class="small col-xs-3">
+                     {{ 'Visit period by robot'|trans }}
+                </div>
+        
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaGeography, {'attr':{'class':'col-md-12', 'required':'required', 'placeholder':'Your city, Your Country'|trans} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaCategory, {'attr':{'class':'col-md-12'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaRobots, {'attr':{'class':'col-md-12'} }) }}
+                </div> 
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.metaRevisitafter, {'attr':{'class':'col-md-12'} }) }}
+                </div> 
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <th>
+                <div class="small col-xs-6">
+                    {{ 'Replay To'|trans }}
+                </div>
+                <div class="small col-xs-6">
+                    {{ 'Default image link'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-6">
+                    {{ form_widget(edit_form.metaReplyto, {'attr':{'class':'col-md-12', 'placeholder':'Example'|trans ~ 'info@ifexist.Ext'} }) }}
+                </div>
+                <div class="small col-xs-6">
+                    {{ form_widget(edit_form.metaImagelink, {'attr':{'class':'col-md-12', 'required': 'required'} }) }}
+                </div>
+            </td>
+        </tr>
+
+        
+        
+        <tr>
+            <th>
+                <div class="small col-xs-6">
+                    {{ 'Meta keyword'|trans }}
+                </div>
+                <div class="small col-xs-6">
+                    {{ 'Meta Description'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-6">
+                    {{ form_widget(edit_form.metaKeyword, {'attr':{'class':'col-md-12', 'required': 'required'} }) }}
+                </div>
+                <div class="small col-xs-6">
+                    {{ form_widget(edit_form.metaDescription, {'attr':{'class':'col-md-12', 'required': 'required'} }) }}
+                </div>
+            </td>
+        </tr>
+        
+
+        
+        
+        <tr>
+            <td>
+                <input type="submit" value="{{ 'Save'|trans }}" class="col-md-12 btn btn-success"/>
+            </td>
+        </tr>
+        
+    </table>          
+                
+     
+    {{ form_rest(edit_form) }}
+    {{ form_end(edit_form) }}
+    
+{% endblock page_content %}

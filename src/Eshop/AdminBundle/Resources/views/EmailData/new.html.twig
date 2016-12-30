@@ -1,0 +1,192 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+
+{% block page_content -%}
+    <h3>{{ 'Email Data create'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_email_data') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+    </div>
+
+
+    {{ form_start(form) }}
+    <table class="table table-responsive">
+        <tr>
+            <th>
+                <div class="col-md-3">
+                    <i class="fa fa-calendar"></i> {{ 'Date'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-check-square-o"></i> {{ 'Cheched'|trans }} = {{ 'Enable'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-check-square-o"></i> {{ 'Cheched'|trans }} = {{ 'Pro'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-flag-o"></i> {{ 'Language'|trans }}
+                </div>
+            </th>
+        </tr>
+        
+        <tr>
+            <td>
+                <div class="col-md-3">
+                    {{ form_widget(form.date, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.enable, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.typecompte, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.lang, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-md-6">
+                    <i class="fa fa-institution"></i> {{ 'Name of company'|trans }}
+                </div>
+                <div class="col-md-2">
+                    <i class="fa fa-tree"></i> {{ 'Activity'|trans }}
+                </div>
+                <div class="col-md-2">
+                    <i class="fa fa-pagelines"></i> {{ 'Type'|trans }}
+                </div>
+                <div class="col-md-2">
+                    <i class="fa fa-leaf"></i> {{ 'Sector'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-md-6">
+                    {{ form_widget(form.namets, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-2">
+                    {{ form_widget(form.activity, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-2">
+                    {{ form_widget(form.typactivity, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-2">
+                    {{ form_widget(form.sector, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-md-3">
+                    <i class="fa fa-female"></i> <i class="fa fa-male"></i> {{ 'Gender'|trans }}
+                </div>
+                <div class="col-md-3">
+                    {{ 'Firstname'|trans }}
+                </div>
+                <div class="col-md-3">
+                    {{ 'Lastname'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-envelope-o"></i> {{ 'Email'|trans }}
+                </div>
+            </th>
+        </tr>
+        
+        <tr>
+            <td>
+                <div class="col-md-3">
+                    {{ form_widget(form.gender, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.firstname, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.lastname, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.email, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-md-3">
+                    <i class="fa fa-map-marker"></i> {{ 'Address'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-map-marker"></i> {{ 'Postal code'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-map-marker"></i> {{ 'City'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-map-marker"></i> {{ 'Country'|trans }}
+                </div>
+            </th>
+        </tr>
+        
+        <tr>
+            <td>
+                <div class="col-md-3">
+                    {{ form_widget(form.address, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.zipcode, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.city, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.country, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="col-md-3">
+                    <i class="fa fa-phone"></i> {{ 'Phone'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-mobile"></i> {{ 'Mobile'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-fax"></i> {{ 'Fax'|trans }}
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-link"></i> {{ 'Web'|trans }}
+                </div>
+            </th>
+        </tr>
+        
+        <tr>
+            <td>
+                <div class="col-md-3">
+                    {{ form_widget(form.phone, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.mobile, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.fax, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="col-md-3">
+                    {{ form_widget(form.web, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <input type="submit" value="{{ 'Submit'|trans }}" class="col-md-12 btn btn-warning"/>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock page_content %}

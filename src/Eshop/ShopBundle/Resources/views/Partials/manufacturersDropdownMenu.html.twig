@@ -1,0 +1,11 @@
+{% trans_default_domain 'shop' %}
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+       aria-expanded="true">{{ 'manufacturers.menu.header'|trans }} <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        {% for manufactDD in manufacturersDropdown %}
+            <li><a href="{{ path('manufacturer', {'slug' : manufactDD.slug}) }}">{{ manufactDD.name }}</a></li>
+        {% endfor %}
+    </ul>
+</li>

@@ -1,0 +1,10 @@
+{% trans_default_domain 'admin' %}
+{% if entity.images|length %}
+    {% for image in entity.images|slice(0, 3) %}
+        <a class="fancybox" rel="group" href="{{ asset(('uploads/images/product/' ~ image.path)) }}">
+            <img src="{{ asset( ('uploads/images/product/' ~ image.path) | imagine_filter('some_thumb')) }}" width="100%"/>
+        </a>
+    {% endfor %}
+{% else %}
+    <a><img src="{{ asset('no-logo.jpg') }}" width="100%"/></a>
+{% endif %}

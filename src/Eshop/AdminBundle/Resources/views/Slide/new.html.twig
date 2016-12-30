@@ -1,0 +1,178 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="{{ asset('bundles/shop/cropit/dist/jquery.cropit.js') }}"></script>
+    <script>
+        var imageData = '';
+            
+            $(function () {
+                $('.image-editor').cropit({
+                        imageBackground: true,
+                        imageBackgroundBorderWidth: 20,
+                        allowDragNDrop: true,
+                        exportZoom: 1,
+                        onImageError: function() {
+                            $(".error-msg").text("{{ "Upload image dimension error"|trans }} " + $(".cropit-image-preview").outerWidth() + "px {{ "in width"|trans }} {{ ' and'|trans }} " + $(".cropit-image-preview").outerHeight() + "px {{ "in height"|trans }}."), $(".cropit-image-preview").addClass("has-error"), window.setTimeout(function() {
+                                return function() {
+                                    return $(".cropit-image-preview").removeClass("has-error")
+                                }
+                            }(this), 3e3)
+                        }
+                    });
+                $('form').submit(function() {
+                    // Move cropped image data to hidden input
+                    var imageData = $('.image-editor').cropit('export');
+                    $('.hidden-image-data').val(imageData);
+
+                    // Print HTTP request params
+                    var formValue = $(this).serialize();
+                    $('#result-data').text('Loading ...' + formValue);
+
+                    // Prevent the form from actually submitting
+                        {#return false;#}
+                });
+            });
+    </script>
+{% endblock javascripts %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/jquery.fancybox.css') }}" rel="stylesheet">        <style>
+            .cropit-image-preview {
+                left: 0;
+                width: 850px;
+                height: 250px;
+                background-color: #eee;
+                border:#ccc solid 1px;
+                {% if file_exists(web_dir ~ '/' ~ imgDir ~ '/' ~ entity.slidekey ~ '.jpg' ) %}
+                    background-image: url('{{ asset(imgDir ~ '/' ~ entity.slidekey ~ '.jpg') }}');
+                {% else %} 
+                    background-image: url('{{ asset('slidePlaceholder.png') }}');
+                {% endif %} 
+                background-size: 100%;
+                background-position: right 50% bottom 50%;
+            }
+
+            .cropit-image-zoom-input {
+                width: 700px;
+            }
+
+            .cropit-image-background {
+                opacity: .2;
+                cursor: auto;
+            }
+
+            .image-size-label {
+                margin-top: 10px;
+            }
+
+            input {
+                display: block;
+            }
+
+            .export {
+                top: 150px;
+                margin-top: 10px;
+            }
+            
+            .cropit-image-preview .error-msg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px 20px;
+                color: #fff;
+                background: rgba(210,65,72,0.8);
+                line-height: 1.5;
+                opacity: 0;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                filter: alpha(opacity=0);
+                -webkit-transition: opacity 0.25s;
+                -moz-transition: opacity 0.25s;
+                -o-transition: opacity 0.25s;
+                -ms-transition: opacity 0.25s;
+                transition: opacity 0.25s;
+            }
+
+            .cropit-image-preview.has-error .error-msg {
+                opacity: 1;
+                -ms-filter: none;
+                filter: none;
+            }
+        </style>
+{% endblock stylesheets %}
+{% block page_content -%}
+    <h3>{{ 'Slide creation'|trans }}</h3>
+    <div class="btn-group-xs">
+        <a href="{{ path('admin_slide') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+    </div>
+    {{ form_start(form) }}
+
+    <div class="col-md-12">
+        <table class="record_properties table table-bordered">
+            <tr>
+                <td>
+                    <label>{{ 'Status'|trans }}</label>
+                </td>
+                <td>
+                    {{ form_widget(form.enabled) }}
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <label>{{ 'Name'|trans }} *</label>
+                </td>
+                <td width="80%">
+                    {{ form_widget(form.name, {'attr':{'class':'col-xs-12'} }) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{{ 'Description'|trans }} *</label>
+                </td>
+                <td>
+                    {{ form_widget(form.description, {'attr':{'class':'col-xs-12'} }) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{{ 'Slide order'|trans }} *</label>
+                </td>
+                <td>
+                    {{ form_widget(form.slideOrder, {'attr':{'class':'col-xs-12'} }) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>{{ 'Image'|trans }}</label>
+                </td>
+                <td>
+                    <div class="col-md-12">
+                    <input type="hidden" name="image-data" class="hidden-image-data" />
+                        <div class="image-editor" id="crop">
+                            <input type="file" class="cropit-image-input">
+                            <div class="cropit-image-preview"><div class="error-msg"></div></div>
+                            <div class="image-size-label">
+                                    {{ 'Zoom image'|trans }}<br>
+                                    <input type="range" class="cropit-image-zoom-input">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="col-md-12 text-bold btn btn-succes">* = {{ 'Rquired'|trans }}</div>
+                </td>
+                <td>
+                    <input type="submit" value="{{ 'Submit'|trans }}" class="btn btn-warning"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {{ form_end(form) }}
+{% endblock page_content %}

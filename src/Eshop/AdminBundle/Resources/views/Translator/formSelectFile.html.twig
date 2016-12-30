@@ -1,0 +1,45 @@
+<h3>{{ 'Choose the elements in the lists for the translation'|trans|capitalize }}</h3>
+{#{{ form_start(form_file_select) }}#}
+<form action="{{ path('admin_translator_lang_nodes_select') }}" method="post">
+<table class="table">
+    <tr>
+        <th class="col-md-3">{{ 'Bundle'|trans }}</th>
+        <th class="col-md-3">{{ 'Translation file prefix'|trans }}</th>
+        <th class="col-md-3">{{ 'Language'|trans }}</th>
+        <th class="col-md-3">{{ 'Action'|trans }}</th>
+    </tr>
+    <tr>
+        <td>
+            <select name="bundle" class="col-md-12 form-control" required>
+                <option value="{{ bundle }}" selected="selected">{{ bundle }}</option>
+                <option value="Shop">Shop</option>
+                <option value="Admin">Admin</option>
+                <option value="Contact">Contact</option>
+            </select>
+        </td>
+        <td>
+            <select name="prefix" class="col-md-12 form-control" required>
+                <option value="{{ prefix }}" selected="selected">{{ prefix }}</option>
+                <option value="shop">shop</option>
+                <option value="admin">admin</option>
+                <option value="contact">contact</option>
+                <option value="messages">messages</option>
+                <option value="validators">validators</option>
+            </select>
+        </td>
+        <td>
+            <select name="lang" class="col-md-12 form-control" required onchange="this.form.submit();">
+                <option value="{{ lang }}" selected="selected">{{ lang }}</option>
+                {% for lang in languages %}
+                    <option value="{{ lang.code }}"><i class="flag-icon flag-icon-{{ lang.code }}"></i> {{ lang.code }}</option>
+                {% endfor %}
+            </select>
+        </td>
+        <td>
+            <input type="submit" value="{{ 'Continue'|trans }}" class="btn btn-warning">
+        </td>
+    </tr>
+</table>
+</form>
+{#{{ form_rest(form_file_select) }}#}
+{#{{ form_end(form_file_select) }}#}

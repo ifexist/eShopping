@@ -1,0 +1,104 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block title %}
+    {{ 'Email Data list'|trans }} - {{ 'Administration panel'|trans }}
+{% endblock title %}
+
+{% block page_content -%}
+    <h3>{{ 'Email Data list'|trans }} {{ total }}</h3>
+<a href="{{ path('admin_email_data_new') }}" class="btn btn-default">{{ 'add'|trans }}</a>
+    <table class="table">
+        <tr>
+            <th class="dropdown">{{ 'Title'|trans }} -- 
+            
+                <a href="#" data-toggle="dropdown" class="btn btn-xs btn-default dropdown-toggle">
+                    <i class="fa fa-list"></i> {{ 'Sort by'|trans }} <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>{{ knp_pagination_sortable(entities, 'Email Data Activity'|trans, 'edt.activity') }}</li>
+                    <li>{{ knp_pagination_sortable(entities, 'Email Data Language'|trans, 'lang.') }}</li>
+                </ul>
+            </th>
+            <th>{{ 'Activity'|trans }}</th>
+            <th>{{ 'Locality'|trans }}</th>
+            <th>{{ 'Language'|trans }}</th>
+            <th>{{ 'Actions'|trans }}</th>
+        </tr>
+    {% for entity in entities %} 
+        <tr>
+            <td>
+                {% if entity.namets != "" %}
+                    <a href="{{ path('admin_email_data_show', { 'id': entity.id }) }}">{{ entity.namets|truncate(25) }}</h4></a>
+                {% endif %} 
+            </td>
+            <td>
+                
+                {% if entity.activity != "" %}
+                    <span class="btn btn-xs btn-default fa fa-tree"></span> {{ entity.activity }}
+                {% endif %} 
+                {% if entity.typactivity != "" %}
+                    <span class="btn btn-xs btn-default fa fa-pagelines"></span> {{ entity.typactivity }}
+                {% endif %} 
+                {% if entity.sector != "" %}
+                    <span class="btn btn-xs btn-default fa fa-leaf"></span> {{ entity.sector }}
+                {% endif %} 
+            </td>
+            <td>
+                <span class="btn btn-xs btn-default fa fa-map-marker"></span> 
+                {% if entity.address != "" %}
+                    {{ entity.address }}, 
+                {% endif %} 
+                {% if entity.zipcode != "" %}
+                    {{ entity.zipcode }}, 
+                {% endif %}  
+                {% if entity.city != "" %}
+                    {{ entity.city }}, 
+                {% endif %} 
+                {% if entity.country != "" %}
+                    <b>{{ entity.country }}</b>
+                {% endif %} 
+            </td>
+            <td>
+                {% if entity.lang.code != "" %}
+                    {{ entity.lang.code|upper }}
+                {% else %} 
+                    {{ 'none'|trans }}
+                {% endif %} 
+            </td>
+            <td>
+                <div class="btn-group-xs">
+                    <a href="{{ path('admin_email_data_show', { 'id': entity.id }) }}" class="btn btn-default" title="{{ 'show'|trans }}"><i class="fa fa-eye"></i></a>
+                    <a href="{{ path('admin_email_data_edit', { 'id': entity.id }) }}" class="btn btn-primary" title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <div class="row">
+        <div class="col-md-12">
+            {{ knp_pagination_render(entities) }}
+        </div>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/fancybox/jquery.mousewheel-3.0.6.pack.js') }}"
+    type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/fancybox/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+        });
+    </script>
+{% endblock javascripts %}
+
+
+

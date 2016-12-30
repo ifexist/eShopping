@@ -1,0 +1,47 @@
+<script>
+            $(document).ready(function () {
+                $("#geocomplete").geocomplete({
+                    details: '#geo_details',
+                    detailsAttribute: "data-geo",
+                    types: ['geocode', 'establishment']
+                }).bind("geocode:result", function (event, result) {
+                    console.log(event, result);
+                    if (result.opening_hours.weekday_text[0].length) {
+                        //start opening_hours
+                        $('[data-geo=opening_hours]').val(
+                                result.opening_hours.weekday_text[0] + '\n' +
+                                result.opening_hours.weekday_text[1] + '\n' +
+                                result.opening_hours.weekday_text[2] + '\n' +
+                                result.opening_hours.weekday_text[3] + '\n' +
+                                result.opening_hours.weekday_text[4] + '\n' +
+                                result.opening_hours.weekday_text[5] + '\n' +
+                                result.opening_hours.weekday_text[6]
+                                );
+                    } else {
+                        $('[data-geo=opening_hours]').val("");
+                    }
+
+                if (result.photos.length) {
+                    var photosN = result.photos;
+                    var text = "";
+                    var i;
+                    for (i = 0; i < photosN.length; i++) {
+                        text += photosN[i].getUrl({maxHeight: 400, maxWidth: 800}) + "|";
+                    }
+                    document.getElementById("photos").innerHTML = text;
+                }
+
+                    if (result.reviews[0].language) {
+                        $('[data-geo=language]').val(
+                                result.reviews[0].language
+                                );
+                    } else {
+                        $('[data-geo=language]').val("");
+                    }
+
+                    //end language
+
+                });
+            });
+
+</script>

@@ -1,0 +1,71 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% block title %}{{ 'Translator'|trans|capitalize }}{% endblock%}
+{#    {% block stylesheets %}
+    {{ parent() }}
+    <style>
+#page-wrapper {
+  width: 100%;
+  background: #FFF;
+  padding: 1em;
+  margin: 1em auto;
+  min-height: 300px;
+  border-top: 5px solid #69c773;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+    </style>
+    {% endblock %}#}
+{% block page_content -%}
+    <form action="{{ path('admin_translator_lang_nodes_select') }}" method="post">
+        {{ render(controller('AdminBundle:Translator:formSelectFile')) }}
+    </form>
+    {% if file_exists(filename) %}
+        <h4 class="align-center">{{ num }} {{ 'Items to translate found'|trans }}. {{ 'Translation'|trans }} EN > {{ lang|upper }}</h4>
+        <table class="table table-condensed">
+            <tr>
+                <th class="col-md-1">
+                    {{ 'No'|trans }}
+                </th>
+                <th class="col-md-5">
+                    {{ 'Source'|trans }}
+                </th>
+                <th class="col-md-5">
+                    {{ 'Definition'|trans }}
+                </th>
+                <th class="col-md-1"></th>
+            </tr>
+        </table>
+        <div style="height: 300px;overflow: auto;">
+                <table class="table table-condensed">
+                    <input type="hidden" name="lang" value="{{ num }}">
+                    <input type="hidden" name="bundle" value="{{ bundle }}">
+                    <input type="hidden" name="prefix" value="{{ prefix }}">
+                    <input type="hidden" name="lang" value="{{ lang }}">
+                    <input type="hidden" name="vAct" value="1">
+                {% for item in upNodes %}
+                    <tr> 
+                    <form action="{{ path('admin_translator_updatenode') }}" method="post">
+                        <input type="hidden" name="bundle" value="{{ bundle }}">
+                        <input type="hidden" name="prefix" value="{{ prefix }}">
+                        <input type="hidden" name="lang" value="{{ lang }}">
+                        {{ item|raw }}
+                        <td align="left">
+                            <input type="submit" value="{{ 'Save'|trans }}" class="btn btn-primary">
+                        </td>
+                    </form>
+                    </tr>
+                {% endfor %}
+                </table>
+        </div>
+            
+    {% else %}
+        <div class="alert">
+            <h4><strong>{{ 'Warning'|trans }} !</strong> {{ 'Bundle'|trans }} {{ bundle }} ({{ 'Language'|trans }} {{ lang }}) {{ 'has not the translation file'|trans }}.</h4>
+            <p>{{ 'Please, choose another bundle/language and repeat operation'|trans }}</p>
+        </div>
+    {% endif %}
+
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock javascripts %} 
+{% endblock page_content -%}

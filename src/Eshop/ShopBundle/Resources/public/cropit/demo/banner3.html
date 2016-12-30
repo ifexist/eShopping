@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cropit</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+        <script src="../dist/jquery.cropit.js"></script>
+
+        <style>
+            .cropit-image-preview {
+                background-color: #f8f8f8;
+                background-size: cover;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                margin-top: 7px;
+                width: 950px;
+                height: 250px;
+                cursor: move;
+            }
+
+            .cropit-image-background {
+                opacity: .2;
+                cursor: auto;
+            }
+
+            .image-size-label {
+                margin-top: 10px;
+            }
+
+            input {
+                display: block;
+            }
+
+            .export {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+<form method="POST" enctype="multipart/form-data">
+    <div class="image-editor">
+        <input name="imgs" type="file" class="cropit-image-input">
+        <div class="cropit-image-preview"></div>
+        <div class="image-size-label">
+            Resize image
+        </div>
+        <input type="range" class="cropit-image-zoom-input">
+        <textarea name="img" class="hidden-image-data"></textarea>
+<!--        <input type="hidden" name="img" class="hidden-image-data">-->
+    </div>
+    <input type="submit" id="submit" value="Submit">
+</form>
+
+<script>
+    $(function() {
+        $('.image-editor').cropit();
+        $('.image-editor').cropit('previewSize', { width: 950, height: 250 });
+//        $('.image-editor').cropit('imageSrc', 'http://lorempixel.com/1200/800/');
+        $('.image-editor').cropit('maxZoom', 1.25);
+        $('.image-editor').cropit('initialZoom', 'image');
+
+    $('form').submit(function() {
+        // Move cropped image data to hidden input
+        var imageData = $('.image-editor').cropit('export');
+        $('.hidden-image-data').val(imageData);
+
+        // Print HTTP request params
+        var formValue = $(this).serialize();
+        $('#result-data').text(formValue);
+
+        // Prevent the form from actually submitting
+        return false;
+    });
+    });
+</script>
+    </body>
+</html>
+

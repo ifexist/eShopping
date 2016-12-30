@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-md-7">
+        {% if file_exists(web_dir ~ '/site/images/banner.png') %}
+            <form action="{{ path('admin_uploadimages_cropbanner') }}" method="post" enctype="multipart/form-data">
+                <button type='submit' style="border:none;background:#fff;">
+                    <img src="{{ asset('site/images/banner.png') }}" width="100%" title="{{ 'Click to image for change banner'|trans }}" style="background: #fff;">
+                    <div class="text-on-banner">
+                        <b>{{ 'Click to image for change banner'|trans }}</b>
+                    </div>
+                </button>
+            </form>
+        {% else %}
+            <form action="{{ path('admin_uploadimages_cropbanner') }}" method="post" enctype="multipart/form-data">
+                <button type='submit' style="border:none;background:#fff;">
+                    <img src="{{ asset('no-banner.jpg') }}" width="100%" title="{{ 'Click to image for upload banner'|trans }}" style="background: #fff;">
+                    <div class="text-on-banner">
+                        <b>{{ 'Click to image for upload banner'|trans }}</b>
+                    </div>
+                </button>
+            </form> 
+        {% endif %} 
+    </div> 
+    <div class="col-md-3">
+        {% if file_exists(web_dir ~ '/site/images/logo.png') %}
+            <form action="{{ path('admin_uploadimages_croplogo') }}" method="post" enctype="multipart/form-data">
+                <button type='submit' style="border:none;background:#fff;">
+                    <img src="{{ asset('site/images/logo.png') }}" width="100%" title="{{ 'Click to image for change logo'|trans }}" style="background: #fff;">
+                    <div class="text-on-logo">
+                        <b>{{ 'Click to image for change logo'|trans }}</b>
+                    </div>
+                </button>
+            </form>
+        {% else %}
+            <form action="{{ path('admin_uploadimages_croplogo') }}" method="post" enctype="multipart/form-data">
+                <button type='submit' style="border:none;background:#fff;">
+                    <img src="{{ asset('no-logo.jpg') }}" width="100%" title="{{ 'Click to image for upload logo'|trans }}" style="background: #fff;">
+                    <div class="text-on-logo">
+                        <b>{{ 'Click to image for upload logo'|trans }}</b>
+                    </div>
+                </button>
+            </form> 
+        {% endif %} 
+    </div> 
+    <div class="col-md-2">
+        {% if file_exists(web_dir ~ '/site/images/apple-touch-icon.png') %}
+            <form action="{{ path('admin_uploadimages_cropicon') }}" method="post" enctype="multipart/form-data">
+                <button type='submit' style="border:none;background:#fff;">
+                    <img src="{{ asset('site/images/apple-touch-icon.png') }}" width="100%" title="{{ 'Click to image for change icon'|trans }}" style="background: #fff;">
+                    <div class="text-on-icon">
+                        <b>{{ 'Click to image for change icon'|trans }}</b>
+                    </div>
+                </button>
+            </form>
+        {% else %}
+            <form action="{{ path('admin_uploadimages_cropicon') }}" method="post" enctype="multipart/form-data">
+                <button type='submit' style="border:none;background:#fff;">
+                    <img src="{{ asset('no-icon.jpg') }}" width="100%" title="{{ 'Click to image for upload icon'|trans }}" style="background: #fff;">
+                    <div class="text-on-icon">
+                        <b>{{ 'Click to image for upload icon'|trans }}</b>
+                    </div>
+                </button>
+            </form> 
+        {% endif %} 
+    </div>
+</div>
+<br>    

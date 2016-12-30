@@ -1,0 +1,5 @@
+{% if ifgAdminstyle.adminstyle == "" %}
+    <link href="{{ asset('bootswatch/skins/custom/bootstrap.min.css') }}" rel="stylesheet">
+{% else%}
+    <link href="{{ asset('bootswatch/skins/'~ ifgAdminstyle.adminstyle ~'/bootstrap.min.css') }}" rel="stylesheet">
+{% endif %}

@@ -1,0 +1,130 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+        <style>
+            .cropit-image-preview {
+                left: 0;
+                width: 300px;
+                height: 150px;
+                background-color: #eee;
+                border:#ccc solid 1px;
+                {% if file_exists(web_dir ~ '/' ~ logoDir ~ '/logo.png') %}
+                    background-image: url('{{ asset(logoDir ~ '/logo.png') }}');
+                {% else %} 
+                    background-image: url('{{ asset('no-logo.jpg') }}');
+                {% endif %} 
+                background-size: 100%;
+                background-position: right 50% bottom 50%;
+            }
+
+            .cropit-image-zoom-input {
+                width: 200px;
+            }
+
+            .cropit-image-background {
+                opacity: .2;
+                cursor: auto;
+            }
+
+            .image-size-label {
+                margin-top: 10px;
+            }
+
+            input {
+                display: block;
+            }
+
+            .export {
+                top: 150px;
+                margin-top: 10px;
+            }
+        </style>
+{% endblock stylesheets %}
+
+{% block title %}
+    {{ 'Add image, Zoom, Crop and Upload a logo'|trans }} - {{ 'Administration panel'|trans }}
+{% endblock title %}
+
+{% block page_content -%}
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h3>{{ 'Add image, Zoom, Crop and Upload a logo'|trans }}</h3>  
+            <div class="btn-group-xs">
+                <a href="{{ path('admin_infosite', { 'id': 1 }) }}" class="btn btn-xs btn-default"><span class="fa fa-eye"> {{ 'Site infomation'|trans }}</span></a>
+                <a href="{{ path('admin_uploadimages_cropbanner') }}" class="btn btn-xs btn-success"><span class="fa fa-upload"> {{ 'Banner'|trans }}</span></a>
+                <a href="{{ path('admin_uploadimages_cropicon') }}" class="btn btn-xs btn-info"><span class="fa fa-upload"> {{ 'Icon'|trans }}</span></a>
+                <a href="{{ path('admin_uploadimages_croplogo') }}" class="btn btn-xs btn-warning"><span class="fa fa-refresh"></span> {{ 'Refresh page'|trans|capitalize }}</a>
+            </div> 
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class=" alert alert-info"><p><b>{{ 'Important'|trans }}</b>:<br>&nbsp;&nbsp;{{ 'Please, add a image first, wait displaying, manipulate and click on'|trans }} :<br><b>{{ 'Upload' }}</b></p></div>
+            <form action="{{ path('admin_uploadimages_croplogo') }}" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="image-data" class="hidden-image-data" />
+                <div class="image-editor" id="crop">
+                    <input type="file" class="cropit-image-input">
+                    <div class="cropit-image-preview"><div class="error-msg"></div></div>
+                    <div class="image-size-label">
+                        <div class="col-md-6">
+                            {{ 'Zoom image'|trans }}<br>
+                            <input type="range" class="cropit-image-zoom-input">
+                            <br>
+                            <button type='submit' class='btn btn-primary'>
+                                <span class='fa fa-upload'> {{ 'Upload'|trans }}</span>
+                            </button>
+                            <br>
+                        </div>
+                        <div class="col-md-3"></div>
+
+                    </div>
+                </div>
+            </form>
+        </div> 
+        <div class="col-md-3"></div>                
+    </div> 
+{% endblock page_content -%}
+
+{% block javascripts %}
+    {{ parent() }}
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="{{ asset('bundles/shop/cropit/dist/jquery.cropit.js') }}"></script>
+
+        <script>
+            var imageData = '';
+            
+                $(function () {
+                    $('.image-editor').cropit({
+                        imageBackground: true,
+                        imageBackgroundBorderWidth: 20,
+                        allowDragNDrop: true,
+                        exportZoom: 1,
+                        onImageError: function() {
+                            $(".error-msg").text("{{ "Upload image dimension error"|trans }} " + $(".cropit-image-preview").outerWidth() + "px {{ "in width"|trans }} {{ ' and'|trans }} " + $(".cropit-image-preview").outerHeight() + "px {{ "in height"|trans }}."), $(".cropit-image-preview").addClass("has-error"), window.setTimeout(function() {
+                                return function() {
+                                    return $(".cropit-image-preview").removeClass("has-error")
+                                }
+                            }(this), 3e3)
+                        }
+                    });
+                    
+    $('form').submit(function() {
+        // Move cropped image data to hidden input
+        var imageData = $('.image-editor').cropit('export');
+        $('.hidden-image-data').val(imageData);
+
+        // Print HTTP request params
+        var formValue = $(this).serialize();
+        $('#result-data').text('Loading ...' + formValue);
+
+        // Prevent the form from actually submitting
+        {#return false;#}
+    });
+                });
+        </script>
+{% endblock javascripts %}

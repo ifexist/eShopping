@@ -1,0 +1,71 @@
+{% trans_default_domain 'shop' %}
+{% if cntIfgSiteContactFooter > 0 %}
+    {% if ifgSiteContactFooter.contactservice1 != "" or ifgSiteContactFooter.contactservice2 != "" or ifgSiteContactFooter.contactservice3 != "" %}
+        <h4>{{ 'Contact-us'|trans }}</h4>
+    {% endif %}
+    {% if ifgSiteContactFooter.contactservice1 != "" or ifgSiteContactFooter.titleservice1 != "" or ifgSiteContactFooter.emailservice1 != "" or ifgSiteContactFooter.phoneservice1 != "" %}
+        <div class="small col-md-12 thumbnails">
+            <div class="btn-group-xs">
+                {% if ifgSiteContactFooter.titleservice1 != "" %}
+                    <div>
+                        <b>{{ ifgSiteContactFooter.titleservice1 }}</b>
+                    </div>
+                {% endif %}
+                {% if ifgSiteContactFooter.emailservice1 != "" %}
+                    <div class="text-info">
+                        <i class="fa fa-envelope"></i> {{ ifgSiteContactFooter.emailservice1 }}
+                    </div>
+                {% endif %}
+                {% if ifgSiteContactFooter.phoneservice1 != "" %}
+                    <div class="text-danger">
+                        <i class="fa fa-phone"></i> {{ ifgSiteContactFooter.phoneservice1 }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    <hr>
+    {% endif %}
+    {% if ifgSiteContactFooter.contactservice2 != "" or ifgSiteContactFooter.titleservice2 != "" or ifgSiteContactFooter.emailservice2 != "" or ifgSiteContactFooter.phoneservice2 != "" %}
+        <div class="small col-md-12">
+            <div class="btn-group-xs">
+                {% if ifgSiteContactFooter.titleservice2 != "" %}
+                    <div>
+                        <b>{{ ifgSiteContactFooter.titleservice2 }}</b>
+                    </div>
+                {% endif %}
+                {% if ifgSiteContactFooter.emailservice2 != "" %}
+                    <div class="text-info">
+                        <i class="fa fa-envelope"></i> {{ ifgSiteContactFooter.emailservice2 }}
+                    </div>
+                {% endif %}
+                {% if ifgSiteContactFooter.phoneservice2 != "" %}
+                    <div class="text-danger">
+                        <i class="fa fa-phone"></i> {{ ifgSiteContactFooter.phoneservice2 }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    <hr>
+    {% endif %}
+    {% if ifgSiteContactFooter.contactservice3 != "" or ifgSiteContactFooter.titleservice3 != "" or ifgSiteContactFooter.emailservice3 != "" or ifgSiteContactFooter.phoneservice3 != "" %}
+        <div class="small col-md-12">
+            <div class="btn-group-xs">
+                {% if ifgSiteContactFooter.titleservice3 != "" %}
+                    <div>
+                        <b>{{ ifgSiteContactFooter.titleservice3 }}</b>
+                    </div>
+                {% endif %}
+                {% if ifgSiteContactFooter.emailservice3 != "" %}
+                    <div class="text-info">
+                        <i class="fa fa-envelope"></i> {{ ifgSiteContactFooter.emailservice3 }}
+                    </div>
+                {% endif %}
+                {% if ifgSiteContactFooter.phoneservice3 != "" %}
+                    <div class="text-danger">
+                        <i class="fa fa-phone"></i> {{ ifgSiteContactFooter.phoneservice3 }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

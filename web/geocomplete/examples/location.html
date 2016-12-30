@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GeoComplete</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+
+    <form>
+      <input id="geocomplete" type="text" placeholder="Type in an address" size="90" />
+    </form>
+    
+    <div class="map_canvas"></div>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9kzJtnEDG1jxxlEvuU2SC9PPKwfW_AGI&libraries=places&signed_in=true"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script src="../jquery.geocomplete.js"></script>
+    <script src="logger.js"></script>
+     
+    <script>
+      $(function(){
+        
+        var options = {
+          map: ".map_canvas",
+          location: "NYC"
+        };
+        
+        $("#geocomplete").geocomplete(options);
+        
+      });
+    </script>
+  </body>
+</html>
+

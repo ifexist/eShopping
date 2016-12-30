@@ -1,0 +1,57 @@
+{% trans_default_domain 'shop' %}
+    <div class="navbar-fixed-top navbar-default" style="border-bottom:#eee solid 1px;">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse js-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="{{ path('news') }}">{{ 'layout.navbar.news'|trans }}</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <li><a href="{{ path('favourites') }}">{{ 'layout.navbar.favourites'|trans }}</a></li>
+                    {% endif %}
+                    {{ render(controller('ShopBundle:LayoutsUtility:themeSelector')) }}
+                    <li><a href="{{ path('quotation_demand') }}"><span class="text-danger"><strong>{{ 'Request a free quote'|trans }}</strong></a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li>
+                    <form class="navbar-form" action="{{ path('search') }}" role="search" method="GET">
+                        <div class="form-group">
+                            <input name="search_phrase" id="search_phrase" type="text" class="form-control" placeholder="{{ 'search.search'|trans }}">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </form> 
+                </li>
+                <li>
+                    <a href="{{ path('showcart') }}">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"> {{ render(controller('ShopBundle:Cart:navbarCart')) }}</span>
+                    </a>
+                </li>
+                {# navbar Auth dropdown menu (on hover)#}
+                {% include '@Shop/Partials/navbarAuthBlock.html.twig' %}
+                {# navbar Auth menu fine #}
+
+                {# language dropdown menu (on hover)#}
+                {{ render(controller('ShopBundle:LayoutsUtility:localeMenu')) }}
+                {# language menu fine #}
+
+                <li>
+                    <a href="{{ path('message_sending') }}" title="{{ 'contact.form_page_title'|trans }}">
+                        <i class="fa fa-envelope-o fa-lg"></i>
+                    </a>
+                </li>
+                {% include '@Shop/Partials/shareTop.html.twig' %}
+{#                <li>
+                    <a href="#" id="sharethis-top">
+                        <span class="fa fa-share-alt fa-lg"> {{ 'Share'|trans }}</span>
+                    </a>
+                </li>#}
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+    </div>

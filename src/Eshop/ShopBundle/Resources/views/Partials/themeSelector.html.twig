@@ -1,0 +1,19 @@
+{% trans_default_domain 'shop' %}
+<li class="active dropdown dropdown-large">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+       aria-expanded="true">
+        {{ 'layout.navbar.theme'|trans }} <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-large col-sm-9">
+        <center>
+            <h4>{{ 'layout.navbar.themechoose'|trans }} <span class="small">({{ 'Only for demonstration'|trans }})</span></h4>
+        </center>
+        {% for theme in themes %}
+            <li class="col-sm-2 list-group-item">
+                <a href="#" data-theme="{{ theme }}" class="theme-link">
+                    <img src="{{ asset('bootswatch/skins/' ~  theme ~ '/thumbnail.png') }}" width="100%" title="{{ theme }}">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</li>

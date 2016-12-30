@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source><![CDATA[]]></source>
+        <target><![CDATA[]]></target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source><![CDATA[%days days ago]]></source>
+        <target><![CDATA[depuis %days jours]]></target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source><![CDATA[%minutes minutes ago]]></source>
+        <target><![CDATA[%minutes minutes ago]]></target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source><![CDATA[1 day]]></source>
+        <target><![CDATA[1 jour]]></target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source><![CDATA[1 day ago]]></source>
+        <target><![CDATA[depuis 1 jour]]></target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source><![CDATA[1 minute ago]]></source>
+        <target><![CDATA[1 minute ago]]></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source><![CDATA[10 days]]></source>
+        <target><![CDATA[10 jours]]></target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source><![CDATA[11 days]]></source>
+        <target><![CDATA[11 jours]]></target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source><![CDATA[12 days]]></source>
+        <target><![CDATA[12 jours]]></target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source><![CDATA[13 days]]></source>
+        <target><![CDATA[13 jours]]></target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source><![CDATA[14 days]]></source>
+        <target><![CDATA[14 jours]]></target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source><![CDATA[14 years]]></source>
+        <target><![CDATA[14 ans]]></target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source><![CDATA[15 days]]></source>
+        <target><![CDATA[15 jours]]></target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source><![CDATA[16 days]]></source>
+        <target><![CDATA[16 jours]]></target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source><![CDATA[17 days]]></source>
+        <target><![CDATA[17 jours]]></target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source><![CDATA[18 days]]></source>
+        <target><![CDATA[18 jours]]></target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source><![CDATA[19 days]]></source>
+        <target><![CDATA[19 jours]]></target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source><![CDATA[2 days]]></source>
+        <target><![CDATA[2 jours]]></target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source><![CDATA[20 days]]></source>
+        <target><![CDATA[20 jours]]></target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source><![CDATA[21 days]]></source>
+        <target><![CDATA[21 jours]]></target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source><![CDATA[22 days]]></source>
+        <target><![CDATA[22 jours]]></target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source><![CDATA[23 days]]></source>
+        <target><![CDATA[23 jours]]></target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source><![CDATA[24 days]]></source>
+        <target><![CDATA[24 jours]]></target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source><![CDATA[25 days]]></source>
+        <target><![CDATA[25 jours]]></target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source><![CDATA[26 days]]></source>
+        <target><![CDATA[26 jours]]></target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source><![CDATA[27 days]]></source>
+        <target><![CDATA[27 jours]]></target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source><![CDATA[28 days]]></source>
+        <target><![CDATA[28 jours]]></target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source><![CDATA[29 days]]></source>
+        <target><![CDATA[29 jours]]></target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source><![CDATA[3 days]]></source>
+        <target><![CDATA[3 days]]></target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source><![CDATA[30 days]]></source>
+        <target><![CDATA[30 days]]></target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source><![CDATA[31 days]]></source>
+        <target><![CDATA[31 jours]]></target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source><![CDATA[4 days]]></source>
+        <target><![CDATA[4 jours]]></target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source><![CDATA[5 days]]></source>
+        <target><![CDATA[5 jours]]></target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source><![CDATA[6 days]]></source>
+        <target><![CDATA[6 jours]]></target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source><![CDATA[7 days]]></source>
+        <target><![CDATA[7 jours]]></target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source><![CDATA[8 days]]></source>
+        <target><![CDATA[8 jours]]></target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source><![CDATA[9 days]]></source>
+        <target><![CDATA[9 jours]]></target>
+      </trans-unit>
+      <trans-unit id="38">
+        <source><![CDATA[Add a description to this slide (Maximum chars 300)]]></source>
+        <target><![CDATA[Ajouter une description à cette diapositive (caractères maximum 300)]]></target>
+      </trans-unit>
+      <trans-unit id="39">
+        <source><![CDATA[Add a name to this slide (Maximum 150 chars)]]></source>
+        <target><![CDATA[Ajoutez un nom à cette diapositive (maximum 150 caractères)]]></target>
+      </trans-unit>
+      <trans-unit id="40">
+        <source><![CDATA[BIG5]]></source>
+        <target><![CDATA[BIG5]]></target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source><![CDATA[BIG5-HKSCS]]></source>
+        <target><![CDATA[BIG5-HKSCS]]></target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source><![CDATA[Background color]]></source>
+        <target><![CDATA[Background color]]></target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source><![CDATA[Category]]></source>
+        <target><![CDATA[Category]]></target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source><![CDATA[Category parnet name]]></source>
+        <target><![CDATA[Category parnet name]]></target>
+      </trans-unit>
+      <trans-unit id="45">
+        <source><![CDATA[Check for yes]]></source>
+        <target><![CDATA[Check for yes]]></target>
+      </trans-unit>
+      <trans-unit id="46">
+        <source><![CDATA[Code icon]]></source>
+        <target><![CDATA[Code icon]]></target>
+      </trans-unit>
+      <trans-unit id="47">
+        <source><![CDATA[Code image]]></source>
+        <target><![CDATA[Code image]]></target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source><![CDATA[Contact-us]]></source>
+        <target><![CDATA[Contact-us]]></target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source><![CDATA[Content type]]></source>
+        <target><![CDATA[Content type]]></target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source><![CDATA[Distribution]]></source>
+        <target><![CDATA[Distribution]]></target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source><![CDATA[EUCJP]]></source>
+        <target><![CDATA[EUCJP]]></target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source><![CDATA[Enable/Disable]]></source>
+        <target><![CDATA[Enable/Disable]]></target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source><![CDATA[Enabled (Check for yes)]]></source>
+        <target><![CDATA[Activé (Cocher si oui)]]></target>
+      </trans-unit>
+      <trans-unit id="54">
+        <source><![CDATA[Field type]]></source>
+        <target><![CDATA[Type de champ]]></target>
+      </trans-unit>
+      <trans-unit id="55">
+        <source><![CDATA[GB2312]]></source>
+        <target><![CDATA[GB2312]]></target>
+      </trans-unit>
+      <trans-unit id="56">
+        <source><![CDATA[HEX code color]]></source>
+        <target><![CDATA[Code de couleur HEXADÉCIMAL]]></target>
+      </trans-unit>
+      <trans-unit id="57">
+        <source><![CDATA[ISO-8859-1]]></source>
+        <target><![CDATA[ISO-8859-1]]></target>
+      </trans-unit>
+      <trans-unit id="58">
+        <source><![CDATA[ISO-8859-15]]></source>
+        <target><![CDATA[ISO-8859-15]]></target>
+      </trans-unit>
+      <trans-unit id="59">
+        <source><![CDATA[Multiple]]></source>
+        <target><![CDATA[Multiple]]></target>
+      </trans-unit>
+      <trans-unit id="60">
+        <source><![CDATA[Name]]></source>
+        <target><![CDATA[Nom]]></target>
+      </trans-unit>
+      <trans-unit id="61">
+        <source><![CDATA[Name of color]]></source>
+        <target><![CDATA[Name of color]]></target>
+      </trans-unit>
+      <trans-unit id="62">
+        <source><![CDATA[Product size type]]></source>
+        <target><![CDATA[Type de taille du produit]]></target>
+      </trans-unit>
+      <trans-unit id="63">
+        <source><![CDATA[Product type]]></source>
+        <target><![CDATA[Type de produit]]></target>
+      </trans-unit>
+      <trans-unit id="64">
+        <source><![CDATA[RGB code color]]></source>
+        <target><![CDATA[code de couleur RGB]]></target>
+      </trans-unit>
+      <trans-unit id="65">
+        <source><![CDATA[Rating]]></source>
+        <target><![CDATA[Évaluation]]></target>
+      </trans-unit>
+      <trans-unit id="66">
+        <source><![CDATA[Register number]]></source>
+        <target><![CDATA[Numéro de registre]]></target>
+      </trans-unit>
+      <trans-unit id="67">
+        <source><![CDATA[Revisit after]]></source>
+        <target><![CDATA[Revoir plus tard]]></target>
+      </trans-unit>
+      <trans-unit id="68">
+        <source><![CDATA[Robots]]></source>
+        <target><![CDATA[Robots]]></target>
+      </trans-unit>
+      <trans-unit id="69">
+        <source><![CDATA[Shift_JIS]]></source>
+        <target><![CDATA[Shift_JIS]]></target>
+      </trans-unit>
+      <trans-unit id="70">
+        <source><![CDATA[Single]]></source>
+        <target><![CDATA[Single]]></target>
+      </trans-unit>
+      <trans-unit id="71">
+        <source><![CDATA[Sizes]]></source>
+        <target><![CDATA[Taille]]></target>
+      </trans-unit>
+      <trans-unit id="72">
+        <source><![CDATA[Taxonomy Cotegoy]]></source>
+        <target><![CDATA[Taxonomy Cotegoy]]></target>
+      </trans-unit>
+      <trans-unit id="73">
+        <source><![CDATA[Term of Taxonomy]]></source>
+        <target><![CDATA[Term of Taxonomy]]></target>
+      </trans-unit>
+      <trans-unit id="74">
+        <source><![CDATA[Title]]></source>
+        <target><![CDATA[Title]]></target>
+      </trans-unit>
+      <trans-unit id="75">
+        <source><![CDATA[Title of color]]></source>
+        <target><![CDATA[Title of color]]></target>
+      </trans-unit>
+      <trans-unit id="76">
+        <source><![CDATA[UTF-8]]></source>
+        <target><![CDATA[UTF-8]]></target>
+      </trans-unit>
+      <trans-unit id="77">
+        <source><![CDATA[about %hours hours ago]]></source>
+        <target><![CDATA[Il y a environ %hours heures]]></target>
+      </trans-unit>
+      <trans-unit id="78">
+        <source><![CDATA[about 1 hour ago]]></source>
+        <target><![CDATA[Il y a environ 1 heure]]></target>
+      </trans-unit>
+      <trans-unit id="79">
+        <source><![CDATA[all]]></source>
+        <target><![CDATA[tous]]></target>
+      </trans-unit>
+      <trans-unit id="80">
+        <source><![CDATA[animals]]></source>
+        <target><![CDATA[animaux]]></target>
+      </trans-unit>
+      <trans-unit id="81">
+        <source><![CDATA[astronomy]]></source>
+        <target><![CDATA[astronomie]]></target>
+      </trans-unit>
+      <trans-unit id="82">
+        <source><![CDATA[cp1252]]></source>
+        <target><![CDATA[cp1252]]></target>
+      </trans-unit>
+      <trans-unit id="83">
+        <source><![CDATA[economics]]></source>
+        <target><![CDATA[économie]]></target>
+      </trans-unit>
+      <trans-unit id="84">
+        <source><![CDATA[engineering]]></source>
+        <target><![CDATA[ingénierie]]></target>
+      </trans-unit>
+      <trans-unit id="85">
+        <source><![CDATA[environment]]></source>
+        <target><![CDATA[environnement]]></target>
+      </trans-unit>
+      <trans-unit id="86">
+        <source><![CDATA[family]]></source>
+        <target><![CDATA[famille]]></target>
+      </trans-unit>
+      <trans-unit id="87">
+        <source><![CDATA[finance]]></source>
+        <target><![CDATA[finance]]></target>
+      </trans-unit>
+      <trans-unit id="88">
+        <source><![CDATA[follow]]></source>
+        <target><![CDATA[suivre]]></target>
+      </trans-unit>
+      <trans-unit id="89">
+        <source><![CDATA[games]]></source>
+        <target><![CDATA[jeux]]></target>
+      </trans-unit>
+      <trans-unit id="90">
+        <source><![CDATA[general]]></source>
+        <target><![CDATA[général]]></target>
+      </trans-unit>
+      <trans-unit id="91">
+        <source><![CDATA[global]]></source>
+        <target><![CDATA[global]]></target>
+      </trans-unit>
+      <trans-unit id="92">
+        <source><![CDATA[half a minute ago]]></source>
+        <target><![CDATA[Il y a une demi-minute]]></target>
+      </trans-unit>
+      <trans-unit id="93">
+        <source><![CDATA[health]]></source>
+        <target><![CDATA[santé]]></target>
+      </trans-unit>
+      <trans-unit id="94">
+        <source><![CDATA[in %days days]]></source>
+        <target><![CDATA[en %days jours]]></target>
+      </trans-unit>
+      <trans-unit id="95">
+        <source><![CDATA[in %minutes minutes]]></source>
+        <target><![CDATA[en %minutes minutes]]></target>
+      </trans-unit>
+      <trans-unit id="96">
+        <source><![CDATA[in 1 day]]></source>
+        <target><![CDATA[en 1 jour]]></target>
+      </trans-unit>
+      <trans-unit id="97">
+        <source><![CDATA[in 1 minute]]></source>
+        <target><![CDATA[en 1 minute]]></target>
+      </trans-unit>
+      <trans-unit id="98">
+        <source><![CDATA[in about %hours hours]]></source>
+        <target><![CDATA[Il y a environ %hours heures]]></target>
+      </trans-unit>
+      <trans-unit id="99">
+        <source><![CDATA[in about 1 hour]]></source>
+        <target><![CDATA[Il y a environ 1 heure]]></target>
+      </trans-unit>
+      <trans-unit id="100">
+        <source><![CDATA[in half a minute]]></source>
+        <target><![CDATA[en une demi-minute]]></target>
+      </trans-unit>
+      <trans-unit id="101">
+        <source><![CDATA[in less than %seconds seconds]]></source>
+        <target><![CDATA[in less than %seconds seconds]]></target>
+      </trans-unit>
+      <trans-unit id="102">
+        <source><![CDATA[in less than a minute]]></source>
+        <target><![CDATA[en moins d'une minute]]></target>
+      </trans-unit>
+      <trans-unit id="103">
+        <source><![CDATA[index]]></source>
+        <target><![CDATA[index]]></target>
+      </trans-unit>
+      <trans-unit id="104">
+        <source><![CDATA[internet]]></source>
+        <target><![CDATA[internet]]></target>
+      </trans-unit>
+      <trans-unit id="105">
+        <source><![CDATA[iu]]></source>
+        <target><![CDATA[iu]]></target>
+      </trans-unit>
+      <trans-unit id="106">
+        <source><![CDATA[less than %seconds seconds ago]]></source>
+        <target><![CDATA[Il y a moins de %seconds secondes]]></target>
+      </trans-unit>
+      <trans-unit id="107">
+        <source><![CDATA[less than a minute ago]]></source>
+        <target><![CDATA[il y a moins d'une minute]]></target>
+      </trans-unit>
+      <trans-unit id="108">
+        <source><![CDATA[literature]]></source>
+        <target><![CDATA[littérature]]></target>
+      </trans-unit>
+      <trans-unit id="109">
+        <source><![CDATA[local]]></source>
+        <target><![CDATA[locale]]></target>
+      </trans-unit>
+      <trans-unit id="110">
+        <source><![CDATA[mature]]></source>
+        <target><![CDATA[adulte]]></target>
+      </trans-unit>
+      <trans-unit id="111">
+        <source><![CDATA[noFollow]]></source>
+        <target><![CDATA[non suivi]]></target>
+      </trans-unit>
+      <trans-unit id="112">
+        <source><![CDATA[noindex]]></source>
+        <target><![CDATA[Pas d'index]]></target>
+      </trans-unit>
+      <trans-unit id="113">
+        <source><![CDATA[none]]></source>
+        <target><![CDATA[aucun(e)]]></target>
+      </trans-unit>
+      <trans-unit id="114">
+        <source><![CDATA[photography]]></source>
+        <target><![CDATA[photographie]]></target>
+      </trans-unit>
+      <trans-unit id="115">
+        <source><![CDATA[restricted]]></source>
+        <target><![CDATA[restreint]]></target>
+      </trans-unit>
+      <trans-unit id="116">
+        <source><![CDATA[shopping]]></source>
+        <target><![CDATA[shopping]]></target>
+      </trans-unit>
+      <trans-unit id="117">
+        <source><![CDATA[software]]></source>
+        <target><![CDATA[logiciel]]></target>
+      </trans-unit>
+      <trans-unit id="118">
+        <source><![CDATA[sports]]></source>
+        <target><![CDATA[sports]]></target>
+      </trans-unit>
+      <trans-unit id="119">
+        <source><![CDATA[travel]]></source>
+        <target><![CDATA[voyage]]></target>
+      </trans-unit>
+      <trans-unit id="120">
+        <source><![CDATA[{1} 1 month ago |]1,Inf[ %months months ago]]></source>
+        <target><![CDATA[{1} depuis 1 mois |]1,Inf[ depuis %months mois]]></target>
+      </trans-unit>
+      <trans-unit id="121">
+        <source><![CDATA[{1} 1 year ago |]1,Inf[ %years years ago]]></source>
+        <target><![CDATA[{1} depuis 1 ans |]1,Inf[depuis  %years ans]]></target>
+      </trans-unit>
+      <trans-unit id="122">
+        <source><![CDATA[Category parent name]]></source>
+        <target><![CDATA[Category parnet name]]></target>
+      </trans-unit>
+      <trans-unit id="123">
+        <source><![CDATA[Taxonomy Category]]></source>
+        <target><![CDATA[Catégorie de taxonomie]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

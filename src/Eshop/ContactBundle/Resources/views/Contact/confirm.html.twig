@@ -1,0 +1,15 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'contact' %}
+{% block title %}{{ 'Confirmation of free quote request'|trans }}{% endblock %}
+
+{% block page_content -%}
+
+    <section>
+        <h3>{{ 'title'|trans({
+            '%title%':    contact.titleValue|trans,
+            '%fullName%': contact.fullName
+        }) }}</h3>
+    </section>
+
+    <p>{{ 'confirm_message'|trans }}</p>
+{% endblock %}

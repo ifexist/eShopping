@@ -1,0 +1,10 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% block title %}{{ 'Translator'|trans|capitalize }}{% endblock%}
+
+{% block page_content -%}
+    <form action="{{ path('admin_translator_lang_nodes_select') }}" method="post">
+    {{ render(controller('AdminBundle:Translator:formSelectFile')) }}
+    </form>
+    {#{% include "@Admin/Translator/formSelectFile.html.twig" %}#}
+{% endblock page_content -%}

@@ -1,0 +1,85 @@
+{% if cntIfgSiteContact > 0 %}
+    {% if ifgSiteContact.contactservice1 != "" or ifgSiteContact.contactservice2 != "" or ifgSiteContact.contactservice3 != "" %}
+        <div class="small menu-link">
+            <h4>{{ 'Contact-us'|trans }}</h4>
+        </div>
+    {% endif %}
+    {% if ifgSiteContact.contactservice1 != "" or ifgSiteContact.titleservice1 != "" or ifgSiteContact.emailservice1 != "" or ifgSiteContact.phoneservice1 != "" %}
+        <div class="small menu-link">
+            <div class="btn-group-xs">
+                {% if ifgSiteContact.titleservice1 != "" %}
+                    <span class="fa fa-asterisk">
+                        &nbsp;{{ ifgSiteContact.titleservice1 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.contactservice1 != "" %}
+                    <span class="fa fa-user">
+                        &nbsp;{{ ifgSiteContact.contactservice1 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.emailservice1 != "" %}
+                    <span class="fa fa-envelope">
+                        &nbsp;{{ ifgSiteContact.emailservice1 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.phoneservice1 != "" %}
+                    <span class="fa fa-phone">
+                        &nbsp;{{ ifgSiteContact.phoneservice1 }}
+                    </span>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    {% if ifgSiteContact.contactservice2 != "" or ifgSiteContact.titleservice2 != "" or ifgSiteContact.emailservice2 != "" or ifgSiteContact.phoneservice2 != "" %}
+        <div class="small menu-link">
+            <div class="btn-group-xs">
+                {% if ifgSiteContact.titleservice2 != "" %}
+                    <span class="fa fa-asterisk">
+                        &nbsp;{{ ifgSiteContact.titleservice2 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.contactservice2 != "" %}
+                    <span class="fa fa-user">
+                        &nbsp;{{ ifgSiteContact.contactservice2 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.emailservice2 != "" %}
+                    <span class="fa fa-envelope">
+                        &nbsp;{{ ifgSiteContact.emailservice2 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.phoneservice2 != "" %}
+                    <span class="fa fa-phone">
+                        &nbsp;{{ ifgSiteContact.phoneservice2 }}
+                    </span>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    {% if ifgSiteContact.contactservice3 != "" or ifgSiteContact.titleservice3 != "" or ifgSiteContact.emailservice3 != "" or ifgSiteContact.phoneservice3 != "" %}
+        <div class="small menu-link">
+            <div class="btn-group-xs">
+                {% if ifgSiteContact.titleservice3 != "" %}
+                    <span class="fa fa-asterisk">
+                        &nbsp;{{ ifgSiteContact.titleservice3 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.contactservice3 != "" %}
+                    <span class="fa fa-user">
+                        &nbsp;{{ ifgSiteContact.contactservice3 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.emailservice3 != "" %}
+                    <span class="fa fa-envelope">
+                        &nbsp;{{ ifgSiteContact.emailservice3 }}
+                    </span>
+                {% endif %}
+                {% if ifgSiteContact.phoneservice3 != "" %}
+                    <span class="fa fa-phone">
+                        &nbsp;{{ ifgSiteContact.phoneservice3 }}
+                    </span>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

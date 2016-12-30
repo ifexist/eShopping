@@ -1,0 +1,12 @@
+{% trans_default_domain 'shop' %}
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+       aria-expanded="true">
+        <i class="flag-icon flag-icon-{{ app.request.get('_locale') }}"></i> {{ 'layout.navbar.lang'|trans }} <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        {% for lang in langs %}
+            <li><a href="{{ path('homepage', {'_locale': lang.code}) }}"><i class="flag-icon flag-icon-{{ lang.code }}"></i> {{ lang.lang }}</span></a></li>
+        {% endfor %}
+    </ul>
+</li>

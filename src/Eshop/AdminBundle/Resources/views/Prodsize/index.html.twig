@@ -1,0 +1,78 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block title %}
+    {{ 'Prdouct size list'|trans }} - {{ 'Administration panel'|trans }}
+{% endblock title %}
+
+{% block page_content -%}
+    <h3>{{ 'Prdouct size list'|trans }}</h3>
+    <p>
+        <a href="{{ path('admin_prodsize_new') }}">
+            <span class="glyphicon glyphicon-plus"></span>
+            {{ 'Create a prdouct type exists in'|trans }}
+        </a>
+    </p>
+    <table class="records_list table table-striped">
+        <thead>
+        <tr>
+            <th>{{ knp_pagination_sortable(entities, 'Enable'|trans, 'c.enable') }}</th>
+            <th>{{ knp_pagination_sortable(entities, 'Title'|trans, 'c.title') }}</th>
+            <th>{{ knp_pagination_sortable(entities, 'Name'|trans, 'c.name') }}</th>
+            <th>{{ knp_pagination_sortable(entities, 'Product type'|trans, 'c.code1') }}</th>
+            <th>{{ knp_pagination_sortable(entities, 'Product size type'|trans, 'c.code2') }}</th>
+            <th class="col-md-1">{{ 'Actions'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>
+                    {% if entity.enable == 1 %}{{ 'Yes'|trans }}{% else %}{{ 'No'|trans }}{% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('admin_prodsize_show', { 'id': entity.id }) }}">{{ entity.title }}</a>
+                </td>
+                <td>
+                    <a href="{{ path('admin_prodsize_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
+                </td>
+                <td>
+                    {{ entity.code1 }}
+                </td>
+                <td>
+                    {{ entity.code2 }}
+                </td>
+                <td>
+                    <div class="btn-group-xs">
+                        <a href="{{ path('admin_prodsize_show', { 'id': entity.id }) }}" class="btn btn-default" title="{{ 'show'|trans }}"><i class="fa fa-eye"></i></a>
+                        <a href="{{ path('admin_prodsize_edit', { 'id': entity.id }) }}" class="btn btn-primary" title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-12">
+            {{ knp_pagination_render(entities) }}
+        </div>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/fancybox/jquery.mousewheel-3.0.6.pack.js') }}"
+            type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/fancybox/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+        });
+    </script>
+{% endblock javascripts %}

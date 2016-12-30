@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            {{ render(controller('ShopBundle:Infosgeneral:adminstyle')) }}
+            <link href="{{ asset('font-awesome/css/font-awesome.css') }}" media="all" rel="stylesheet" type="text/css"/>
+            <link href="{{ asset('css/glyphicon.css') }}" rel='stylesheet' type='text/css' />
+            <link rel="stylesheet" href="{{ asset('bundles/lexiktranslation/ng-table/ng-table.min.css') }}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('site/images/apple-touch-icon.png') }}"/>
+    </head>
+    <body>
+    {% include "@Admin/Partials/admin-menu-simple-top.html.twig" %}
+            <br><br>
+        {% block flash_message %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% set flashes = app.session.flashbag.all() %}
+                        {% if flashes | length > 0 %}
+                            {% for type, messages in flashes %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ type }}">{{ message }}</div>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endblock flash_message %}
+
+        {% block content '' %}
+
+        {% block javascript_footer %}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="{{ asset('bootstrap/3.3.7/js/bootstrap.min.js') }}"></script>
+            {#<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>#}
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+            <script src="{{ asset('bundles/lexiktranslation/ng-table/ng-table.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

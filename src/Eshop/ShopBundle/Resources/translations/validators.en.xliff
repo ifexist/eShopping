@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source><![CDATA[Must be at least {{ limit }}]]></source>
+        <target><![CDATA[Must be at least {{ limit }}]]></target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source><![CDATA[Only the file types image are allowed.]]></source>
+        <target><![CDATA[Only the file types image are allowed.]]></target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source><![CDATA[The maximum allowed file size is 5MB.]]></source>
+        <target><![CDATA[The maximum allowed file size is 5MB.]]></target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source><![CDATA[This slug is already in use. It is possible that the brand name already exists. Change this name and press "generate slug"]]></source>
+        <target><![CDATA[This slug is already in use. It is possible that the brand name already exists. Change this name and press "generate slug"]]></target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source><![CDATA[This slug is already in use. It is possible that the product name already exists. Change this name and press "generate slug"]]></source>
+        <target><![CDATA[This slug is already in use. It is possible that the product name already exists. Change this name and press "generate slug"]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

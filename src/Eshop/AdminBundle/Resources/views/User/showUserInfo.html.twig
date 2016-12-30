@@ -1,0 +1,55 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block page_content -%}
+    <h3>{{ 'User'|trans }}</h3>
+    <div class="btn-group-xs">
+        <a href="{{ path('admin_user_list') }}" class="btn btn-default">{{ 'Back to list'|trans }}</a>
+        <a href="{{ path('admin_user_edit', { 'id': user.id }) }}" class="btn btn-primary"><i class="fa fa-edit"></i> {{ 'Edit'|trans }}</a>
+    </div>
+    <table class="record_properties table table-bordered table-striped">
+        <tbody>
+        <tr>
+            <th class="col-md-3">{{ 'Firstname'|trans }}</th>
+            <td class="col-md-9">{{ user.firstname }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Lastname'|trans }}</th>
+            <td>{{ user.lastname }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Username'|trans }}</th>
+            <td>{{ user.username }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Email'|trans }}</th>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Phone number'|trans }}</th>
+            <td>{{ user.phone }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Address'|trans }}</th>
+            <td>{{ user.address }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Join date'|trans }}</th>
+            <td>{{ user.joinDate|date('Y-m-d h:i') }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Orders'|trans }}</th>
+            <td>
+                {% if user.orders|length %}
+                    <a href="{{ path('admin_user_orders', {'id': user.id}) }}">
+                        {{ 'Orders'|trans }} ({{ user.orders|length }})
+                    </a>
+                {% else %}
+                    -
+                {% endif %}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock page_content %}
+

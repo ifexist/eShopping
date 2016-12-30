@@ -1,0 +1,223 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{{ asset('bundles/shop/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+    <link href="{{ asset('bundles/shop/css/dropzone.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block page_content -%}
+    <h3>{{ 'Product create'|trans }}</h3>
+        {{ form_errors(form) }}
+    <div class="btn-group">
+        <a href="{{ path('admin_product') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+    </div>
+    {{ form_start(form) }}
+    <input type="hidden" name="filenames" id="filenames">
+    <table class="table">
+        <tr>
+            <td>
+                <div class="small col-md-8">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <span class="text-primary btn-xs btn btn-succes" style="color:#333;" /><b>{{ 'Name'|trans }} *</b> <span class="small text-warning">({{ 'Unique value required'|trans }})</span></span>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="control-label">
+                                <span class="small">({{ 'Maximum'|trans }} 255 {{ 'Chars'|trans }})</span>
+                            </label>
+                            {{ form_widget(form.name, {'attr': {'class': 'product-name', 'maxlength':255, 'placeholder': 'Enter the name of product'} }) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="small col-md-4">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <span class="text-primary btn-xs btn btn-succes" style="color:#333;" /><b>{{ 'Reference'|trans }}/{{ 'Model'|trans }}</b> <span class="small text-warning">({{ 'Unique value required'|trans }})</span></span>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="control-label">
+                                <span class="small">({{ 'Maximum'|trans }} 150 {{ 'Chars'|trans }})</span>
+                            </label>
+                            {{ form_widget(form.ref, {'attr': {'placeholder': 'Enter a unique reference or model', 'maxlength':150} }) }}
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-md-8">
+                <b>{{ 'Add aditional description for this product'|trans }}</b><br>
+                {{ form_widget(form.description, {'id':'description' }, {'attr': {'class':'description', 'maxlength':5000} }) }}
+                </div>
+                
+                <div class="small col-md-4">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <br>
+                            <input type="button" id="press_me" class="btn btn-default" value="{{ 'generate metakey'|trans }}" /> <span class="small">({{ 'Maximum'|trans }} 255 {{ 'Chars'|trans }})</span>
+                            <br><br>
+                        </div>
+                        <b>{{ 'Meta keyword'|trans }}</b><br>
+                        {{ form_widget(form.metaKeys, {'attr': {'class': 'metakey', 'maxlength':255, 'required':'required'} }) }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-md-4">
+                    <b>{{ 'Real Price'|trans }} <span class="small">({{ 'If it is a discounted product, enter its old price'|trans }})</span></b><br>
+                    {{ form_widget(form.oldprice) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'Actual Price'|trans }} <span class="small">({{ 'If it is a discounted product, enter its old price here'|trans }})</span></b><br>
+                    {{ form_widget(form.price) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'Currency'|trans }}</b><br>
+                    {{ form_widget(form.currency) }}
+                </div>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <div class="small col-md-4">
+                    <b>{{ 'Category'|trans }}</b><br>
+                    {{ form_widget(form.category) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'Manufacturer'|trans }}</b><br>
+                    {{ form_widget(form.manufacturer) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'In stock'|trans }}</b><br>
+                    {{ form_widget(form.quantity) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-xs-2">
+                    <b>{{ 'Delivery possible'|trans }}</b><br>
+                    {{ form_widget(form.delivery) }}
+                </div>
+                <div class="col-xs-2">
+                    <b>{{ 'Delivery Price'|trans }}</b><br>
+                    {{ form_widget(form.deliveryprice) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'Measure quantity'|trans }}</b><br>
+                    {{ form_widget(form.measureQuantity, {'attr': {'class': 'measure-quantity'} }) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'Measure'|trans }}</b><br>
+                    {{ form_widget(form.measure, {'attr': {'class': 'measure-name'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-md-4">
+                    <b>{{ 'Exists in 1'|trans|capitalize }} <span class="small">({{ 'Maximum chars'|trans|capitalize }} 350) {{ 'Example: Colors : Blue, Red, ...'|trans|capitalize }}</b></span><br>
+                {{ form_widget(form.existin1, {'attr':{'style':'font-size:12px', 'placeholder':'Example: colors : Blue, Red, Yellow...'|trans|capitalize} }) }}
+                </div>
+                <div class="small col-md-4">
+                    <b>{{ 'Exists in 2'|trans|capitalize }} <span class="small">({{ 'Maximum chars'|trans|capitalize }} 350) {{ 'Example: Sizes : XXL, XL, L, ...'|trans|capitalize }}</b></span><br>
+                {{ form_widget(form.existin2, {'attr':{'class':'col-xs-12', 'placeholder':'Example: Sizes : XXL, XL, L, ...'|trans|capitalize} }) }}
+                </div>
+                <div class="small col-md-4">
+                    <input type="submit" value="{{ 'save'|trans }}" class="col-md-12 btn btn-warning"/>
+                </div>
+            </td>
+        </tr>
+    </table>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    <div class="panel panel-default" style="margin: 30px;">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                {{ 'attach photos here'|trans }}
+            </h3>
+        </div>
+        <form action="{{ oneup_uploader_endpoint('gallery') }}" class="dropzone dz-clickable"
+              id="my-dropzone" style="min-height: 100px;" enctype="multipart/form-data">
+        </form>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+<script src="{{ asset('bundles/shop/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/js/dropzone.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/js/speakingurl.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/slugit-jquery/js/jquery.slugit.js') }}"></script>
+    <script src="{{ asset('bundles/shop/keywords-generator/js/soundex.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/keywords-generator/js/keywords.js') }}" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    $('#description').wysihtml5();
+    </script>
+    <script>
+        $(document).ready(function () {
+            Dropzone.options.myDropzone = {
+                init: function () {
+                    thisDropzone = this;
+                    this.on("success", function (file, response) {
+                        var filename = response['image_id'];
+                        //check for normal file uploaded
+                        if (filename) {
+                            $('#filenames').val($('#filenames').val() + filename + ',');
+                        }
+                    });
+                }
+            };
+
+            $('.generate-slug').on('click', function (e) {
+                e.preventDefault();
+                //get field value
+                var productName = $('.product-name').val();
+                var measureQuantity = $('.measure-quantity').val();
+                var measureName = $('.measure-name').find('option:selected').text();
+                var productPrice = $('.product-price').val();
+                var productCurrency = $('.product-currency').val();
+
+                var slugInut = $('.product-slug');
+                var nameToSlug = productName + '-' + measureQuantity + '-' + measureName + '-' + productPrice + '-' + productCurrency;
+
+                //generate slug
+                var slug = getSlug(nameToSlug, {
+                    custom: {
+                        '%': ' percent '
+                    },
+                    uric: true
+                });
+                //record to slug input
+                slugInut.val(slug);
+            });
+        });
+                
+             
+        jQuery('#press_me').click(function(){
+                var sLength=jQuery('.description').val().length;
+                if(sLength<5) {
+                        alert('{{ 'Add aditional description for this product length must be more or equal than'|trans }} 5 {{ 'symbols'|trans }}');
+                } else {
+                        if(sLength>5000) {
+                                alert('{{ 'Add aditional description for this product length must be at less or equal than'|trans }} 5000 {{ 'symbols'|trans }}');
+                        } else {
+                                jQuery('#log').html('');
+                                var myKeywords=getKeywords(jQuery('.description').val());
+                                jQuery('.metakey').val(myKeywords);
+                        }
+                }
+        });
+    </script>
+{% endblock javascripts %}

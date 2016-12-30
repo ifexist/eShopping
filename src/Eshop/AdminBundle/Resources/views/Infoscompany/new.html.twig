@@ -1,0 +1,225 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/shop/geoaddresspicker/demos/themes/base/jquery.ui.all.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/shop/bootstrap-tokenfield/dist/css/bootstrap-tokenfield.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/shop/bootstrap-tokenfield/dist/css/tokenfield-typeahead.min.css') }}">
+    <style>
+        /* CSS REQUIRED */
+        .state-icon {
+            left: -5px;
+        }
+        .list-group-item-primary {
+            color: rgb(255, 255, 255);
+            background-color: rgb(66, 139, 202);
+        }
+
+        /* DEMO ONLY - REMOVES UNWANTED MARGIN */
+        .well .list-group {
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="{{ asset('bootstrap-tokenfield/dist/bootstrap-tokenfield.min.js') }}"></script>
+
+    <script>
+        $(function() {
+          var availableTags = [
+              {% for activity in activities %}
+                '{{ activity.code }}|{{ activity.description|e }}',
+              {% endfor %}   
+          ];
+          $( "#activity" ).autocomplete({
+            source: availableTags
+          });
+        });
+  </script>
+{% endblock %}
+
+{% block page_content -%}
+    <h3>{{ "Create your company's information"|trans }}</h3>
+    {{ include('@Admin/Infoscompany/Includes/Menus/top.html.twig') }}
+    {{ form_start(form) }}
+    {{ form_widget(form.longitude) }}
+    {{ form_widget(form.latitude) }}
+    <table class="record_properties table table-bordered">
+        <tr>
+            <th width="50%">
+                {{ 'Name of company'|trans }} *
+            </th>
+            <th width="50%">
+                {{ 'Activity of company'|trans }} * <span class="small">({{ 'Autocomplete'|trans }})</span>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                {{ form_widget(form.namets, {'attr': {'class': 'col-md-12', 'required':'required'} }) }}
+            </td>
+            <td>
+                <select name="activity">
+                    <option selected="selected"></option>
+                    {% for activity in activities %}
+                        <option value="{{ activity.id }}">{{ activity.cat1 }}</option>
+                    {% endfor %}
+                </select>
+                {#<input style="z-index:1000;" class="col-md-12"  type="text" id="activity" name="activity" required>#}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                {{ 'Address'|trans }}
+            </th>
+            <th>
+                <div class="small col-sm-4">
+                    {{ 'Postal Code'|trans }}
+                </div>
+                <div class="small col-sm-8">
+                    {{ 'City'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                {{ form_widget(form.address, {'attr': {'class': 'col-md-12'} }) }}
+            </td>
+            <td>
+                <div class="small col-sm-4">
+                    {{ form_widget(form.zipcode, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="small col-sm-8">
+                    {{ form_widget(form.city, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="small col-sm-6">
+                    {{ 'Provance'|trans }}
+                </div>
+                <div class="small col-sm-6">
+                    {{ 'Departement'|trans }}
+                </div>
+            </th>
+            <th>
+                <div class="small col-sm-4">
+                    {{ 'Country'|trans }} *
+                </div>
+                <div class="small col-sm-4">
+                    {{ 'Currency code'|trans }} *
+                </div>
+                <div class="small col-sm-4">
+                    {{ 'Language code'|trans }} *
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-sm-6">
+                    {{ form_widget(form.region, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="small col-sm-6">
+                    {{ form_widget(form.department, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+            <td>
+                <div class="small col-sm-4">
+                    <select name="country" class="col-md-12" required>
+                        <option selected="selected"></option>
+                        {% for country in countries %}
+                            <option value="{{ country.countryname }}">{{ country.countryname}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="small col-sm-4">
+                    <select name="currencycode" class="col-md-12" required>
+                        <option selected="selected"></option>
+                        {% for currency in currencies %}
+                            <option value="{{ currency.code }}">{{ currency.code }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="small col-sm-4">
+                    <select name="langcode" class="col-md-12" required>
+                        <option selected="selected"></option>
+                        {% for lang in langs %}
+                            <option value="{{ lang.code|upper }}">{{ lang.code|upper }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="small col-sm-8">
+                    {{ 'Register number of company'|trans }}
+                </div>
+                <div class="small col-sm-4">
+                    {{ 'VAT amount of country'|trans }}
+                </div>
+            </th>
+            <th>
+                <div class="small col-sm-6">
+                    {{ 'E-mail address of company'|trans }}
+                </div>
+                <div class="small col-sm-6">
+                    {{ 'Phone number of company'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-sm-8">
+                    {{ form_widget(form.register, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="small col-sm-4">
+                    {{ form_widget(form.vat, {'attr': {'class': 'col-md-12', 'style':'z-index:900;'} }) }}
+                </div>
+            </td>
+            <td>
+                <div class="small col-sm-6">
+                    {{ form_widget(form.email, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+                <div class="small col-sm-6">
+                    {{ form_widget(form.phone, {'attr': {'class': 'col-md-12'} }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Other additional information of your company'|trans }} *</th>
+            <th class="info text-center"><h5>{{ 'Important'|trans }}! * = {{ 'Required'|trans }}</h5></th>
+        </tr>
+        <tr>
+            <td>{{ form_widget(form.content, {'attr': {'class': 'col-md-12', 'required':'required'} }) }}</td>
+            <td class="info">
+                <span class="text-center text-bold">
+                    <h4>{{ 'Entering of all fields, is not mandatory'|trans }}</h4>
+                    <p>
+                        {{ 'However, it is important to grasp the most possble box'|trans }}. 
+                        {{ 'These information are units to better ranking of your website and business'|trans }}.
+                    </p>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                <input type="submit" value="{{ 'Create'|trans }}" class="col-md-12 btn btn-success"/>
+            </td>
+        </tr>
+    </table>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    <a href="{{ path('admin_infoscompany') }}">
+        {{ 'Back to the list'|trans }}
+    </a>
+{% endblock page_content %}

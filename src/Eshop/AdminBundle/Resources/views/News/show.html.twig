@@ -1,0 +1,72 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block page_content -%}
+    <h3>{{ 'News'|trans }}</h3>
+    <table class="record_properties table table-bordered table-striped">
+        <tbody>
+        <tr>
+            <th>{{ 'Title'|trans }}</th>
+            <td>{{ entity.title }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Slug'|trans }}</th>
+            <td>{{ entity.slug }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Text'|trans }}</th>
+            <td>
+                {{ entity.text|rawdescr|nl2br }}
+            </td>
+        </tr>
+        <tr>
+            <th>{{ 'Meta keys'|trans }}</th>
+            <td>{{ entity.metaKeys }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Meta description'|trans }}</th>
+            <td>{{ entity.metaDescription }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{{ path('admin_news') }}">
+                {{ 'Back to the list'|trans }}
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="{{ path('admin_news_edit', { 'id': entity.id }) }}">
+                {{ 'Edit'|trans }}
+            </a>
+        </li>
+        <li class="list-group-item">
+                {% include "@Admin/Partials/Includes/Modals/deleteConfirm.html.twig" %}
+                {{ form_start(delete_form) }}
+                {{ form_widget(delete_form) }}
+                <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete" data-title="{{ 'Delete'|trans }} {{ entity.title }}" data-message="{{ 'Are you sure to delete this data'|trans }} ?">
+                    <i class="fa fa-trash"></i> {{ 'Delete'|trans }}
+                </button>
+                    &nbsp;&nbsp;<span class="text-danger"><strong>{{ 'Warning'|trans }} !</strong> {{ 'Removing these data will be irreversible'|trans }}.</span>
+                {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function () {
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock javascripts %}

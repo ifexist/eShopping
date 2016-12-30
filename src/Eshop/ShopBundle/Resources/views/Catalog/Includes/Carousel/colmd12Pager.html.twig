@@ -1,0 +1,23 @@
+<div class="row">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+          {% for slide in slides %}
+              <div class="item {% if slide.slideOrder == 1 %}active{% endif %}">
+                  <img src="{{ asset('uploads/images/slide/' ~ slide.slidekey ~ '.jpg') }}" width="100%">
+                  <div class="carousel-caption">
+                      <h3 style="color:#fff;">{{ slide.name }}</h3>
+                      <p style="color:#fff;">{{ slide.description|raw }}</p>
+                  </div>
+              </div><!-- End Item -->
+          {% endfor %}
+      </div><!-- End Carousel Inner -->
+    	<ul class="nav nav-pills nav-justified">
+        {% for slide in slides %}
+            <li data-target="#myCarousel" data-slide-to="{{ slide.slideOrder - 1 }}" {% if slide.slideOrder == 1 %} class="menu-link active"{% else %} class="menu-link"{% endif %}><a href="#"><small>{{ slide.name|truncate(20) }} {#{{ slide.description|raw|truncate(25) }}#}</small></a></li>
+        {% endfor %}    
+        </ul>
+
+
+    </div><!-- End Carousel -->
+</div>  

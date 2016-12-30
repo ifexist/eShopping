@@ -1,0 +1,17 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'ShopBundle' %}
+
+{% block title %}
+    {{ 'profile.restriction.title'|trans }}
+{% endblock title %}
+
+{% block page_content %}
+<div class="container">
+    <h2>{{ 'profile.restriction.title'|trans }}</h2>
+    <p>{{ 'profile.restriction.message'|trans }}</p>
+    <div class="btn-group-xs">
+        <a href="{{ path('fos_user_security_login') }}" class="btn btn-default">{{ 'layout.navbar.signin'|trans }}</a>
+        <a href="{{ path('fos_user_registration_register') }}" class="btn btn-default">{{ 'layout.navbar.signup'|trans }}</a></li>
+    </div>
+</div>
+{% endblock page_content %}

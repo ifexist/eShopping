@@ -1,0 +1,32 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: eshop
+    database_user: root
+    database_password: 54321
+    database_version: 5.6
+    mailer_transport: smtp
+    mailer_port: null
+    mailer_host: smtp.phpnet.org
+    mailer_user: admin@ifexist.com
+    mailer_password: zendahoura
+    admin_email: null
+    secret: kHhtpeme78856trbhrFRTTv6v5v78rrdkvkpzdfkvY85644
+    locale: fr
+    products_pagination_count: 10
+    category_products_pagination_count: 10
+    admin_products_pagination_count: 10
+    admin_categories_pagination_count: 10
+    admin_catparents_pagination_count: 10
+    admin_prodcolors_pagination_count: 10
+    admin_prodsizes_pagination_count: 10
+    admin_prodexistins_pagination_count: 10
+    admin_manufacturers_pagination_count: 10
+    search_pagination_count: 24
+    admin_users_pagination_count: 10
+    admin_user_orders_pagination_count: 10
+    facebook_app_id: addyourfacebookappid
+    facebook_app_secret: addyourfacebookapsecret
+    google_app_id: addyourgoogleappid
+    google_app_secret: addyourgoogleappsecret

@@ -1,0 +1,24 @@
+Eshop\ShopBundle\Entity\Product:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: slug
+            errorPath: slug
+            message: 'This slug is already in use. It is possible that the product name already exists. Change this name and press "generate slug"'
+            
+            fields: name
+            errorPath: name
+            message: 'This name is already in use. Change the name and press "generate slug"'
+            
+            fields: ref
+            errorPath: ref
+            message: 'This reference is already in use.'
+            
+            
+
+Eshop\ShopBundle\Entity\Manufacturer:      
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: slug
+            errorPath: slug
+            message: 'This slug is already in use. It is possible that the brand name already exists. Change this name and press "generate slug"'
+            

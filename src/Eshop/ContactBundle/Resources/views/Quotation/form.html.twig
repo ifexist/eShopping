@@ -1,0 +1,54 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'contact' %}
+
+{% block title %}{{ 'subject_devis'|trans }}{% endblock %}
+{% block page_content -%}
+    {{ form_widget(form.subject) }}
+    <div class="container">
+        {{ form_start(form) }}
+            <div style="display: none;">
+            </div>
+            <p><label for="type-site">Type de site internet *</label>
+            <div class="wrapselect"><span class="wpcf7-form-control-wrap type-site">
+                    <select name="typesite" required>
+                        <option value="Site vitrine">Site vitrine</option>
+                        <option value="Site e-commerce">Site e-commerce</option>
+                        <option value="Site catalogue">Site catalogue</option>
+                        <option value="Site institutionel">Site institutionel</option>
+                        <option value="Blog">Blog</option><option value="Autre">Autre</option>
+                    </select>
+                
+                
+                
+                </span></div>
+            <p><label for="details-site">Décrivez-nous votre projet * <span>Quels sont les objectifs de votre site ?<br> Quels types de contenus contiendra-t-il ?<br> Y a-t-il des besoins spécifiques : site multilingue, gestion d’actualités, calendrier d'événements, etc ?</span></label><span class="wpcf7-form-control-wrap details-site"><textarea name="details-site" cols="40" rows="8" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" id="details-site" aria-required="true" aria-invalid="false"></textarea></span><label for="budget-site">Quel est le budget dédié à ce projet ? *</label>
+            <div class="wrapselect"><span class="wpcf7-form-control-wrap budget-site">
+                    <select name="budget-site" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" id="budget-site" aria-required="true" aria-invalid="false">
+                        <option value="Moins de 1500€HT">Moins de 1500€HT</option>
+                        <option value="De 1500€HT à 2500€HT" selected="selected">De 1500€HT à 2500€HT</option>
+                        <option value="Plus de 2500€HT">Plus de 2500€HT</option>
+                        <option value="Plus de 5000€HT">Plus de 5000€HT</option>
+                    </select>
+                </span></div>
+            <p><label for="date-site">Date souhaitée de mise en ligne du site</label><span class="wpcf7-form-control-wrap date-site"><input type="text" name="date-site" value="" size="40" class="wpcf7-form-control wpcf7-text" id="date-site" aria-invalid="false" /></span><label for="coo-name">Nom prénom *</label><span class="wpcf7-form-control-wrap coo-name"><input type="text" name="coo-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="coo-name" aria-required="true" aria-invalid="false" /></span>
+            <div class="demiform demiformfirst"><label for="coo-email">Adresse e-mail *</label><span class="wpcf7-form-control-wrap coo-email"><input type="email" name="coo-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="coo-email" aria-required="true" aria-invalid="false" /></span></div>
+            <div class="demiform"><label for="coo-tel">Numéro de téléphone *</label><span class="wpcf7-form-control-wrap coo-tel"><input type="text" name="coo-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="coo-tel" aria-required="true" aria-invalid="false" /></span></div>
+            <div class="clear"></div>
+            <div class="demiform demiformfirst"><label for="soc-name">Société</label><span class="wpcf7-form-control-wrap soc-name"><input type="text" name="soc-name" value="" size="40" class="wpcf7-form-control wpcf7-text" id="soc-name" aria-invalid="false" /></span></div>
+            <div class="demiform"><label for="soc-type">Type de structure</label>
+                <div class="wrapselect"><span class="wpcf7-form-control-wrap soc-type">
+                        <select name="soc-type" class="wpcf7-form-control wpcf7-select" id="soc-type" aria-invalid="false">
+                            <option value="Entreprise">Entreprise</option>
+                            <option value="Organisme public">Organisme public</option>
+                            <option value="Association">Association</option>
+                            <option value="Auto-entrepreneur">Auto-entrepreneur</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </span></div>
+            </div>
+            <div class="clear"></div>
+            <p><label for="soc-adresse">Adresse de la société <span>Adresse complète, code postal, ville</span></label><span class="wpcf7-form-control-wrap soc-adresse"><input type="text" name="soc-adresse" value="" size="40" class="wpcf7-form-control wpcf7-text" id="soc-adresse" aria-invalid="false" /></span><label for="soc-site">Site internet (si existant)</label><span class="wpcf7-form-control-wrap soc-site"><input type="text" name="soc-site" value="" size="40" class="wpcf7-form-control wpcf7-text" id="soc-site" aria-invalid="false" placeholder="http://..." /></span><span class="wpcf7-form-control-wrap messagesrc"><input type="text" name="messagesrc" value="nat" size="40" class="wpcf7-form-control wpcf7-text" id="messagesrc" aria-invalid="false" /></span><input type="submit" value="Envoyer" class="wpcf7-form-control wpcf7-submit" /></p>
+            <div class="wpcf7-response-output wpcf7-display-none"></div>
+        </form>
+    </div>
+{% endblock %}

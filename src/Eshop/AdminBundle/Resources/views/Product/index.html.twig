@@ -1,0 +1,145 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% set FEATURED = 'featured'|trans %}
+{% set NOT_FEATURED = 'not featured'|trans %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block title %}
+    {{ 'Products list'|trans }} - {{ 'Administration panel'|trans }}
+{% endblock title %}
+
+{% block page_content -%}
+    <h3>{{ 'Products list'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_product') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+        <a href="{{ path('admin_product_new') }}" class="btn btn-default">{{ 'Create a new product'|trans }}</a>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{{ 'Image'|trans }}</th>
+                <th class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="btn btn-xs btn-default dropdown-toggle">
+                        <i class="fa fa-list"></i> {{ 'Sort by'|trans }} <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>{{ knp_pagination_sortable(entities, 'Name'|trans, 'p.name') }}</li>
+                        <li>{{ knp_pagination_sortable(entities, 'Price'|trans, 'p.price') }}</li>
+                    </ul>
+                </th>
+                <th>{{ 'Actions'|trans }}</th>
+            </tr>
+        </thead>
+
+    {% for entity in entities %}
+        <tbody>
+            <tr>
+                <td width="10%">
+                    {{ include('@Admin/Partials/productImages.twig') }}
+                </td>
+                <td width="70%">
+                    <h4 class="media-heading">
+                        <a href="{{ path('admin_product_show', { 'id': entity.id}) }}">{{ entity.name }}</a> 
+                        <span class="small">(<b>{{ 'Category'|trans  }}</b> {{ entity.category.name }})</span>
+                    </h4>
+                    <p>
+                        {{ entity.description|truncate(250)|raw }}
+                    </p>
+                    <p>
+                        {% if entity.oldprice > 0 %}{{ 'Price'|trans }}
+                            <b>
+                                <span class="text-primary text-uppercase">{{ entity.price }} {{ entity.currency.code }} {{ entity.currency.symbol }}</span>
+                            </b>
+
+                            <b><span class="small text-danger" style="text-decoration: line-through;">
+                                    {{ 'Instead of'|trans }} : {{ entity.oldprice }} {{ entity.currency.code }} 
+                                    {{ entity.currency.symbol }}</span>
+                            </b>
+                        {% else %}
+                            {{ 'Price'|trans }}
+                            <span class="text-primary text-uppercase">{{ entity.price }}</span> {{ entity.currency.code }} <span class="small">{{ entity.currency.symbol }}</span>
+                        {% endif %}
+                        ({{ entity.measureQuantity }} {{ entity.measure.name }})
+                    </p>
+                </td>
+                <td width="20%">
+                    <div class="btn-group-xs">
+                        <a href="{{ path('admin_product_show', { 'id': entity.id }) }}" class="btn btn-default" title="{{ 'show'|trans }}"><i class="fa fa-eye"></i></a>
+                        <a href="{{ path('admin_product_edit', { 'id': entity.id }) }}" class="btn btn-primary" title="{{ 'edit'|trans }}"><i class="fa fa-edit"></i></a>
+                            {% if entity.featured|length %}
+                            <a href="#" class="small featured btn btn-info">{{ FEATURED }}</a>
+                        {% else %}
+                            <a href="#" class="small featured btn btn-info">{{ NOT_FEATURED }}</a>
+                        {% endif %}
+                        <br><br>
+
+                        <a href="{{ path('admin_category_show', {'id': entity.category.id}) }}" class="btn btn-xs btn-success" title="{{ 'Category'|trans }} {{ entity.category }}">
+                            {{ entity.category|truncate(15) }}
+                        </a>
+                        <a href="{{ path('admin_manufacturer_show', {'id': entity.manufacturer.id}) }}" class="btn btn-xs btn-warning" title="{{ 'Manufacturer'|trans }} {{ entity.manufacturer }}">
+                            {{ entity.manufacturer|truncate(15) }}
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    {% endfor %}
+        </table>
+    <div class="row">
+        <div class="col-md-12">
+            {{ knp_pagination_render(entities) }}
+        </div>
+    </div>
+{% endblock page_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/shop/fancybox/jquery.mousewheel-3.0.6.pack.js') }}"
+    type="text/javascript"></script>
+    <script src="{{ asset('bundles/shop/fancybox/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox();
+
+            $(".featured").on("click", function (e) {
+                e.preventDefault();
+                var link = $(this);
+                var productId = link.closest('tr').data('id');
+                var value = link.text();
+
+                var newValue = false;
+                if (value == '{{ NOT_FEATURED }}') {
+                    newValue = true;
+                }
+
+                $.ajax({
+                    type: 'post',
+                    url: '{{ path('admin_featured_product_edit_ajax') }}',
+                    data: {
+                        product_id: productId,
+                        new_value: newValue
+                    },
+                    success: function (data) {
+                        if (data.success === true) {
+                            changeFeaturedValue(link);
+                        }
+                    }
+                });
+            });
+
+            function changeFeaturedValue(link) {
+                if (link.html() == '{{ NOT_FEATURED }}') {
+                    link.html('{{ FEATURED }}')
+                } else {
+                    link.html('{{ NOT_FEATURED }}')
+                }
+            }
+        });
+    </script>
+{% endblock javascripts %}

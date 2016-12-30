@@ -1,0 +1,20 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'ShopBundle' %}
+{% block title %}{{ 'quotation.exists_title'|trans }}{% endblock %}
+{% block page_content -%}
+    <body bgcolor="#FFFFFF">
+        <div class="container">
+            <h2>{{ 'quotation.exists_title'|trans }}</h2>
+                <div class="alert alert-warning">
+                    <h4><i class="fa fa-warning"></i> {{ 'Warning'|trans }}</h4>
+                    <p>{{ 'One free quotation id allready requested by'|trans }}
+                        <strong>{{ entity.email|upper }}</strong> {{ 'for creation of a website type'|trans }} <strong>{{ entity.typesite|capitalize }} ({{ entity.lang|upper }}) {{ entity.createdAt|ago }}</strong>.
+                    </p>
+                    <br>
+                    <h4>
+                        {{ 'Please note that all the received quotation requests will be reviewed and answered as soon as possible'|trans }}.
+                    </h4>
+                </div> 
+            </div>
+
+{% endblock page_content -%}

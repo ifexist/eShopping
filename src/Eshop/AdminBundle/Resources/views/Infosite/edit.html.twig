@@ -1,0 +1,336 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/css/summernote.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/geoaddresspicker/demos/themes/base/jquery.ui.all.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/bootstrap-tokenfield/dist/css/bootstrap-tokenfield.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/bootstrap-tokenfield/dist/css/tokenfield-typeahead.min.css') }}" rel="stylesheet">  
+    <style>
+        .text-on-banner
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 15px;
+            width:85%;
+            margin:0 auto;
+            color: #ffffff;
+            background: #333333;
+            background: rgba(0, 0, 0, 0.22);
+            z-index:2;
+            font-size:100%;
+        }
+        .text-on-logo
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 15px;
+            width:75%;
+            margin:0 auto;
+            color: #ffffff;
+            background: #333333;
+            background: rgba(0, 0, 0, 0.22);
+            z-index:2;
+            font-size:100%;
+        }
+        .text-on-icon
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 15px;
+            width:90%;
+            margin:0 auto;
+            color: #ffffff;
+            background: #333333;
+            background: rgba(0, 0, 0, 0.22);
+            z-index:2;
+            font-size:100%;
+            background-position: right 50% bottom 50%;
+            border-radius: 50%;
+        }
+    </style>
+{% endblock %}
+
+{% block page_content -%}
+    <h3>{{ "Edit your website information"|trans }}</h3>
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>
+            <b>{{ 'Important'|trans }}! * = {{ 'Required'|trans }}</b>.<br>{{ 'Entering of all fields, is not mandatory'|trans }}. 
+            {{ 'However, it is important to grasp the most possble box'|trans }}. 
+            {{ 'These information are units to better ranking of your website and business'|trans }}. 
+            <b>{{ 'Click on each image for updating or changing'|trans }}</b>.
+        </p>
+    </div> 
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success" role="alert">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    <div class="col-md-12">
+        {% include "@Admin/Infosite/Includes/imagesite.html.twig" %}
+    </div>
+    <div class="btn-group">
+        <a href="{{ path('admin_infosite_show', { 'id': entity.id }) }}" class="btn btn-default"><i class="fa fa-eye"> {{ 'Show'|trans }}</i></a>
+    </div>
+    {{ form_start(edit_form) }}
+    <table class="record_properties table table-bordered">
+        <tr>
+            <th>
+                <div class="small col-xs-4">
+                    {{ 'Site theme'|trans }} {% if entity.sitestyle != "" %}({{ 'Default'|trans }} {{ 'choosen'|trans }} <i class="label label-default">{{ entity.sitestyle|capitalize }}</i>){% endif %}
+                </div>
+                <div class="small col-xs-4">
+                    {{ 'Admin theme'|trans }} {% if entity.adminstyle != "" %}({{ 'Default'|trans }} {{ 'choosen'|trans }} <i class="label label-default">{{ entity.adminstyle|capitalize }}</i>){% endif %}
+                </div>
+                <div class="small col-xs-4">
+                     {{ 'Products'|trans }} * <span class="small"><b>{{ 'Auto Completion'|trans|capitalize }}</b>.</span>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-4">
+                    <div class="col-md-12" style="height: 150px;overflow: auto;">
+                    {% for sitestyle in sitestyles %}
+                        <div class="col-md-6">
+                            <label><input type="radio" name="sitestyle" value="{{ sitestyle }}" {% if sitestyle == entity.sitestyle %} checked="checked"{% endif %}> {{ sitestyle|capitalize }}</label>
+                            <img src="{{ asset('bootswatch/skins/' ~ sitestyle ~ '/thumbnail.png') }}" width="100%">
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="small col-xs-4">
+                    <div class="col-md-12" style="height: 150px;overflow: auto;">
+                    {% for adminstyle in adminstyles %}
+                        <div class="col-md-6">
+                            <label><input type="radio" name="adminstyle" value="{{ adminstyle }}" {% if adminstyle == entity.adminstyle %} checked="checked"{% endif %}> {{ adminstyle|capitalize }}</label>
+                            <img src="{{ asset('bootswatch/skins/' ~ adminstyle ~ '/thumbnail.png') }}" width="100%">
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="small col-xs-4">
+                    {{ form_widget(edit_form.prodcats, {'id':'prodcats'}, {'attr':{'style':'font-size:12px', 'class':'small form-control'} }) }}
+                </div>  
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Name of website'|trans }} *
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Slogan of website'|trans }} *
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Link website'|trans }} *
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Language'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.namesite, {'attr': {'class': 'col-md-12', 'required':'required'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.slogan, {'attr': {'class': 'col-md-12', 'required':'required'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.web, {'attr': {'class': 'col-md-12', 'required':'required'} }) }}
+                </div>
+                <div class="small col-xs-3">
+                    <select name="langcode" class="col-md-12" required>
+                        <option value="{{ app.request.locale|lower }}" selected="selected">{{ app.request.locale|lower }}</option>
+                        {% for lang in langs %}
+                            <option value="{{ lang.code|lower }}">{{ lang.code|lower}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Name of service'|trans }} 1
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Name of contact'|trans }} 1
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Email of contact'|trans }} 1
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Phone of contact'|trans }} 1
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.titleservice1, {'attr': {'class': 'col-md-12', 'placeholder':'Support' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.contactservice1, {'attr': {'class': 'col-md-12', 'placeholder':'Mr Gerald House' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.emailservice1, {'attr': {'class': 'col-md-12', 'placeholder':'suport@mysite.ltd' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.phoneservice1, {'attr': {'class': 'col-md-12', 'placeholder':'+44 400 500 300 200 1' } }) }}
+                </div>
+            </td>
+        </tr>        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Name of service'|trans }} 2
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Name of contact'|trans }} 2
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Email of contact'|trans }} 2
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Phone of contact'|trans }} 2
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.titleservice2, {'attr': {'class': 'col-md-12', 'placeholder':'Hotline' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.contactservice2, {'attr': {'class': 'col-md-12', 'placeholder':'My Hoteline center or null' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.emailservice2, {'attr': {'class': 'col-md-12', 'placeholder':'hotline@mysite.ltd' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.phoneservice2, {'attr': {'class': 'col-md-12', 'placeholder':'+44 400 500 300 200 2' } }) }}
+                </div>
+            </td>
+        </tr>        
+        <tr>
+            <th>
+                <div class="small col-xs-3">
+                    {{ 'Name of service'|trans }} 3
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Name of contact'|trans }} 3
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Email of contact'|trans }} 3
+                </div>
+                <div class="small col-xs-3">
+                    {{ 'Phone of contact'|trans }} 3
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.titleservice3, {'attr': {'class': 'col-md-12', 'placeholder':'Webmaster' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.contactservice3, {'attr': {'class': 'col-md-12', 'placeholder':'Lucie Cariere' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.emailservice3, {'attr': {'class': 'col-md-12', 'placeholder':'webmaster@mysite.ltd' } }) }}
+                </div>
+                <div class="small col-xs-3">
+                    {{ form_widget(edit_form.phoneservice3, {'attr': {'.class': 'col-md-12', 'placeholder':'+44 400 500 300 200 3' } }) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class="small col-xs-4">
+                    {{ 'Action'|trans }}
+                </div>
+                <div class="small col-xs-8">
+                    {{ 'Other imrotant links'|trans }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="small col-xs-4">
+                    <input type="submit" value="{{ 'Save'|trans }}" class="col-md-12 btn btn-success"/>
+                </div>
+                <div class="small col-xs-8">
+                    {{ include('@Admin/Infosite/Includes/infositelinks.html.twig') }}
+                </div>
+            </td>
+        </tr>
+    </table>        
+                
+     
+    {{ form_rest(edit_form) }}
+    {{ form_end(edit_form) }}
+    
+{% endblock page_content %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="{{ asset('bundles/shop/bootstrap-tokenfield/dist/bootstrap-tokenfield.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/js/speakingurl.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/js/summernote.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.generate-slug').on('click', function (e) {
+                e.preventDefault();
+                //get field value
+                var productName = $('.product-name').val();
+                var slugInut = $('.product-slug');
+                var nameToSlug = productName;
+
+                //generate slug
+                var slug = getSlug(nameToSlug, {
+                    custom: {
+                        '%': ' percent '
+                    },
+                    uric: true
+                });
+                //record to slug input
+                slugInut.val(slug);
+            });
+
+            $('.delete-form').submit(function (e) {
+                var currentForm = this;
+                e.preventDefault();
+                bootbox.confirm("{{ 'Are you sure'|trans }}?", function (result) {
+                    if (result) {
+                        currentForm.submit();
+                    }
+                });
+            });
+        });
+        {% include '@Admin/Partials/initSummernote.js.twig' with {'height': 300} %}
+    </script>  
+    <script>
+        $('#prodcats').tokenfield({
+            autocomplete: {
+                source: [        
+                    {% for prodcat in prodcats %}
+                        '{{ prodcat.id }} - {{ prodcat.cat1 }}',
+                    {% endfor %}   
+                        ],
+                delay: 100
+                    },
+                    showAutocompleteOnFocus: true
+                })
+    </script>
+{% endblock javascripts %}

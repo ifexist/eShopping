@@ -1,0 +1,5 @@
+{% if ifgsitestyle.sitestyle == "" %}
+    <link href="{{ asset('bootswatch/skins/custom/bootstrap.min.css') }}" rel="stylesheet">
+{% else%}
+    <link href="{{ asset('bootswatch/skins/'~ ifgsitestyle.sitestyle ~'/bootstrap.min.css') }}" rel="stylesheet">
+{% endif %}

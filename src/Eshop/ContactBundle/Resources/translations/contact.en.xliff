@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-07-29T16:13:09Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="da39a3ee5e6b4b0d3255bfef95601890afd80709" resname="">
+        <source></source>
+        <target state="new"></target>
+        <jms:reference-file line="43">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+        <jms:reference-file line="90">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+        <jms:reference-file line="103">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7521e18a88e60917d77c74549b8d7bc0c32dda83" resname="1500to2500HT">
+        <source>1500to2500HT</source>
+        <target state="new">1500to2500HT</target>
+        <jms:reference-file line="99">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d70f93df5e8f9b55be44fbeee9d203972e3383d4" resname="Address">
+        <source>Address</source>
+        <target state="new">Address</target>
+        <jms:reference-file line="60">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="81">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7aeba4cd15b1afc5015285c0854f0edae2380d36" resname="Budget">
+        <source>Budget</source>
+        <target state="new">Budget</target>
+        <jms:reference-file line="161">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="86">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="64">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="107">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77dfd2135f4db726c47299bb55be26f7f4525a46" resname="Cancel">
+        <source>Cancel</source>
+        <target state="new">Cancel</target>
+        <jms:reference-file line="41">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+        <jms:reference-file line="145">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5de4a8d0426c265371fd357ddde65efc81763c1b" resname="Check your mailbox">
+        <source>Check your mailbox</source>
+        <target state="new">Check your mailbox</target>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="587c22fb090f99aad7847b7fd57da553bd8110dd" resname="Choose in locality">
+        <source>Choose in locality</source>
+        <target state="new">Choose in locality</target>
+        <jms:reference-file line="138">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="141">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4271627f4f0bef6104a95cca7bb21cda4d74503e" resname="City">
+        <source>City</source>
+        <target state="new">City</target>
+        <jms:reference-file line="128">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="138">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d77942fbe41cea1e2c860060ef9ef45588ec4c00" resname="Commercial Name">
+        <source>Commercial Name</source>
+        <target state="new">Commercial Name</target>
+        <jms:reference-file line="169">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7a1994999d181deea68e4304b3346e78f838ecb7" resname="Company">
+        <source>Company</source>
+        <target state="new">Company</target>
+        <jms:reference-file line="38">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="59">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="845260cb1918dfd8cfcb59372c770380660ff5b6" resname="Confirmation of free quote request">
+        <source>Confirmation of free quote request</source>
+        <target state="new">Confirmation of free quote request</target>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="10">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f9767ffe8850403f0bfba49cb008bafdd45610cd" resname="Content of site">
+        <source>Content of site</source>
+        <target state="new">Content of site</target>
+        <jms:reference-file line="195">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d523ebbd10146cdfd39dee077f04c9d08468d0bc" resname="Country">
+        <source>Country</source>
+        <target state="new">Country</target>
+        <jms:reference-file line="128">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="141">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0d01e2e86669e98441ab4dce5520696c318b7098" resname="E-mail">
+        <source>E-mail</source>
+        <target state="new">E-mail</target>
+        <jms:reference-file line="48">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="84add5b2952787581cb9a8851eef63d1ec75d22b" resname="Email">
+        <source>Email</source>
+        <target state="new">Email</target>
+        <jms:reference-file line="102">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d73e796f69393e38a92c10e34ae3acefc8576b67" resname="Etc">
+        <source>Etc</source>
+        <target state="new">Etc</target>
+        <jms:reference-file line="195">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0f01ed56a1e32a05e5ef96e4d779f34784af9a96" resname="Example">
+        <source>Example</source>
+        <target state="new">Example</target>
+        <jms:reference-file line="195">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cf23ba48c06d7e6d4b41a205bfb3cac3bb7b1e38" resname="Firstname">
+        <source>Firstname</source>
+        <target state="new">Firstname</target>
+        <jms:reference-file line="86">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d7e2c17d0baf6c611dabac2ebffae57c7e2a2132" resname="Free quote request with the following information">
+        <source>Free quote request with the following information</source>
+        <target state="new">Free quote request with the following information</target>
+        <jms:reference-file line="29">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8a754c61c2ced0c5ff79a1827e02c9d643d6d926" resname="Gender">
+        <source>Gender</source>
+        <target state="new">Gender</target>
+        <jms:reference-file line="55">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+        <jms:reference-file line="78">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="357671f6a8955ae65c790708943a71ffab7d973b" resname="Here is the information">
+        <source>Here is the information</source>
+        <target state="new">Here is the information</target>
+        <jms:reference-file line="34">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="35">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b19425a24353321616ff88d2c2250f95ee5f7749" resname="If so what languages">
+        <source>If so what languages</source>
+        <target state="new">If so what languages</target>
+        <jms:reference-file line="195">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f6150903acd48cfd252be6637bfe034b46b6e47c" resname="If this site will be multilanguage">
+        <source>If this site will be multilanguage</source>
+        <target state="new">If this site will be multilanguage</target>
+        <jms:reference-file line="195">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc4b565123632ad4bb428a24f6368e4fe5666466" resname="If you already have a website">
+        <source>If you already have a website</source>
+        <target state="new">If you already have a website</target>
+        <jms:reference-file line="177">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e9f1329893fcce34c5493c61b07cd255075af524" resname="If you have a Model website, Please add the url">
+        <source>If you have a Model website, Please add the url</source>
+        <target state="new">If you have a Model website, Please add the url</target>
+        <jms:reference-file line="185">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a209e33196dac3a224870766fd964da53d7c7dd2" resname="Language of site">
+        <source>Language of site</source>
+        <target state="new">Language of site</target>
+        <jms:reference-file line="148">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="639860fbb86cea7f96e287fa3fecca62e4bb42f8" resname="Lastname">
+        <source>Lastname</source>
+        <target state="new">Lastname</target>
+        <jms:reference-file line="94">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b058a9b22f579cab7ac16513a1de431a941a51e5" resname="Locality">
+        <source>Locality</source>
+        <target state="new">Locality</target>
+        <jms:reference-file line="126">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="08e58ced0ce4de85f4c595930598014b994ebdab" resname="More on this project">
+        <source>More on this project</source>
+        <target state="new">More on this project</target>
+        <jms:reference-file line="115">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="83">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="136">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a5063aea71291724bb9d7d64345803a3c6e08e9b" resname="Mr">
+        <source>Mr</source>
+        <target state="new">Mr</target>
+        <jms:reference-file line="57">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ed16d8cbf00b51d289e71fa320e8f52782fd47a1" resname="Mrs">
+        <source>Mrs</source>
+        <target state="new">Mrs</target>
+        <jms:reference-file line="58">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="67370c8e5feb3e1066f9337265ee0c220612fa85" resname="Name of company">
+        <source>Name of company</source>
+        <target state="new">Name of company</target>
+        <jms:reference-file line="169">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="de680511b7cc0040dbbc9b2e67bfe01b1d17dff8" resname="Note that all quotes received applications will be reviewed and answered promptly">
+        <source>Note that all quotes received applications will be reviewed and answered promptly</source>
+        <target state="new">Note that all quotes received applications will be reviewed and answered promptly</target>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/exists.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="367302354774030c0fabc4b9267b4979b2747750" resname="On the model of">
+        <source>On the model of</source>
+        <target state="new">On the model of</target>
+        <jms:reference-file line="105">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="73">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="126">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="be95a1991050fb6127cb99e9868cafdc02df3dc6" resname="One free quotation id already requested by">
+        <source>One free quotation id already requested by</source>
+        <target state="new">One free quotation id already requested by</target>
+        <jms:reference-file line="9">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/exists.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77064d5265236e0ac252f3fc4a5ba7b274b6a583" resname="Phone">
+        <source>Phone</source>
+        <target state="new">Phone</target>
+        <jms:reference-file line="110">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="49">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="36">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="70">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0975f66459d4a84e0f7acfd028928e063026c87d" resname="Please no forget">
+        <source>Please no forget</source>
+        <target state="new">Please no forget</target>
+        <jms:reference-file line="180">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="188">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="426837193359bcd954331d02decab30161077ab0" resname="Please, check all information and click on Submit">
+        <source>Please, check all information and click on Submit</source>
+        <target state="new">Please, check all information and click on Submit</target>
+        <jms:reference-file line="35">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d7432cda8e62d47c236a130a6e70ad23f4b41867" resname="Postal code">
+        <source>Postal code</source>
+        <target state="new">Postal code</target>
+        <jms:reference-file line="128">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="135">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="56e3badc4e6c5cc95e0ea5a9a878b9bd09f319d4" resname="Refresh">
+        <source>Refresh</source>
+        <target state="new">Refresh</target>
+        <jms:reference-file line="212">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="68c2779c9004610d4be935702c20f63324133360" resname="Request a quote">
+        <source>Request a quote</source>
+        <target state="new">Request a quote</target>
+        <jms:reference-file line="4">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="376b390407d20b33f1c90946a54f53fac30760ae" resname="Request free quote for website creation">
+        <source>Request free quote for website creation</source>
+        <target state="new">Request free quote for website creation</target>
+        <jms:reference-file line="69">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="74">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f6a8a2fbae018c4ea523cce114a013efa8fc574b" resname="Security code">
+        <source>Security code</source>
+        <target state="new">Security code</target>
+        <jms:reference-file line="204">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dacf65959849884a011f36f76a04eebea94c5ea" resname="Submit">
+        <source>Submit</source>
+        <target state="new">Submit</target>
+        <jms:reference-file line="223">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+        <jms:reference-file line="40">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+        <jms:reference-file line="144">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6555ab15ab01e41d7429810b51f5fee00ad5094a" resname="The objective of site">
+        <source>The objective of site</source>
+        <target state="new">The objective of site</target>
+        <jms:reference-file line="195">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="45fec2939922eb588c25d7494173b49124f2c177" resname="This quote request already exists">
+        <source>This quote request already exists</source>
+        <target state="new">This quote request already exists</target>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/exists.html.twig</jms:reference-file>
+        <jms:reference-file line="7">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/exists.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="65ba3b2c93bdb4d2f32c221ddd77d25d517b1b48" resname="Type and language of site">
+        <source>Type and language of site</source>
+        <target state="new">Type and language of site</target>
+        <jms:reference-file line="77">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="55">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="98">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c49213ac0f77454ea6ce3193e9b03bc83883d50b" resname="Type of site">
+        <source>Type of site</source>
+        <target state="new">Type of site</target>
+        <jms:reference-file line="80">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+        <jms:reference-file line="118">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="03128bed906297aaae20f8f5b84b2c5ec6e0f459" resname="Verification">
+        <source>Verification</source>
+        <target state="new">Verification</target>
+        <jms:reference-file line="3">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+        <jms:reference-file line="11">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e9c45563358e813f157ba81b33143542165ba84e" resname="Warning">
+        <source>Warning</source>
+        <target state="new">Warning</target>
+        <jms:reference-file line="8">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/exists.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2e8a57cc5c472f4ac3b071979a38e80db7e59e87" resname="Website">
+        <source>Website</source>
+        <target state="new">Website</target>
+        <jms:reference-file line="95">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+        <jms:reference-file line="48">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/email.html.twig</jms:reference-file>
+        <jms:reference-file line="116">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/verify.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ec40a46df4e45a1102aa34eb7ebc2ea32e894c6" resname="Your free quote request is sent successfully">
+        <source>Your free quote request is sent successfully</source>
+        <target state="new">Your free quote request is sent successfully</target>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/confirm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="99d90b66cf245b86e4c3c81d3c8a38bc3035ea7a" resname="Your project">
+        <source>Your project</source>
+        <target state="new">Your project</target>
+        <jms:reference-file line="193">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="80207e308ba5795be1941ebc3609b2a1792cf50e" resname="associative">
+        <source>associative</source>
+        <target state="new">associative</target>
+        <jms:reference-file line="86">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1de49f7900d3c5420e6270869944886d3c98f4b2" resname="auto completion">
+        <source>auto completion</source>
+        <target state="new">auto completion</target>
+        <jms:reference-file line="126">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="169254c45fa4ed7ea11c00541ffb17b0cde39625" resname="blog">
+        <source>blog</source>
+        <target state="new">blog</target>
+        <jms:reference-file line="87">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="81e4a5523e4e1843f200847f875f60d495df137f" resname="budget">
+        <source>budget</source>
+        <target state="new">budget</target>
+        <jms:reference-file line="96">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6021e7754356c560166ea88e775fdc82bff89817" resname="captcha">
+        <source>captcha</source>
+        <target state="new">captcha</target>
+        <jms:reference-file line="68">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="41dabae7b9269b285d97d343465fadf2fc075403" resname="catalog">
+        <source>catalog</source>
+        <target state="new">catalog</target>
+        <jms:reference-file line="84">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f5fcfe22398478332f7dd64b02bfcdeb7622691e" resname="confirm_message">
+        <source>confirm_message</source>
+        <target state="new">confirm_message</target>
+        <jms:reference-file line="14">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/confirm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6fff4c1e88edc70946fbe2a5767de5bf562c562b" resname="contact_title">
+        <source>contact_title</source>
+        <target state="new">contact_title</target>
+        <jms:reference-file line="4">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+        <jms:reference-file line="7">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="444c1efe975e9babde869520762c42efcacf1deb" resname="ecommerce">
+        <source>ecommerce</source>
+        <target state="new">ecommerce</target>
+        <jms:reference-file line="82">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a88b7dcd1a9e3e17770bbaa6d7515b31a2d7e85d" resname="email">
+        <source>email</source>
+        <target state="new">email</target>
+        <jms:reference-file line="44">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e8108b821aa8165140b5f968d0a4f979f2d0b615" resname="firstname">
+        <source>firstname</source>
+        <target state="new">firstname</target>
+        <jms:reference-file line="28">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5014f0df590696d1442b05ef51840d339fd062c7" resname="for creation of a website type">
+        <source>for creation of a website type</source>
+        <target state="new">for creation of a website type</target>
+        <jms:reference-file line="10">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/exists.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d1f8bde161f6b0908d075cf8b2ef1664e2e76824" resname="institutional">
+        <source>institutional</source>
+        <target state="new">institutional</target>
+        <jms:reference-file line="85">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4e2cdd3b204e1576631be15f94076c91440497e7" resname="lastname">
+        <source>lastname</source>
+        <target state="new">lastname</target>
+        <jms:reference-file line="36">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6b7088d65f8370384f98238f43ecec855a5596c9" resname="less1500HT">
+        <source>less1500HT</source>
+        <target state="new">less1500HT</target>
+        <jms:reference-file line="98">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6f9b9af3cd6e8b8a73c2cdced37fe9f59226e27d" resname="message">
+        <source>message</source>
+        <target state="new">message</target>
+        <jms:reference-file line="60">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a1566a5ef9135e12b507a7a9eb18d4f8c04b9611" resname="more2500HT">
+        <source>more2500HT</source>
+        <target state="new">more2500HT</target>
+        <jms:reference-file line="100">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9821e4a32d5fd109616827fabf6549b7addfe677" resname="more5000HT">
+        <source>more5000HT</source>
+        <target state="new">more5000HT</target>
+        <jms:reference-file line="101">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d0941e68da8f38151ff86a61fc59f7c5cf9fcaa2" resname="other">
+        <source>other</source>
+        <target state="new">other</target>
+        <jms:reference-file line="88">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f6be6ca910984ef05a237a180d464ceb8847c14a" resname="phone">
+        <source>phone</source>
+        <target state="new">phone</target>
+        <jms:reference-file line="52">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5ae4bd2e8ca7ac03ed542f6df7ba9ceda3381166" resname="postal code, place, city, etc..">
+        <source>postal code, place, city, etc..</source>
+        <target state="new">postal code, place, city, etc..</target>
+        <jms:reference-file line="131">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="26b56c1bdfb048c3e46419fde332bab76deb2cd3" resname="refresh">
+        <source>refresh</source>
+        <target state="new">refresh</target>
+        <jms:reference-file line="76">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a941bb95f5edb0a9973448e033026bed7464a3ab" resname="showcase">
+        <source>showcase</source>
+        <target state="new">showcase</target>
+        <jms:reference-file line="83">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/QuotationType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="335ce16b3fe40346cc3af2a4efce2ef04bc4ea55" resname="subject">
+        <source>subject</source>
+        <target state="new">subject</target>
+        <jms:reference-file line="41">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+        <jms:reference-file line="12">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5a84b302b933a073ffc96a2ea21c011650c2e20d" resname="subject_deminfo">
+        <source>subject_deminfo</source>
+        <target state="new">subject_deminfo</target>
+        <jms:reference-file line="45">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="330b81692a10d356ee66c205ee440544db5f76ca" resname="subject_devis">
+        <source>subject_devis</source>
+        <target state="new">subject_devis</target>
+        <jms:reference-file line="44">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+        <jms:reference-file line="4">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Quotation/form.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ba6b926675b99fe4631b77a07152f355fc982db7" resname="subject_other">
+        <source>subject_other</source>
+        <target state="new">subject_other</target>
+        <jms:reference-file line="48">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="911da9d9ac52466d796deeb806aaefd90e4aebc0" resname="subject_prbsit">
+        <source>subject_prbsit</source>
+        <target state="new">subject_prbsit</target>
+        <jms:reference-file line="47">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c2efaaa682316f120c29f69e9aa190c366c4fa2e" resname="subject_sugg">
+        <source>subject_sugg</source>
+        <target state="new">subject_sugg</target>
+        <jms:reference-file line="46">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3fa4054f214f0f8063d8fb4453be65d460e3e30c" resname="submit">
+        <source>submit</source>
+        <target state="new">submit</target>
+        <jms:reference-file line="87">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c6de1b7dd91465d437ef415f94f36afc1fbc8a8" resname="title">
+        <source>title</source>
+        <target state="new">title</target>
+        <jms:reference-file line="30">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+        <jms:reference-file line="20">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/index.html.twig</jms:reference-file>
+        <jms:reference-file line="8">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/confirm.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="04da8fe61f7315d9e90adc946a7d3da7e34c2999" resname="title_mr">
+        <source>title_mr</source>
+        <target state="new">title_mr</target>
+        <jms:reference-file line="32">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9e974c1f323744476613f9f25c62cdfedc345ef5" resname="title_mrs">
+        <source>title_mrs</source>
+        <target state="new">title_mrs</target>
+        <jms:reference-file line="33">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Form/Type/ContactType.php</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

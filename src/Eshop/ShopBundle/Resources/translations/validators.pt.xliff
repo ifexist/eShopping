@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-06-29T16:41:41Z" source-language="en" target-language="de" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="f72a2935bea97ab4a8119e163444c2a7ed059608" resname="Must be at least {{ limit }}">
+        <source>Must be at least {{ limit }}</source>
+        <target state="new">Must be at least {{ limit }}</target>
+      </trans-unit>
+      <trans-unit id="5742c001b2dd97bcf21fd2b4018e58654c4ad12a" resname="Only the file types image are allowed.">
+        <source>Only the file types image are allowed.</source>
+        <target state="new">Only the file types image are allowed.</target>
+      </trans-unit>
+      <trans-unit id="31296fddbf9693cec691e24447320b74f2ef5de3" resname="The maximum allowed file size is 5MB.">
+        <source>The maximum allowed file size is 5MB.</source>
+        <target state="new">The maximum allowed file size is 5MB.</target>
+      </trans-unit>
+      <trans-unit id="32c198b76a0756af7bae84195b986b3fb5ac3a09" resname="This slug is already in use. It is possible that the brand name already exists. Change this name and press &quot;generate slug&quot;">
+        <source>This slug is already in use. It is possible that the brand name already exists. Change this name and press "generate slug"</source>
+        <target state="new">This slug is already in use. It is possible that the brand name already exists. Change this name and press "generate slug"</target>
+      </trans-unit>
+      <trans-unit id="69da651b2d2036d25e76f623251dfc251cd129cb" resname="This slug is already in use. It is possible that the product name already exists. Change this name and press &quot;generate slug&quot;">
+        <source>This slug is already in use. It is possible that the product name already exists. Change this name and press "generate slug"</source>
+        <target state="new">This slug is already in use. It is possible that the product name already exists. Change this name and press "generate slug"</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

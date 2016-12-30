@@ -1,0 +1,8 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% block title %}{{ 'Translator'|trans|capitalize }}{% endblock%}
+
+{% block page_content -%}
+    {% include "@Admin/Translator/Includes/selectfile.html.twig" %}
+    {% include "@Admin/Translator/Includes/nodeselected.html.twig" %}
+{% endblock page_content -%}

@@ -1,0 +1,23 @@
+{% extends "::admin.html.twig" %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ render(controller('ShopBundle:Infosgeneral:adminstyle')) }}
+    <link href="{{ asset('font-awesome/css/font-awesome.css') }}" media="all" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('flag-icon-css/css/flag-icon.css') }}" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block body %}
+    {% include "@Admin/Partials/admin-menu-simple-top.html.twig" %}
+            <br><br><br>
+    <div class="container">
+        {% block page_content %}
+        {% endblock page_content %}
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ asset('bootstrap/3.3.7/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/shop/js/bootbox.min.js') }}"></script>
+{% endblock %}

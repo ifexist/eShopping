@@ -1,0 +1,68 @@
+{% if ifgSitelinksFooter.mediatitle1 != "" 
+or ifgSitelinksFooter.mediatitle2 != "" 
+or ifgSitelinksFooter.mediatitle3 != "" 
+or ifgSitelinksFooter.mediatitle4 != "" 
+or ifgSitelinksFooter.mediatitle5 != "" 
+or ifgSitelinksFooter.mediatitle6 != "" 
+or ifgSitelinksFooter.mediatitle7 != "" 
+or ifgSitelinksFooter.mediatitle8 != "" 
+or ifgSitelinksFooter.mediatitle9 != "" 
+or ifgSitelinksFooter.mediatitle10 != ""
+%}
+<div>
+    {% if ifgSitelinksFooter.mediatitle1 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink1 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle1|capitalize }} : {{ ifgSitelinksFooter.medialink1 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle1|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle1|capitalize }} : {{ ifgSitelinksFooter.medialink1 }}" width="22px">
+        </a>
+    {% endif %}
+
+
+    {% if ifgSitelinksFooter.mediatitle2 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink2 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle2|capitalize }} : {{ ifgSitelinksFooter.medialink2 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle2|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle2|capitalize }} : {{ ifgSitelinksFooter.medialink2 }}" width="22px">
+        </a>
+    {% endif %}
+
+
+    {% if ifgSitelinksFooter.mediatitle3 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink3 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle3|capitalize }} : {{ ifgSitelinksFooter.medialink3 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle3|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle3|capitalize }} : {{ ifgSitelinksFooter.medialink3 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle4 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink4 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle4|capitalize }} : {{ ifgSitelinksFooter.medialink4 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle4|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle4|capitalize }} : {{ ifgSitelinksFooter.medialink4 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle5 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink5 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle5|capitalize }} : {{ ifgSitelinksFooter.medialink5 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle5|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle5|capitalize }} : {{ ifgSitelinksFooter.medialink5 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle6 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink6 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle6|capitalize }} : {{ ifgSitelinksFooter.medialink6 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle6|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle6|capitalize }} : {{ ifgSitelinksFooter.medialink6 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle7 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink7 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle7|capitalize }} : {{ ifgSitelinksFooter.medialink7 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle7|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle7|capitalize }} : {{ ifgSitelinksFooter.medialink7 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle8 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink8 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle8|capitalize }} : {{ ifgSitelinksFooter.medialink8 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle8|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle8|capitalize }} : {{ ifgSitelinksFooter.medialink8 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle9 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink9 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle9|capitalize }} : {{ ifgSitelinksFooter.medialink9 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle9|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle9|capitalize }} : {{ ifgSitelinksFooter.medialink9 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinksFooter.mediatitle10 != "" %}
+        <a href="{{ ifgSitelinksFooter.medialink10 }}" target="_blank" title="{{ ifgSitelinksFooter.mediatitle10|capitalize }} : {{ ifgSitelinksFooter.medialink10 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinksFooter.mediatitle10|lower ~'.png') }}" title="{{ ifgSitelinksFooter.mediatitle10|capitalize }} : {{ ifgSitelinksFooter.medialink10 }}" width="22px">
+        </a>
+    {% endif %}
+</div>
+{% endif %}

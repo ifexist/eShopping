@@ -1,0 +1,43 @@
+{% trans_default_domain 'shop' %}
+<div class="item col-md-4 col-lg-3">
+    <div class="thumbnail">
+        <a href="{{ path('show_product', {'slug' : product.slug}) }}">
+            {% if product.images|length %}
+                <img class="group list-group-image"
+                     src="{{ asset( ('uploads/images/product/' ~ product.images.first().path) | imagine_filter('category_mainpage_thumb')) }}"
+                     alt="{{ product.name }}"/>
+            {% else %}
+                <img class="group list-group-image"
+                     src="{{ asset( ('uploads/images/product/no_image_available.png') | imagine_filter('category_mainpage_thumb')) }}"
+                     alt="{{ product.name }}"/>
+            {% endif %}
+
+        </a>
+        <div class="caption description-container id-row" data-id="{{ product.id }}">
+            {% if product.favourites|length %}
+                <a href="#"><span class="glyphicon glyphicon-heart like" aria-hidden="true"></span></a>
+            {% else %}
+                <a href="#"><span class="glyphicon glyphicon-heart-empty like" aria-hidden="true"></span></a>
+            {% endif %}
+            <a href="{{ path('show_product', {'slug' : product.slug}) }}">
+                <h4 class="group inner list-group-item-heading product-title" style="height: 70px; overflow: auto;">
+                    {{ product.name|truncate(35) }} 
+                    {% if product.oldprice > 0 and product.oldprice > product.price %}
+                        <br><span class="small"> ({{ 'Discounted'|trans }} <b class="text-danger" style="text-decoration: line-through;">{{ product.oldprice }} {{ product.currency.code }} {{ product.currency.symbol|lower }}</b>)</span>
+                    {% endif %}
+                </h4>
+            </a>
+            <p class="price">
+                <span>{{ product.price }}</span> {{ product.currency.symbol }} ({{ product.measureQuantity }} {{ product.measure.name }})
+            </p>
+            
+                <div class="btn-group">
+                    <a class="btn btn-success addtocart-btn" href="#" title="{{ 'cart.addtocart'|trans }}"> <i class="fa fa-cart-plus fa-lg"></i></a>
+                <a href="{{ path('show_product', {'slug' : product.slug}) }}" class="btn btn-default" title="{{ 'View'|trans }}"><i class="fa fa-eye fa-lg"></i></a>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('admin_product_edit', { 'id': product.id }) }}" class="btn btn-primary" title="{{ 'Edit'|trans }}"><i class="fa fa-edit fa-lg"></i></a>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

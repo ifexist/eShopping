@@ -1,0 +1,86 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'ShopBundle' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}
+    {{ entity.username }}
+{% endblock title %}
+
+{% block page_content %}
+<div class="container">
+    <h2>{{ entity.username }}</h2>
+    <div class="btn-group-xs">
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('admin_index') }}" class="btn btn-default">{{ 'layout.navbar.adminpanel'|trans }}</a>
+        <a href="{{ path('user_profile_edit') }}" class="btn btn-primary">{{ 'profile.edit.submit'|trans }}</a>
+        <a href="{{ path('fos_user_change_password') }}" class="btn btn-danger">{{ 'change_password.submit'|trans }}</a>
+        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-warning">{{ 'layout.navbar.logout'|trans }}</a>
+    {% else %}
+        <a href="{{ path('user_profile_edit') }}" class="btn btn-primary">{{ 'profile.edit.submit'|trans }}</a>
+        <a href="{{ path('fos_user_change_password') }}" class="btn btn-danger">{{ 'change_password.submit'|trans }}</a>
+        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-warning">{{ 'layout.navbar.logout'|trans }}</a>
+    {% endif %}
+    </div>
+
+        <table class="table table-hover">
+            <tr>
+                <th width="25%">
+                    {{ 'profile.show.username'|trans }}
+                </th>
+                <td width="75%">
+                    {{ entity.username }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    {{ 'profile.email'|trans }}
+                </th>
+                <td>     
+                    {{ entity.email }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ 'Gender'|trans }}
+                </th>                    
+                <td>     
+                    {{ entity.gender|trans }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    
+                    {{ 'Firstname'|trans }}
+                </th>                    
+                <td>     
+                    {{ entity.firstname }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    
+                    {{ 'Lastname'|trans }}
+                </th>                    
+                <td>     
+                    {{ entity.lastname }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ 'Phone'|trans }}
+                </th>                    
+                <td>     
+                    {{ entity.phone }}
+                </td>  
+            </tr>
+            <tr>
+                <th>
+                    {{ 'Address'|trans }}
+                </th>                    
+                <td>     
+                    {{ entity.address }}
+                </td>  
+            </tr>
+        </table>
+</div>
+{% endblock page_content %}

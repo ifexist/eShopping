@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source><![CDATA[AdminBundle]]></source>
+        <target><![CDATA[AdminBundle]]></target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source><![CDATA[Administration panel]]></source>
+        <target><![CDATA[Panel de administración]]></target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source><![CDATA[Are you sure]]></source>
+        <target><![CDATA[Estás seguro]]></target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source><![CDATA[Back to the list]]></source>
+        <target><![CDATA[Volver a la lista]]></target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source><![CDATA[Bundle]]></source>
+        <target><![CDATA[Bundle]]></target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source><![CDATA[Chars]]></source>
+        <target><![CDATA[Caracteres]]></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source><![CDATA[Check]]></source>
+        <target><![CDATA[Comprobar]]></target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source><![CDATA[Click to image for change banner]]></source>
+        <target><![CDATA[Haga clic en la imagen para cambiar el banner]]></target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source><![CDATA[Click to image for change icon]]></source>
+        <target><![CDATA[Haga clic para ver el icono de cambio]]></target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source><![CDATA[Click to image for change logo]]></source>
+        <target><![CDATA[Haga clic para cambiar de imagen]]></target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source><![CDATA[Click to image for upload banner]]></source>
+        <target><![CDATA[Haga clic en la imagen para cargar el banner]]></target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source><![CDATA[Click to image for upload icon]]></source>
+        <target><![CDATA[Haga clic en la imagen para subir el icono]]></target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source><![CDATA[Click to image for upload logo]]></source>
+        <target><![CDATA[Haga clic para cargar la imagen]]></target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source><![CDATA[ContactBundle]]></source>
+        <target><![CDATA[ContactBundle]]></target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source><![CDATA[Description]]></source>
+        <target><![CDATA[Descripción]]></target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source><![CDATA[Disable]]></source>
+        <target><![CDATA[Inhabilitar]]></target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source><![CDATA[Edit]]></source>
+        <target><![CDATA[Editar]]></target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source><![CDATA[Enable]]></source>
+        <target><![CDATA[Habilitar]]></target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source><![CDATA[Enter one parent category name]]></source>
+        <target><![CDATA[Introduce un nombre de categoría padre]]></target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source><![CDATA[Example Man, Woman, Kid, ...]]></source>
+        <target><![CDATA[Ejemplo: Hombre, Mujer, Niño, ...]]></target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source><![CDATA[Logout]]></source>
+        <target><![CDATA[Cerrar sesión]]></target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source><![CDATA[Main category creation]]></source>
+        <target><![CDATA[Creación de categoría principal]]></target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source><![CDATA[Maximum]]></source>
+        <target><![CDATA[Máximo]]></target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source><![CDATA[ShopBundle]]></source>
+        <target><![CDATA[ShopBundle]]></target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source><![CDATA[Unchck]]></source>
+        <target><![CDATA[Unchck]]></target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source><![CDATA[eShop]]></source>
+        <target><![CDATA[eShop]]></target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source><![CDATA[save]]></source>
+        <target><![CDATA[Salvar]]></target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source><![CDATA[to]]></source>
+        <target><![CDATA[a]]></target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source><![CDATA[Uncheck]]></source>
+        <target><![CDATA[Desmarcar]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

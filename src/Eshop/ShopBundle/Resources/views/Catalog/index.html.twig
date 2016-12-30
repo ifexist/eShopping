@@ -1,0 +1,73 @@
+{% extends '@Shop/layout.html.twig' %}
+{% trans_default_domain 'shop' %}
+
+{% block title %}
+    {{ 'layout.navbar.sitename'|trans }} - {{ 'categories.menu.header'|trans }}
+{% endblock title %}
+{% block page_content -%}
+    {% if slides|length %}
+        {% include '@Shop/Catalog/Includes/Carousel/colmd10-2Pager.html.twig' %}
+    {% endif %}
+    <div class="row">
+{#        <div class="small col-md-2">
+            {{ render(controller('ShopBundle:LayoutsUtility:categoriesMenu')) }}
+            {{ render(controller('ShopBundle:LayoutsUtility:manufacturersMenu')) }}
+        </div>#}
+        <div class="col-md-10">
+            <h3 class="text-center">{{ 'layout.index.latestproducts'|trans }}</h3>
+            {% for product in latest_products %}
+                {{ include('@Shop/Partials/productPreview.html.twig') }}
+            {% endfor %}
+            {% if featured_products | length %}
+                <h3 class="text-center">{{ 'layout.index.featuredproducts'|trans }}</h3>
+                {% for product in featured_products %}
+                    {{ include('@Shop/Partials/productPreview.html.twig') }}
+                {% endfor %}
+        {% endif %}
+            <div class="col-md-12 thumbnail">
+                {% if news | length %}
+                    <h4>
+                        <strong>{{ news.title }}</strong>
+                    </h4>
+                    <div>
+                        {{ news.text|raw|nl2br }}
+                    </div>
+                    <p class="pull-right">{{ news.date|date() }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="small col-md-2">
+            {{ render(controller('ShopBundle:Infosgeneral:infositeContact')) }}
+            {{ render(controller('ShopBundle:Infosgeneral:sitelinks')) }}
+            {{ include('@Shop/Partials/Includes/Widget/MNW.html.twig') }}
+        </div> 
+    </div>
+{% endblock page_content %}
+{% block javascripts %}
+    {{ parent() }}
+<script>
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+		interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+</script>
+{% endblock javascripts %}

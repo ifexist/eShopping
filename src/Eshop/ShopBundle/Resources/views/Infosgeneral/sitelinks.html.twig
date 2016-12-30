@@ -1,0 +1,68 @@
+{% if ifgSitelinks.mediatitle1 != "" 
+or ifgSitelinks.mediatitle2 != "" 
+or ifgSitelinks.mediatitle3 != "" 
+or ifgSitelinks.mediatitle4 != "" 
+or ifgSitelinks.mediatitle5 != "" 
+or ifgSitelinks.mediatitle6 != "" 
+or ifgSitelinks.mediatitle7 != "" 
+or ifgSitelinks.mediatitle8 != "" 
+or ifgSitelinks.mediatitle9 != "" 
+or ifgSitelinks.mediatitle10 != ""
+%}
+<div class="small list-group-item">
+    {% if ifgSitelinks.mediatitle1 != "" %}
+        <a href="{{ ifgSitelinks.medialink1 }}" target="_blank" title="{{ ifgSitelinks.mediatitle1|capitalize }} : {{ ifgSitelinks.medialink1 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle1|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle1|capitalize }} : {{ ifgSitelinks.medialink1 }}" width="22px">
+        </a>
+    {% endif %}
+
+
+    {% if ifgSitelinks.mediatitle2 != "" %}
+        <a href="{{ ifgSitelinks.medialink2 }}" target="_blank" title="{{ ifgSitelinks.mediatitle2|capitalize }} : {{ ifgSitelinks.medialink2 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle2|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle2|capitalize }} : {{ ifgSitelinks.medialink2 }}" width="22px">
+        </a>
+    {% endif %}
+
+
+    {% if ifgSitelinks.mediatitle3 != "" %}
+        <a href="{{ ifgSitelinks.medialink3 }}" target="_blank" title="{{ ifgSitelinks.mediatitle3|capitalize }} : {{ ifgSitelinks.medialink3 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle3|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle3|capitalize }} : {{ ifgSitelinks.medialink3 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle4 != "" %}
+        <a href="{{ ifgSitelinks.medialink4 }}" target="_blank" title="{{ ifgSitelinks.mediatitle4|capitalize }} : {{ ifgSitelinks.medialink4 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle4|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle4|capitalize }} : {{ ifgSitelinks.medialink4 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle5 != "" %}
+        <a href="{{ ifgSitelinks.medialink5 }}" target="_blank" title="{{ ifgSitelinks.mediatitle5|capitalize }} : {{ ifgSitelinks.medialink5 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle5|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle5|capitalize }} : {{ ifgSitelinks.medialink5 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle6 != "" %}
+        <a href="{{ ifgSitelinks.medialink6 }}" target="_blank" title="{{ ifgSitelinks.mediatitle6|capitalize }} : {{ ifgSitelinks.medialink6 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle6|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle6|capitalize }} : {{ ifgSitelinks.medialink6 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle7 != "" %}
+        <a href="{{ ifgSitelinks.medialink7 }}" target="_blank" title="{{ ifgSitelinks.mediatitle7|capitalize }} : {{ ifgSitelinks.medialink7 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle7|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle7|capitalize }} : {{ ifgSitelinks.medialink7 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle8 != "" %}
+        <a href="{{ ifgSitelinks.medialink8 }}" target="_blank" title="{{ ifgSitelinks.mediatitle8|capitalize }} : {{ ifgSitelinks.medialink8 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle8|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle8|capitalize }} : {{ ifgSitelinks.medialink8 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle9 != "" %}
+        <a href="{{ ifgSitelinks.medialink9 }}" target="_blank" title="{{ ifgSitelinks.mediatitle9|capitalize }} : {{ ifgSitelinks.medialink9 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle9|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle9|capitalize }} : {{ ifgSitelinks.medialink9 }}" width="22px">
+        </a>
+    {% endif %}
+    {% if ifgSitelinks.mediatitle10 != "" %}
+        <a href="{{ ifgSitelinks.medialink10 }}" target="_blank" title="{{ ifgSitelinks.mediatitle10|capitalize }} : {{ ifgSitelinks.medialink10 }}">
+            <img src="{{ asset('Icons/MinimalisticCircles/32x32/' ~ ifgSitelinks.mediatitle10|lower ~'.png') }}" title="{{ ifgSitelinks.mediatitle10|capitalize }} : {{ ifgSitelinks.medialink10 }}" width="22px">
+        </a>
+    {% endif %}
+</div>
+{% endif %}

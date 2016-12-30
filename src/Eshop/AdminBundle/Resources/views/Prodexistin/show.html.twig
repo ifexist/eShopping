@@ -1,0 +1,32 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/shop/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/shop/fancybox/jquery.fancybox.css') }}" media="all" rel="stylesheet"
+          type="text/css"/>
+{% endblock stylesheets %}
+
+{% block page_content -%}
+    <h3>{{ 'prdouct size'|trans }}</h3>
+    <div class="btn-group">
+        <a href="{{ path('admin_prodexistin') }}" class="btn btn-default">{{ 'Back to the list'|trans }}</a>
+    </div>
+
+    <table class="table table-striped">
+        <tr>
+            <th width="30%">{{ 'Enable'|trans }}</th>
+            <td width="70%">{% if entity.enable == 1 %}{{ 'Yes'|trans }}{% else %}{{ 'No'|trans }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>{{ 'Name'|trans }}</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+            <th>{{ 'The corresponding values are'|trans }}</th>
+            <td>{{ entity.fieldtype }}</td>
+        </tr>
+    </table>
+{% endblock page_content %}
+ 

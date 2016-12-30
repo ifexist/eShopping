@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2016-07-29T16:13:21Z" source-language="en" target-language="de" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="df0409551b15a7419e689c62b3e1e9a127afd5f0" resname="contact.email_message_html">
+        <source>contact.email_message_html</source>
+        <target state="new">contact.email_message_html</target>
+        <jms:reference-file line="18">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/email.txt.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="724cf3545d3b08f4e3e677c9c3f4b8d76ba00f11" resname="contact.email_message_txt">
+        <source>contact.email_message_txt</source>
+        <target state="new">contact.email_message_txt</target>
+        <jms:reference-file line="5">/home/keyvan/www/eshop2-8/src/Eshop/ContactBundle/Resources/views/Contact/email.txt.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

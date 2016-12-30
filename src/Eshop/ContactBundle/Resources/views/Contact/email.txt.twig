@@ -1,0 +1,26 @@
+{% trans_default_domain 'EshopContactBundle' %}
+
+{% block body_text %}
+{% autoescape false %}
+{{ 'contact.email_message_txt'|trans({
+    '%title%':     contact.titleValue|trans,
+    '%firstName%': contact.firstname,
+    '%lastName%':  contact.lastname,
+    '%email%':     contact.email,
+    '%phone%':     contact.phone,
+    '%message%':   contact.message
+}) }}
+{% endautoescape %}
+{% endblock %}
+
+{% block body_html %}
+{% autoescape false %}
+{{ 'contact.email_message_html'|trans({
+    '%title%':     contact.titleValue|trans,
+    '%firstName%': contact.firstName,
+    '%lastName%':  contact.lastName,
+    '%email%':     contact.email,
+    '%message%':   contact.message|nl2br
+}) }}
+{% endautoescape %}
+{% endblock %}
