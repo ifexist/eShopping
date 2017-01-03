@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+        xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+        xmlns:sr="https://www.webmarked.net">
+    <channel>
+        <title>{{ site.namesite }}</title>
+	<atom:link href="{{ path('feed_product') }}" rel="self" type="application/rss+xml" />
+        <link>{{ app.request.schemeAndHttpHost }}</link>
+        <description>{{ site.slogan }}, {{ site.prodcats }}</description>
+        <language>fr-FR{#{{ site.langcode }}#}</language>
+        <copyright>Copyright {{ "now"|date("Y") }}, {{ app.request.server.get('SERVER_NAME') }}</copyright>
+        <pubDate>{{ site.added|date("D, d M Y h:i:s") }} +0000</pubDate>
+        <lastBuildDate>{{ site.updated|date("D, d M Y h:i:s") }} +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+        {% for item in products %}
+            <item>
+                <title>{{ item.name }} - {{ item.price }} {{ item.currency.code|upper }}</title>
+                <link>{{ app.request.schemeAndHttpHost }}/{{ site.langcode }}/product/{{ item.slug }}</link>
+                <description>{{ item.description|raw }}</description>
+                <pubDate>{{ item.dateCreated|date("D, d M Y h:i:s") }} +0000</pubDate>
+                <lastBuildDate>{{ item.dateUpdated|date("D, d M Y h:i:s") }} +0000</lastBuildDate>
+                <category>{{ item.dateCreated|date("D, d M Y h:i:s") }} +0000</category>
+                <source url="{{ path('show_product', {'slug' : item.slug}) }}">{{ item.price }} {{ item.currency.code|upper }}</source>
+                {% if item.images|length %}
+                    <enclosure url="{{ asset( ('uploads/images/product/' ~ item.images.first().path) | imagine_filter('category_mainpage_thumb')) }}"/>
+                {% else %}
+                    <enclosure url="{{ asset( ('uploads/images/product/no_image_available.png') | imagine_filter('category_mainpage_thumb')) }}"/>
+                {% endif %}
+            </item>
+        {% endfor %}
+    </channel>
+</rss>
