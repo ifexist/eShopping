@@ -1,0 +1,75 @@
+{% extends '@Admin/adminLayout.html.twig' %}
+{% trans_default_domain 'admin' %}
+{% block title %}{{ 'Edit Language Country Code'|trans|capitalize }}{% endblock%}
+
+{% block page_content -%}
+<div class="col-md-12">
+    <h1>{{ 'Edit Language Country Code'|trans|capitalize }}</h1>
+    <table class="table">
+                    <td class="col-md-1">
+                        {{ 'ID'|trans }}
+                    </td>
+                    <td class="col-md-2">
+                        {{ 'Country name'|trans }}
+                    </td>
+                    <td class="col-md-1">
+                        {{ 'Country code'|trans }}
+                    </td>
+                    <td class="col-md-3">
+                        {{ 'Languages code'|trans }}
+                    </td>
+                    <td class="col-md-2">
+                        {{ 'Language country code'|trans }}
+                    </td>
+                    <td class="col-md-1">
+                        {{ 'Actions'|trans }}
+                    </td>
+                </tr>
+    {% for country in countryList %}
+        {% set enchor = country.id -2 %}
+        <form action="{{ path('admin_countries_edit') }}#{{ enchor }}" method="post">
+            <input type="hidden" name="id" value="{{ country.id }}">
+                <tr>
+                    <td class="col-md-1">
+                        <h2 id="{{ country.id }}" style="font-size:14px;margin:0;">{{ country.id }}</h2>
+                    </td>
+                    <td class="col-md-2">
+                        {{ country.countryName }}</h2>
+                    </td>
+                    <td class="col-md-1">
+                        {{ country.country }}
+                    </td>
+                    <td class="col-md-3">
+                        <input class="col-md-12" name="langsCode" value="{{ country.langsCode }}"> 
+                    </td>
+                    <td class="col-md-2">
+                        {% if country.langCountryCode != ""%}
+                            <input class="col-md-12" name="langCountryCode" value="{{ country.langCountryCode }}" readonly="true"> 
+                        {% else %}
+                            <input class="col-md-12" name="langCountryCode" value="{{ country.langsCode[:2] }}-{{ country.country }}">    
+                        {% endif %}
+                    </td>
+                    <td class="col-md-1">
+                        <input type="submit" value="{{ 'save'|trans }}" class="btn btn-xs btn-primary">
+                    </td>
+                    {#{% if country.langCountryCode != ""%}
+                    <td class="col-md-2">
+                        <input class="col-md-12" name="langCountryCode" value="{{ country.langCountryCode }}" readonly="true">   
+                    </td>
+                    <td class="col-md-1">
+                        <input type="button" value="{{ 'saved'|trans }}" class="btn btn-xs btn-default">
+                    </td>
+                    {% else %}
+                    <td class="col-md-3">
+                        <input class="col-md-12" name="langCountryCode" value="{{ country.langsCode[:2] }}-{{ country.country }}">   
+                    </td>
+                    <td class="col-md-1">
+                        <input type="submit" value="{{ 'save'|trans }}" class="btn btn-xs btn-primary">
+                    </td>
+                    {% endif %}#}
+                </tr>
+        </form>
+    {% endfor %}
+            </table>
+</div><br>
+{% endblock page_content -%}

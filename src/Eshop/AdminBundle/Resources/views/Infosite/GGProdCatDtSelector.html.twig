@@ -1,0 +1,95 @@
+{% extends '@Admin/datatableAdmin.html.twig' %}
+{% trans_default_domain 'admin' %}
+
+{% block title %}{{ 'Categories'|trans|capitalize }}{% endblock%}
+{% block page_content %}
+    <div class="col-md-3">
+        <h1>{{ 'Main Categories'|trans|capitalize }}</h1>
+        <div class="list-group">
+            <a href="#" class="list-group-item disabled">
+                {{ 'Choose a category'|trans }}
+            </a>
+            <div style="height: 600px;overflow:auto;">
+                {% for itmeCat1 in listCat1 %}
+                    <li class="list-group-item"><a href="{{ path('admin_product_categories_selector', {'idArrive': idArrive, 'linkArrive': linkArrive, 'cat1': itmeCat1.cat1}) }}">{{ itmeCat1.cat1 }}</a></li>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        {% if cat1 != "" %}
+            <h1>{{ 'Category'|trans|capitalize }} <span class="small">({{ cat1 }})</span></h1>
+            <table id="example" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="small col-md-1">{{ 'ID'|trans }}</th>
+                        <th class="small col-md-3">{{ 'Category'|trans }} 2</th>
+                        <th class="small col-md-2">{{ 'Category'|trans }} 3</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 4</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 5</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 6</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 7</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="small col-md-1">{{ 'ID'|trans }}</th>
+                        <th class="small col-md-3">{{ 'Category'|trans }} 2</th>
+                        <th class="small col-md-2">{{ 'Category'|trans }} 3</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 4</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 5</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 6</th>
+                        <th class="small col-md-1">{{ 'Category'|trans }} 7</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    {% for catField in categories %}
+                        <tr>
+                            <th class="small"><a href="{{ path(linkArrive, {'id': idArrive, 'catId': catField.id}) }}" class="col-md-12 btn btn-xs btn-primary"><b><i class="fa fa-edit"></i> {{ catField.id }}</b></a></th>
+                            <th class="small">{{ catField.cat2 }}</th>
+                            <td class="small">{{ catField.cat3 }}</td>
+                            <td class="small">{{ catField.cat4 }}</td>
+                            <th class="small">{{ catField.cat5 }}</th>
+                            <td class="small">{{ catField.cat6 }}</td>
+                            <td class="small">{{ catField.cat7 }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif  %}
+    {% block javascripts %}  
+        {{ parent() }}
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    initComplete: function () {
+                        this.api().columns(1).every(function () {
+                            var column = this;
+                            var select = $('<select class="col-md-12"><option value="">{{ 'Filter by'|trans }}</option></select>')
+                                    .appendTo($(column.footer()).empty())
+                                    .on('change', function () {
+                                        var val = $.fn.dataTable.util.escapeRegex(
+                                                $(this).val()
+                                                );
+
+                                        column
+                                                .search(val ? '^' + val + '$' : '', true, false)
+                                                .draw();
+                                    });
+
+                            column.data().unique().sort().each(function (d, j) {
+                                select.append('<option value="' + d + '">' + d + '</option>')
+                            });
+                        });
+                    },
+                    retrieve: true,
+                    paging: true,
+                    "language": {
+                        "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                    },
+                });
+            });
+        </script>
+    {% endblock javascripts %} 
+{% endblock page_content %}

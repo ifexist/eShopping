@@ -1,0 +1,14 @@
+/vendor/
+/app/logs
+/app/cache
+/app/config/parameters.yml
+/nbproject/private
+/web/uploads
+UPGRADE.md
+UPGRADE-2.2.md
+UPGRADE-2.3.md
+UPGRADE-2.4.md
+UPGRADE-2.8.md
+*.csv
+*.xls
+*.ods

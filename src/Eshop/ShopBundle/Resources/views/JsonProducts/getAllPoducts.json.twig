@@ -1,0 +1,22 @@
+siteInfos = {
+    "siteName":"{{ site.namesite }}", 
+    "siteLink":"{{ site.web }}", 
+    "siteLang":"{{ site.langcode }}",
+    "siteDescription":"{{ site.slogan }}, {{ site.prodcats }}",
+    "siteUpdated":"{{ site.updated|date("D, d M Y h:i:s") }}"
+};
+productsInfos = {
+    {% for entry in products %}
+        "productName":"{{ entry.name }}", 
+        "productLink":"{{ app.request.schemeAndHttpHost }}/{{ site.langcode }}/product/{{ entry.slug }}", 
+        {% if entry.images|length %}
+        "productImage":"{{ app.request.schemeAndHttpHost }}/{{ entry.images.first().path }}",  
+        {% else %}
+        "productImage":"{{ app.request.schemeAndHttpHost }}/uploads/images/product/no_image_available.png",
+        {% endif %}
+        "productDescription":"{{ entry.description }}",
+        "productCategory":"{{ entry.category.name }}",
+        "productCategoryId":"{{ entry.category }}",
+        "productUpdated":"{{ entry.dateUpdated|date("D, d M Y h:i:s") }}"
+    {% endfor %}
+};

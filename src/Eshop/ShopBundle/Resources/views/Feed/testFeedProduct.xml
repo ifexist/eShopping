@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <title type="text">{{ site.namesite }}</title>
+    <link rel="alternate" href="{{ path('homepage') }}" type="text/html" />
+    <subtitle>{{ site.slogan }}</subtitle>
+    <updated>{{ site.updated|date("D, d M Y h:i:s") }}</updated>
+    <id>{{ path('feed_product') }}</id>
+        {% for entry in products %}
+        <entry>
+            <id>{{ app.request.schemeAndHttpHost }}/{{ site.langcode }}/product/{{ entry.slug }}</id>
+            <re:rank scheme="{{ site.web }}">341</re:rank>
+            <title type="text">{{ entry.name }}</title>
+            <author>
+                <name>{{ site.web }}v</name>
+                <uri>{{ site.titleservice3 }}</uri>
+            </author>
+            <link rel="alternate" href="{{ app.request.schemeAndHttpHost }}/{{ site.langcode }}/product/{{ entry.slug }}" />
+            <published>{{ entry.dateCreated|date("D, d M Y h:i:s") }}</published>
+            <updated>{{ entry.dateUpdated|date("D, d M Y h:i:s") }}</updated>
+            <summary type="html">
+                {{ entry.description }}
+            </summary>
+            {% if entry.images|length %}
+            <enclosure url="{{ asset( ('uploads/images/product/' ~ entry.images.first().path) | imagine_filter('category_mainpage_thumb')) }}"/>
+            {% else %}
+            <enclosure url="{{ asset( ('uploads/images/product/no_image_available.png') | imagine_filter('category_mainpage_thumb')) }}"/>
+            {% endif %}
+            <category>{{ entry.category.name }}</category>
+        </entry>
+    {% endfor %}
+</products>
