@@ -3,5 +3,12 @@
 /app/cache
 /app/config/parameters.yml
 /nbproject/private
-/web/uploads
+/google_categoy_product/
 *.md
+*.ods
+*.xls
+UPGRADE.md
+UPGRADE-2.2.md
+UPGRADE-2.3.md
+UPGRADE-2.4.md
+UPGRADE-2.8.md
